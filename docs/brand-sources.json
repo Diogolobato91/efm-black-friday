@@ -1,0 +1,17 @@
+{
+  "observedOn": "2026-11-04",
+  "sources": [
+    {
+      "target": "public/brand/efm-blue.svg",
+      "repository": "Diogolobato91/EFM-avaliacao",
+      "sourcePath": "public/LOGO-AZUL-1-1.svg",
+      "gitBlobSha": "a8169a57313694cbb5c827a4781c062fb6e63204"
+    },
+    {
+      "target": "public/brand/efm-white.svg",
+      "repository": "Diogolobato91/EFM-avaliacao",
+      "sourcePath": "public/LOGO-BRANCA.svg",
+      "gitBlobSha": "3f6a77221845d5eea39ff9a15425ba3a902375b0"
+    }
+  ]
+}

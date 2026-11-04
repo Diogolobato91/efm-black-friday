@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analytics Tracking"
+  short_description: "Eventos de intenção e mensuração da campanha"
+  default_prompt: "Use $analytics-tracking na tarefa pertinente desta landing page, preservando o briefing e a identidade da EFM."

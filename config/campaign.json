@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "brand": "EFM Languages",
+  "campaign": "Black Friday",
+  "locale": "pt-BR",
+  "timezone": "America/Belem",
+  "whatsapp": {
+    "phone": "5591985106086",
+    "url": "https://wa.me/5591985106086"
+  },
+  "modalities": [
+    {
+      "id": "english",
+      "label": "Inglês",
+      "plans": [
+        {
+          "id": "basic",
+          "name": "Básico",
+          "classesPerMonth": 4,
+          "monthlyPriceBRL": 350,
+          "drawChances": 3
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "classesPerMonth": 8,
+          "monthlyPriceBRL": 450,
+          "drawChances": 5
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "classesPerMonth": 12,
+          "monthlyPriceBRL": 550,
+          "drawChances": 7
+        }
+      ]
+    },
+    {
+      "id": "spanish",
+      "label": "Espanhol",
+      "plans": [
+        {
+          "id": "basic",
+          "name": "¡Vamos!",
+          "classesPerMonth": 4,
+          "monthlyPriceBRL": 350,
+          "drawChances": 3
+        },
+        {
+          "id": "pro",
+          "name": "¡Arriba!",
+          "classesPerMonth": 8,
+          "monthlyPriceBRL": 450,
+          "drawChances": 5
+        },
+        {
+          "id": "premium",
+          "name": "¡Dale!",
+          "classesPerMonth": 12,
+          "monthlyPriceBRL": 550,
+          "drawChances": 7
+        }
+      ]
+    }
+  ],
+  "initialFee": {
+    "amountBRL": 199.9,
+    "includes": [
+      "Material didático",
+      "Portal do aluno"
+    ]
+  },
+  "firstMonthlyPayment": {
+    "month": 12,
+    "year": null
+  },
+  "bonus": {
+    "otherLanguageMonths": 1,
+    "classesPerWeek": 1,
+    "continuation": "Escolha do aluno após o período"
+  },
+  "giveaway": {
+    "eligibleModalities": [
+      "english",
+      "spanish"
+    ],
+    "destination": "Malta",
+    "weeks": 2,
+    "included": [
+      "Curso de duas semanas",
+      "Hospedagem",
+      "Seguro viagem",
+      "Transfer do aeroporto para a acomodação"
+    ],
+    "spendingAllowanceEUR": 200,
+    "airfareIncluded": false,
+    "transferable": false,
+    "requiresActiveEnrollmentAndCurrentPaymentsUntilTravel": true,
+    "drawDate": {
+      "day": 10,
+      "month": 12,
+      "year": null,
+      "time": null
+    },
+    "instagram": null,
+    "regulationStatus": "pending-final-stage"
+  },
+  "referral": {
+    "existingStudentMayEnter": true,
+    "chances": null
+  },
+  "displayClassDuration": false
+}

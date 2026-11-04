@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "fontFamily": "Montserrat",
+  "colors": {
+    "blue": "#0D48FE",
+    "navy": "#061938",
+    "orange": "#F25C05",
+    "white": "#FFFFFF",
+    "campaignBlack": "#080A0F",
+    "lightSurface": "#F1F1F1",
+    "mutedText": "#CBD5E1"
+  },
+  "proposedCampaignTokens": [
+    "campaignBlack",
+    "mutedText"
+  ],
+  "logos": {
+    "blue": "public/brand/efm-blue.svg",
+    "white": "public/brand/efm-white.svg"
+  }
+}

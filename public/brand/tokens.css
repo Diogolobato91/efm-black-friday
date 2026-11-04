@@ -1,0 +1,12 @@
+:root {
+  --efm-blue: #0D48FE;
+  --efm-navy: #061938;
+  --efm-orange: #F25C05;
+  --bf-background: #080A0F;
+  --bf-text: #FFFFFF;
+  --bf-text-muted: #CBD5E1;
+  --bf-light-surface: #F1F1F1;
+  --bf-cta-background: var(--efm-orange);
+  --bf-cta-text: var(--efm-navy);
+  --bf-font: "Montserrat", sans-serif;
+}

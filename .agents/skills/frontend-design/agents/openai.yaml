@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Design"
+  short_description: "Design visual e execução de interfaces EFM"
+  default_prompt: "Use $frontend-design na tarefa pertinente desta landing page, preservando o briefing e a identidade da EFM."

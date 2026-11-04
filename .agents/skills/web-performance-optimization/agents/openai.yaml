@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Performance"
+  short_description: "Otimização do carregamento da landing page"
+  default_prompt: "Use $web-performance-optimization na tarefa pertinente desta landing page, preservando o briefing e a identidade da EFM."

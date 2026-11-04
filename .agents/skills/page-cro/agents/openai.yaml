@@ -1,0 +1,4 @@
+interface:
+  display_name: "Page CRO"
+  short_description: "Revisão da oferta e do caminho até o WhatsApp"
+  default_prompt: "Use $page-cro na tarefa pertinente desta landing page, preservando o briefing e a identidade da EFM."

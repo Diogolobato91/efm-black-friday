@@ -1,0 +1,4 @@
+interface:
+  display_name: "Accessibility Audit"
+  short_description: "Revisão de acessibilidade e barreiras de uso"
+  default_prompt: "Use $accessibility-compliance-accessibility-audit na tarefa pertinente desta landing page, preservando o briefing e a identidade da EFM."

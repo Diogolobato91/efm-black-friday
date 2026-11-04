@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI UX Pro Max"
+  short_description: "Referências de layout, cores, tipografia e UX"
+  default_prompt: "Use $ui-ux-pro-max na tarefa pertinente desta landing page, preservando o briefing e a identidade da EFM."

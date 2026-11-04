@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 1,
+  "source": "https://github.com/sickn33/agentic-awesome-skills",
+  "upstreamCommit": "48de968b4615c294de601f72268aa7be88dde863",
+  "installedOn": "2026-11-04",
+  "transformations": [
+    "SKILL.md metadata normalized to name and description",
+    "Final whitespace normalized",
+    "Codex UI metadata generated locally",
+    "webapp-testing: reference section corrected for examples absent from upstream bundle"
+  ],
+  "files": [
+    {
+      "path": ".agents/skills/copywriting/SKILL.md",
+      "sourcePath": "skills/copywriting/SKILL.md",
+      "gitBlobSha": "232b5be62b6d3dcaf68ab44805a71d97466a5b45",
+      "sha256": "ab7d868885d6993c33ac726556064a000d9c9fd1e749547981c66aa3bbfb381e"
+    },
+    {
+      "path": ".agents/skills/page-cro/SKILL.md",
+      "sourcePath": "skills/page-cro/SKILL.md",
+      "gitBlobSha": "c01317491852a16265b10d533f775d853734aa0b",
+      "sha256": "1660db408cb196fd0d0d701d3fe995936414ec2d0ee6d92060262591a66717af"
+    },
+    {
+      "path": ".agents/skills/frontend-design/LICENSE.txt",
+      "sourcePath": "skills/frontend-design/LICENSE.txt",
+      "gitBlobSha": "f433b1a53f5b830a205fd2df78e2b34974656c7b",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": ".agents/skills/frontend-design/SKILL.md",
+      "sourcePath": "skills/frontend-design/SKILL.md",
+      "gitBlobSha": "a9475e3261898ed1ad3bd334a3ad85f1b92e89b0",
+      "sha256": "d5af9d933832987920792ce1ef1f4e87ee6193a0009a1c16cbac2872a81a4fc4"
+    },
+    {
+      "path": ".agents/skills/web-performance-optimization/SKILL.md",
+      "sourcePath": "skills/web-performance-optimization/SKILL.md",
+      "gitBlobSha": "5c54f3128949cf7cd075b938d7fd206f6461227f",
+      "sha256": "14247fc0beb76d56d7abf033f6a841a8e6257ee9defeea7fd76ade6364a594f5"
+    },
+    {
+      "path": ".agents/skills/seo-fundamentals/SKILL.md",
+      "sourcePath": "skills/seo-fundamentals/SKILL.md",
+      "gitBlobSha": "1f755fe94b17b9d12bae7e2a0cc82d7c74a68c7f",
+      "sha256": "06ada8d39faf98d3c6a611246857f17176fa1604e6ba5b513bf4673d0bed706b"
+    },
+    {
+      "path": ".agents/skills/webapp-testing/LICENSE.txt",
+      "sourcePath": "skills/webapp-testing/LICENSE.txt",
+      "gitBlobSha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": ".agents/skills/webapp-testing/SKILL.md",
+      "sourcePath": "skills/webapp-testing/SKILL.md",
+      "gitBlobSha": "1e1e35eb7e27b7d678ef19329e5c21d29694bb73",
+      "sha256": "b73456a5f5ced2b6a28685dc784167812254ca31c022f645b38cd8019bfb3ab7",
+      "localChanges": [
+        "Removed advertised paths to three examples not distributed by upstream; documented actual bundled helper"
+      ]
+    },
+    {
+      "path": ".agents/skills/accessibility-compliance-accessibility-audit/SKILL.md",
+      "sourcePath": "skills/accessibility-compliance-accessibility-audit/SKILL.md",
+      "gitBlobSha": "d25175e9b5c4ddf9f19e38f892228c14791604e4",
+      "sha256": "f81c7bf979bacad9b275a5bb57c1c6f17efaaf89fc4103af28f0b7e7addacce9"
+    },
+    {
+      "path": ".agents/skills/analytics-tracking/SKILL.md",
+      "sourcePath": "skills/analytics-tracking/SKILL.md",
+      "gitBlobSha": "fb7c26aa50d3c018933f3457798291a29e4ba9b1",
+      "sha256": "74f5e0887879e66a0b7b6611f46ca8e8c205f07c8cbd48e65058ee609a1a0675"
+    },
+    {
+      "path": ".agents/skills/seo-fundamentals/scripts/seo_checker.py",
+      "sourcePath": "skills/seo-fundamentals/scripts/seo_checker.py",
+      "gitBlobSha": "2a9fe1f1e4111209c31e5db0e9380a3d572a7694",
+      "sha256": "84f51eb190d3d03c4fad6b17ae083aa98a8714862b4d1ddd9d33b23c8f93d710"
+    },
+    {
+      "path": ".agents/skills/accessibility-compliance-accessibility-audit/resources/implementation-playbook.md",
+      "sourcePath": "skills/accessibility-compliance-accessibility-audit/resources/implementation-playbook.md",
+      "gitBlobSha": "29605ebaef81e890dc636d0d03956a2b3ac5252f",
+      "sha256": "dd2898808f986c64c22be8d91c291902dc3a271d4fea78e55756edc3db690afd"
+    },
+    {
+      "path": ".agents/skills/webapp-testing/scripts/with_server.py",
+      "sourcePath": "skills/webapp-testing/scripts/with_server.py",
+      "gitBlobSha": "8ed55882cc9aaf427f1da1b0dedf204fa2377ea4",
+      "sha256": "dea1e4fa247942366c9d8c1873f9fe7c1c29a6fdd8d75f4f565e794ed8402394"
+    },
+    {
+      "path": ".agents/skills/web-performance-optimization/references/detailed-guide.md",
+      "sourcePath": "skills/web-performance-optimization/references/detailed-guide.md",
+      "gitBlobSha": "67831c8a8bcc18fdab005f2ba1afb46257bf3fdc",
+      "sha256": "90679192fc9408c8f6eb5890d8711532543bfe1f4de3b8233735f39855eb5205"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/SKILL.md",
+      "sourcePath": "skills/ui-ux-pro-max/SKILL.md",
+      "gitBlobSha": "b9b54ee3f8bcdac6f3340916855e5cf280bef833",
+      "sha256": "b881f47a8ca5798252ac5769975501577ad71d5d0e5c34b2b0289408dc06010d"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/core.py",
+      "sourcePath": "skills/ui-ux-pro-max/scripts/core.py",
+      "gitBlobSha": "acd597ebfeea62c047aa7a864d590c19cd2a0968",
+      "sha256": "0ad6279cdc2aca8236f12b5159f91d66f3f215c86688081400944e2e9af0cd8c"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/design_system.py",
+      "sourcePath": "skills/ui-ux-pro-max/scripts/design_system.py",
+      "gitBlobSha": "84b12e6689e1681ebfb936755d19a9412d61fe80",
+      "sha256": "19e7e364950887ef90ca897ab47ad37489025be543d5dde452bdb8d0418d0f19"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/search.py",
+      "sourcePath": "skills/ui-ux-pro-max/scripts/search.py",
+      "gitBlobSha": "00a38df94953a7e351968fe366661b6e43b3c77f",
+      "sha256": "7a360908a1cb9de2ee2a2b629d9d9627f4269cf03a1d816755c6dde40c8a5c41"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/charts.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/charts.csv",
+      "gitBlobSha": "2ab164af7493f0d25cef41ade090e0274dfd9c85",
+      "sha256": "3bb2fcc38e773ccb944e05ea77e67b7296e0065820f91cf60b7a473ad2d5fc6a"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/colors.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/colors.csv",
+      "gitBlobSha": "7327ffd1517144d96660b18d8a647e080c823e2a",
+      "sha256": "25fd715fccadf230212e71c814be365127c511c19888dad4c06136163212adab"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/icons.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/icons.csv",
+      "gitBlobSha": "a09a5343368729ea8c71406bc38c29f0289fb24a",
+      "sha256": "26be5e47c4c3fc7acae52ac8bbfaf1bf9e5ddc9c01808953a3636f8615b9de9f"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/landing.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/landing.csv",
+      "gitBlobSha": "82772fdd8ae8fe2740d355b137a223c14c6daa83",
+      "sha256": "c4860b378071fe0c23f08eaec3aafd8846bf099776931a13dcb5bc2f49056189"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/products.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/products.csv",
+      "gitBlobSha": "880971dbd4deb75c5a2037687ea3fcf1b90183ec",
+      "sha256": "8aa955bc43dfb651079336a905129ed9d3aa7bea4d60062267477afff0e1a9af"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/prompts.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/prompts.csv",
+      "gitBlobSha": "50281922cfd5512518d87232ef6225e6cd3978b6",
+      "sha256": "0f5acb17260f64fcc96668414d0e8b37418dcb5eec043f49b986b99399831ff3"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/react-performance.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/react-performance.csv",
+      "gitBlobSha": "671465f29ce8d1b12e1576ab81c7b610161f2f6d",
+      "sha256": "904c8afcda229629545912dde0e8ac37503757131f0169f80b016f1f58c4fd3f"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/flutter.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/stacks/flutter.csv",
+      "gitBlobSha": "2e32c6a29bf8e4ceeb61e92e33193adbe1219a75",
+      "sha256": "92992264280f9f73d1141f29ed65af1e76f2fd785180590d8a797b88f9354c63"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "gitBlobSha": "0150307c60daa96a8a9604c9fa18a29acb5b0d4e",
+      "sha256": "a7c410190d94e040999e61903eed2ef95ef419e18d86745acce1aecde89224da"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "gitBlobSha": "6e9bea577c8c9294113d741b3f8dd3e6b1770b1c",
+      "sha256": "dc291dec1cf6889b2b2eb484789a72b3c8b1ac88c74cb792a04018248a87ec08"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "gitBlobSha": "7146e84836c504d4374a9b1cace3262b771a2956",
+      "sha256": "05d6e74501b2b6a636faed32450622759f49a5bcafad971f5f4e7eba0eb7be71"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "gitBlobSha": "c275d0de8c6a06a06f8439be017af660fefe91bb",
+      "sha256": "f7a3f2d9542856d00199f85c6c023b7c284cc698e2e6e12d61afce2edacb24d6"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/react-native.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/stacks/react-native.csv",
+      "gitBlobSha": "209e893c3b2441813add061270009d9b6fe3e512",
+      "sha256": "f35b8d3f26bfc5c76f97b12549965c7905abef7dc46e7a3c72ca9bc0dc6365f2"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/react.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/stacks/react.csv",
+      "gitBlobSha": "7b9995bd4b9fba4b1c75393984e4bc6f060bd180",
+      "sha256": "918d377038ec3d07ee0246a80a382d77706658b1699496279308a937b0c35519"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "gitBlobSha": "fb86e8d1c135aa384df284f216c3db9c5187ae57",
+      "sha256": "395c2e415ef6f48a474acccdc8eb2c7258a6ed751a5037ba171a2d8823e02ded"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/svelte.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/stacks/svelte.csv",
+      "gitBlobSha": "1c6b4562d5d1c4ca98ad70959367ffcd68df5611",
+      "sha256": "988cfc577a0890f2012b6a51b79d321f338d688973e5621796e006539a9108ae"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "gitBlobSha": "d3515e4c0ac9569874d9a91b19eb3b950691eac1",
+      "sha256": "de7b3d2cc3d8fff94e6bc93895414cdf63d60e789fb0472b39500571798e2873"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/vue.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/stacks/vue.csv",
+      "gitBlobSha": "cd4d415aee18ed5ea3b0348ed6a1bddf1961ee06",
+      "sha256": "e6c41d53c6ca448a0240f8484fd65c023915976076c159c70ae1dd11c040d10a"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/styles.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/styles.csv",
+      "gitBlobSha": "31877fa7284e801a067a30fcdac26cf844a94303",
+      "sha256": "e012cef80e78dbd7e84cf6a22eb50686be0043fd60c19d8c5db7ef8285e47d85"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/typography.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/typography.csv",
+      "gitBlobSha": "29765f59703a12eb3eae3474e61c6885ef50208d",
+      "sha256": "b785ae697a4f67e798ede63e5140d9b3142571ed3767fd59d7e6df6c96a3eedf"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/ui-reasoning.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/ui-reasoning.csv",
+      "gitBlobSha": "08990ab8652df9a0f68ef93e091ae998dd34d59b",
+      "sha256": "2d44b3295111ebdff85c6f612e7855ed95936d720179c8fbc5e5ecf5c7f8063a"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/ux-guidelines.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/ux-guidelines.csv",
+      "gitBlobSha": "5b35e396d2ffe761dec64dce42ce88448d1c3616",
+      "sha256": "c5f0ca63e224bd0d679c6adb9a10da2f07e5aca37d1a61720939fabb2defe9d3"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/web-interface.csv",
+      "sourcePath": "skills/ui-ux-pro-max/data/web-interface.csv",
+      "gitBlobSha": "93b648c0df82fa0048ab6c647660a2ae83abd121",
+      "sha256": "772462d3fad31069260817c0ace05a9ca1044633ff1595977884789cfff48d7f"
+    },
+    {
+      "path": ".agents/THIRD_PARTY_LICENSE.txt",
+      "sourcePath": "LICENSE",
+      "gitBlobSha": "dc38cfd7ab732a67b0f14997cfa8c9ec740a1889",
+      "sha256": "af98370a7edc0f00ec46979d049517833c9a7fa2ba74e3cf8cc42f7db557299d"
+    }
+  ]
+}

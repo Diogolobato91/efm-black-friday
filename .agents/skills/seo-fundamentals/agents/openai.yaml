@@ -1,0 +1,4 @@
+interface:
+  display_name: "SEO Fundamentals"
+  short_description: "Metadados e fundamentos técnicos da página"
+  default_prompt: "Use $seo-fundamentals na tarefa pertinente desta landing page, preservando o briefing e a identidade da EFM."

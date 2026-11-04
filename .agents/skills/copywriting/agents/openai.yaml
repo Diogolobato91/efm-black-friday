@@ -1,0 +1,4 @@
+interface:
+  display_name: "Copywriting"
+  short_description: "Textos de venda claros para a campanha EFM"
+  default_prompt: "Use $copywriting na tarefa pertinente desta landing page, preservando o briefing e a identidade da EFM."

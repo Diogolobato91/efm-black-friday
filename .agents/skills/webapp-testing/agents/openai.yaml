@@ -1,0 +1,4 @@
+interface:
+  display_name: "Webapp Testing"
+  short_description: "Verificação de jornadas no navegador"
+  default_prompt: "Use $webapp-testing na tarefa pertinente desta landing page, preservando o briefing e a identidade da EFM."
