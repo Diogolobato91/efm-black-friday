@@ -1,0 +1,20 @@
+{
+  "name": "efm-black-friday",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.js",
+    "test:e2e": "python3 tests/browser.py",
+    "preview:file": "node scripts/create_preview.mjs"
+  },
+  "devDependencies": {
+    "vite": "6.4.5"
+  },
+  "dependencies": {
+    "@fontsource-variable/montserrat": "5.2.8"
+  }
+}

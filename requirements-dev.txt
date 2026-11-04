@@ -1,0 +1,2 @@
+# Browser tests only; not a runtime dependency of the page.
+playwright==1.62.0

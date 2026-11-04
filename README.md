@@ -1,27 +1,58 @@
 # EFM Black Friday
 
-Preparação da landing page de campanha da EFM Languages, com atendimento no WhatsApp.
+Landing page da EFM Languages para inglês e espanhol, com comparação de planos e atendimento pelo WhatsApp. Projeto independente dos sistemas acadêmicos, sem banco ou autenticação.
 
-## Estado
-Agentes, nove skills e briefing configurados. A interface, o build da aplicação, tracking real e hospedagem ainda não foram implementados.
+## Executar
 
-## Começar
-Abra este repositório no Codex e leia AGENTS.md. A oferta está em docs/briefing.md, a equipe em docs/agents.md e a identidade em docs/brand.md. config/campaign.json reúne os dados comerciais confirmados; public/brand contém logos e tokens.
+Node.js 22.12+ (validado com Node 24), npm e Python 3.11+ para a verificação de configuração.
 
-| Inglês / Espanhol | Aulas mensais | Mensalidade |
-| --- | ---: | ---: |
-| Básico / ¡Vamos! | 4 | R$ 350 |
-| Pro / ¡Arriba! | 8 | R$ 450 |
-| Premium / ¡Dale! | 12 | R$ 550 |
+```sh
+npm ci
+npm run dev
+```
 
-## Validar a preparação
-Com Python 3.11 ou superior:
+Vite escuta somente em loopback por padrão. Para testar o build de produção:
+
+```sh
+npm run build
+npm run preview
+```
+
+## Verificar
+
 ```sh
 python3 scripts/validate_setup.py
+npm test
+npm run build
 ```
-O comando verifica agentes, bundles e integridade dos arquivos, dados da campanha e referências. Não é teste de uma interface.
 
-## Próximo trabalho
-Implementar a landing page conforme o briefing: redação persuasiva, design Black Friday da EFM, comparação Inglês/Espanhol, CTA por plano para WhatsApp, referência a Malta e verificação responsiva. Usar apenas experiências reais e assets autorizados. Regulamento fica para a etapa final. Datas completas, Instagram, vídeos e ferramentas de mensuração ainda têm pendências descritas no briefing.
+A suíte funcional usa Python Playwright e Chromium (o ambiente atual já os fornece). Para preparar outra máquina: `python3 -m pip install -r requirements-dev.txt` e `python3 -m playwright install chromium`. É possível escolher um Chromium instalado usando `CHROMIUM_PATH`. Com o servidor de desenvolvimento ativo na porta 5173:
 
-Esta preparação não publica um site nem instala dependências da futura aplicação.
+```sh
+npm run test:e2e
+```
+
+As capturas de tela são salvas fora do checkout em `/tmp/efm-black-friday-review`. O navegador não envia mensagens nem navega ao WhatsApp durante os testes. Dependências de teste de navegador não fazem parte do bundle da página.
+
+## Prévia sem hospedagem
+
+Depois de `npm run build`, execute `npm run preview:file`. O comando gera `/tmp/efm-black-friday-review/preview.html` com fonte, estilos, imagens e JavaScript incorporados. Baixe e abra esse arquivo no navegador para revisar a interação sem publicar o site. Os botões continuam apontando ao WhatsApp real da campanha; abrir um link não envia mensagem automaticamente.
+
+## Conteúdo e manutenção
+
+- `config/campaign.json`: idiomas, planos, valores, bônus e premiação.
+- `config/brand.json` e `public/brand/tokens.css`: identidade EFM.
+- `src/main.js` / `src/style.css`: interface e interação.
+- `src/campaign.js`: seleção e construção dos links de WhatsApp.
+- `src/analytics.js`: eventos locais de intenção, sem pixels ou provedor configurado.
+- `docs/briefing.md`: oferta confirmada e pendências comerciais.
+- `docs/analytics.md`: eventos, consentimento e limites de mensuração.
+- `docs/qa.md`: verificações e limitações da primeira versão.
+
+Montserrat é hospedada localmente via Fontsource (SIL Open Font License; licença no pacote). As logos são os SVGs existentes da EFM. A ilustração de Valletta é original deste projeto; não é fotografia nem depoimento.
+
+## Antes da publicação
+
+A primeira versão usa `noindex` para revisão. Confirmar domínio e hospedagem, revisar metadados finais e indexação, finalizar regulamento e informações comerciais pendentes. Não há pixel GA4/Meta nem matrícula/conversa confirmada por clique. Uma integração futura exige IDs reais, definição de consentimento e validação de recepção no provedor.
+
+Esta implementação não faz deploy, não publica regulamento e não aplica mudanças nos sistemas reais da EFM.

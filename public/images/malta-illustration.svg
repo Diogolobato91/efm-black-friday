@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1200" viewBox="0 0 1000 1200" fill="none">
+  <title>Ilustração de Valletta, Malta</title>
+  <desc>Interpretação gráfica original da paisagem de Valletta: cúpula, torre, edifícios de pedra clara e barcos no Mediterrâneo. Não é fotografia.</desc>
+  <defs>
+    <linearGradient id="sky" x1="500" y1="0" x2="500" y2="900" gradientUnits="userSpaceOnUse"><stop stop-color="#5179A4"/><stop offset=".55" stop-color="#9DBED1"/><stop offset="1" stop-color="#E4D9B9"/></linearGradient>
+    <linearGradient id="sea" x1="500" y1="750" x2="500" y2="1200" gradientUnits="userSpaceOnUse"><stop stop-color="#0C658D"/><stop offset="1" stop-color="#073D6B"/></linearGradient>
+    <linearGradient id="stone" x1="0" y1="450" x2="800" y2="950" gradientUnits="userSpaceOnUse"><stop stop-color="#EAD5A8"/><stop offset="1" stop-color="#AA8159"/></linearGradient>
+    <linearGradient id="dome" x1="510" y1="340" x2="735" y2="510" gradientUnits="userSpaceOnUse"><stop stop-color="#F3E2BB"/><stop offset=".5" stop-color="#D8BE8D"/><stop offset="1" stop-color="#A98861"/></linearGradient>
+    <pattern id="windows" width="48" height="67" patternUnits="userSpaceOnUse"><path d="M17 16h15v27H17z" fill="#554E48"/><path d="M16 44h17" stroke="#E7D0A4" stroke-width="5"/></pattern>
+    <pattern id="masonry" width="120" height="44" patternUnits="userSpaceOnUse"><path d="M0 43h120M60 0v43" stroke="#9C7857" stroke-opacity=".35" stroke-width="2"/></pattern>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".08"/></feComponentTransfer><feBlend in="SourceGraphic" mode="soft-light"/></filter>
+  </defs>
+  <g filter="url(#grain)">
+    <path fill="url(#sky)" d="M0 0h1000v1200H0z"/>
+    <circle cx="803" cy="211" r="87" fill="#F3E3B8" opacity=".85"/>
+    <path d="M-80 295c150-75 250-30 355-60s165-38 254-14M612 111c88-30 151-30 235-10" stroke="#D6E3E4" stroke-width="19" stroke-linecap="round" opacity=".22"/>
+    <path d="m132 213 14-8 14 8m44 35 10-6 11 6m567 96 14-8 14 8" stroke="#344D62" stroke-width="3" stroke-linecap="round"/>
+    <path d="M0 798c221-64 461-63 1000-26v428H0z" fill="url(#sea)"/>
+    <!-- skyline: limestone buildings and domed church -->
+    <path d="M0 583h103V498h80v-51h87v59h102v-42h89v56h81v-45h112v28h94v-20h92v41h160v355H0z" fill="#CBB88F"/>
+    <path d="M0 583h103V498h80v-51h87v59h102v-42h89v56h81v-45h112v28h94v-20h92v41h160v355H0z" fill="url(#windows)" opacity=".45"/>
+    <path d="M523 481c0-89 46-147 108-147s108 58 108 147" fill="url(#dome)"/>
+    <path d="M525 481h212v26H525z" fill="#E3C99B"/>
+    <path d="M535 476c8-75 40-127 96-138m-63 138c5-70 27-115 63-138m0 138V338m63 138c-5-70-27-115-63-138m96 138c-8-75-40-127-96-138" stroke="#9F805B" stroke-width="4" opacity=".7"/>
+    <path d="M617 309h28v32h-28z" fill="#D4BB8C"/><path d="m613 310 18-21 18 21" fill="#D9C297"/><path d="M631 273v22m-7-14h14" stroke="#776448" stroke-width="3"/>
+    <path d="M539 508h185v98H539z" fill="#D5BC8F"/><path d="M551 513h158v89H551z" fill="url(#windows)"/><path d="M530 604h203v16H530z" fill="#B79A70"/>
+    <!-- church tower -->
+    <path d="M372 519h75V353h-75z" fill="#DBCAAA"/><path d="M363 353h94v-16h-94z" fill="#E6D6B4"/>
+    <path d="M382 336h55v-48h-55z" fill="#C6B08A"/><path d="m379 288 31-93 31 93" fill="#9B9586"/>
+    <path d="M410 176v24m-7-17h14" stroke="#5D655E" stroke-width="3"/>
+    <path d="M393 321v-17a17 17 0 0 1 34 0v17z" fill="#4A514D"/><path d="M389 382h41v47h-41z" fill="#B29D7B"/>
+    <circle cx="410" cy="406" r="15" fill="#F1E3C3"/><path d="M410 396v11l8 5" stroke="#6D624D" stroke-width="2"/>
+    <!-- dense waterfront blocks -->
+    <path d="M-30 652h144V546H-30z" fill="#D9C39A"/><path d="M-30 652h144V546H-30z" fill="url(#windows)"/>
+    <path d="M107 620h149V522H107z" fill="#DEC9A3"/><path d="M107 620h149V522H107z" fill="url(#windows)"/>
+    <path d="M260 642h117V560H260z" fill="#BCA27B"/><path d="M260 642h117V560H260z" fill="url(#windows)"/>
+    <path d="M752 648h132V559H752z" fill="#E4CBA0"/><path d="M752 648h132V559H752z" fill="url(#windows)"/>
+    <path d="M882 663h145V579H882z" fill="#D2B78D"/><path d="M882 663h145V579H882z" fill="url(#windows)"/>
+    <path d="M65 628h179v136H65z" fill="#D6BB8C"/><path d="M65 628h179v136H65z" fill="url(#windows)"/>
+    <path d="M246 642h191v137H246z" fill="#E4CD9F"/><path d="M246 642h191v137H246z" fill="url(#windows)"/>
+    <path d="M441 614h151v160H441z" fill="#D1B184"/><path d="M441 614h151v160H441z" fill="url(#windows)"/>
+    <path d="M597 638h181v145H597z" fill="#DFC79A"/><path d="M597 638h181v145H597z" fill="url(#windows)"/>
+    <path d="M781 666h148v110H781z" fill="#C8AB7E"/><path d="M781 666h148v110H781z" fill="url(#windows)"/>
+    <!-- traditional enclosed balconies -->
+    <path d="M112 661h48v42h-48zM304 662h46v42h-46zM635 654h46v42h-46zM802 679h46v42h-46z" fill="#315F55"/>
+    <path d="M119 667v29m13-29v29m13-29v29m166-29v29m13-29v29m13-29v29m305-37v29m13-29v29m13-29v29m141-4v29m13-29v29m13-29v29" stroke="#9EB69D" stroke-width="2"/>
+    <path d="M109 703h54m138 1h52m279-8h52m115 25h52" stroke="#243D3A" stroke-width="5"/>
+    <!-- bastion wall and promenade -->
+    <path d="M-20 743c266 26 422 28 645 9s324 3 395 24v105c-214-42-362-30-571-6S128 859-20 832z" fill="url(#stone)"/>
+    <path d="M-20 743c266 26 422 28 645 9s324 3 395 24v105c-214-42-362-30-571-6S128 859-20 832z" fill="url(#masonry)"/>
+    <path d="M-20 741c266 26 422 28 645 9s324 3 395 24" stroke="#F0DAB0" stroke-width="12"/>
+    <path d="M0 840c156 27 285 40 464 24s358-40 536 13" stroke="#183B42" stroke-width="9"/>
+    <path d="M112 764v28m210-16v30m210-31v29m210-41v30m151-13v29" stroke="#806B50" stroke-width="9"/>
+    <!-- water light and boats -->
+    <path d="M51 911h162m41 37h109m147-42h132m86 30h185M12 1025h179m91 51h221m156-57h224m-696 111h96m246 20h173m140-49h140" stroke="#4F91A6" stroke-width="3" stroke-linecap="round" opacity=".65"/>
+    <path d="M578 980h164l-24 31H603z" fill="#E5D5A3"/><path d="M590 990h142l-11 15H602z" fill="#BC4C34"/><path d="M659 836v143" stroke="#E1D5B6" stroke-width="4"/><path d="m652 848-66 119h66z" fill="#FAEDCE"/><path d="m666 871 49 96h-49z" fill="#DECDA5"/><path d="M590 1027c39-7 81-7 126 0" stroke="#83AAB3" stroke-width="3" opacity=".6"/>
+    <path d="M136 1082h114l-19 24h-76z" fill="#D8B969"/><path d="M147 1088h91l-9 12h-72z" fill="#0D48FE"/><path d="M189 1050v33m-12-17h26" stroke="#E1D5B6" stroke-width="3"/>
+    <path d="M146 1120h96m-65 12h37" stroke="#6195A7" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
