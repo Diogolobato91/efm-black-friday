@@ -19,7 +19,7 @@ Preserve Montserrat, logo real, azul #0D48FE, marinho #061938, laranja #F25C05 e
 Priorize leitura e contato no celular, benefícios claros, comparação dos planos, imagens reais autorizadas e CTAs nos pontos de decisão. Não fabrique descontos, depoimentos, popularidade, resultados, vagas ou urgência. Bandeiras não podem cobrir texto/controles; respeite movimento reduzido.
 
 ## Implementação e verificação
-A stack ainda não foi implementada. Escolha uma solução proporcional ao escopo; esta landing page não exige banco ou autenticação por padrão. Preserve a solução adotada nas próximas tarefas.
+A landing page usa Vite, JavaScript e CSS, sem banco ou autenticação. Preserve a solução adotada nas próximas tarefas.
 WhatsApp da campanha: 5591985106086. A seleção de idioma/plano acompanha o link; abrir o link não envia mensagem nem comprova matrícula. Analytics deve separar intenção de matrícula.
 Validação desta preparação: python3 scripts/validate_setup.py, com Python 3.11+. Quando houver interface, valide os fluxos afetados, 375/390, 768 e 1440 px, teclado, contraste e movimento reduzido. O checker atual só valida configuração e referências; não certifica página, SEO, conversão ou acessibilidade.
 Não executar snippets ou scripts de terceiros sem ler o código e o contexto. Preserve licenças e origem das skills; atualização de bundles exige atualizar o lock e conferir os recursos. Não usar testes com escrita nos sistemas reais da EFM.

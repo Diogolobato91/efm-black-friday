@@ -41,8 +41,10 @@ Depois de `npm run build`, execute `npm run preview:file`. O comando gera `/tmp/
 ## Conteúdo e manutenção
 
 - `config/campaign.json`: idiomas, planos, valores, bônus e premiação.
+- `config/media.json`: foto opcional do Vinícius na abertura e vídeo opcional da campanha; veja `docs/media.md`.
 - `config/brand.json` e `public/brand/tokens.css`: identidade EFM.
 - `src/main.js` / `src/style.css`: interface e interação.
+- `src/experience.css`, `src/motion.js` e `src/motion.css`: escolha interativa do plano e animações, com respeito à preferência por movimento reduzido.
 - `src/campaign.js`: seleção e construção dos links de WhatsApp.
 - `src/analytics.js`: eventos locais de intenção, sem pixels ou provedor configurado.
 - `docs/briefing.md`: oferta confirmada e pendências comerciais.

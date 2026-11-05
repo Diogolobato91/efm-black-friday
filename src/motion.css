@@ -1,0 +1,143 @@
+/* Content has no hidden/pre-reveal state. Motion is an optional enhancement. */
+:root {
+  --motion-ease: cubic-bezier(.2, .75, .25, 1);
+  --motion-duration: 620ms;
+}
+
+.efm-motion .motion-enter {
+  animation: efm-rise var(--motion-duration) var(--motion-ease) both;
+  animation-delay: var(--motion-delay, 0ms);
+}
+
+.efm-motion .motion-hero-enter .hero-copy > :is(.eyebrow, .black-friday, h1, .hero-description, .hero-actions) {
+  animation: efm-rise 680ms var(--motion-ease) both;
+}
+.efm-motion .motion-hero-enter .black-friday { animation-delay: 55ms; }
+.efm-motion .motion-hero-enter h1 { animation-delay: 110ms; }
+.efm-motion .motion-hero-enter .hero-description { animation-delay: 165ms; }
+.efm-motion .motion-hero-enter .hero-actions { animation-delay: 220ms; }
+.efm-motion .motion-hero-enter .hero-art {
+  animation: efm-scene-enter 850ms var(--motion-ease) both;
+}
+.efm-motion .motion-hero-enter .asterisk {
+  animation: efm-asterisk 950ms var(--motion-ease) 100ms both;
+}
+
+.efm-motion .floating-flag {
+  /* One finite drift cycle keeps the page calm after the initial impression. */
+  animation: efm-flag-drift 4400ms ease-in-out 1 both;
+  animation-play-state: paused;
+}
+.efm-motion .flag-two { animation-delay: 250ms; }
+.efm-motion .motion-scene-visible .floating-flag { animation-play-state: running; }
+
+.motion-route {
+  position: absolute;
+  top: 34%;
+  left: 7%;
+  width: 86%;
+  height: 28%;
+  color: var(--bf-text);
+  opacity: .68;
+  z-index: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+.efm-motion .motion-hero-enter .motion-route-line {
+  animation: efm-route-enter 1400ms var(--motion-ease) 150ms both;
+  transform-origin: 50% 50%;
+}
+.efm-motion .hero-art .floating-flag,
+.efm-motion .hero-art .travel-stamp { z-index: 1; }
+.efm-motion .hero-art figcaption { z-index: 3; }
+.efm-motion .hero-art:has(.hero-portrait) .motion-route { opacity: .28; }
+.efm-motion .hero-art:has(.hero-portrait) .hero-portrait { z-index: 1; }
+
+.efm-motion .motion-scene .malta-illustration {
+  transform: translate(var(--motion-x, 0px), var(--motion-y, 0px)) scale(1.025);
+  transition: transform 350ms var(--motion-ease);
+}
+.efm-motion .malta-poster.motion-enter img {
+  animation: efm-malta-arrive 1100ms var(--motion-ease) both;
+}
+
+.efm-motion :is(.button, .text-link, .header-contact, .select-plan) svg:last-child {
+  transition: transform 200ms var(--motion-ease);
+}
+.efm-motion :is(.button, .text-link, .header-contact, .select-plan):focus-visible svg:last-child {
+  transform: translateX(3px);
+}
+.efm-motion .plan-card {
+  transition: border-color 220ms, box-shadow 220ms;
+}
+.efm-motion .plan-card:focus-within {
+  box-shadow: 0 0 0 1px var(--efm-blue), 0 12px 30px #0003;
+}
+.efm-motion .faq-list summary > span {
+  transition: transform 200ms var(--motion-ease);
+}
+.efm-motion .language-toggle button {
+  transition: background-color 200ms, color 200ms, box-shadow 200ms;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .efm-motion :is(.button, .text-link, .header-contact, .select-plan):hover svg:last-child {
+    transform: translateX(3px);
+  }
+  .efm-motion .plan-card:not(.is-selected):hover {
+    box-shadow: 0 10px 30px #0004;
+    border-color: var(--soft);
+  }
+}
+
+/* No continuous animation loop or scroll/pointer hijacking. */
+@keyframes efm-rise {
+  from { opacity: .55; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes efm-scene-enter {
+  from { opacity: .7; transform: translateY(16px) rotate(.7deg); }
+  to { opacity: 1; transform: translateY(0) rotate(0deg); }
+}
+@keyframes efm-asterisk {
+  from { transform: rotate(-40deg) scale(.86); }
+  to { transform: rotate(0deg) scale(1); }
+}
+@keyframes efm-flag-drift {
+  0%, 100% { translate: 0 0; }
+  45% { translate: 0 -9px; }
+  70% { translate: 0 -3px; }
+}
+@keyframes efm-route-enter {
+  from { opacity: .15; transform: translate(-6px, 4px); }
+  to { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes efm-malta-arrive {
+  from { scale: 1.035; }
+  to { scale: 1; }
+}
+
+.efm-motion-paused :is(.motion-enter, .motion-hero-enter *, .floating-flag) {
+  animation-play-state: paused !important;
+}
+
+.efm-motion-reduced :is(.motion-enter, .motion-hero-enter *, .floating-flag, .malta-poster img) {
+  animation: none !important;
+}
+.efm-motion-reduced .motion-scene .malta-illustration {
+  transform: none;
+  transition: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .efm-motion :is(.motion-enter, .motion-hero-enter *, .floating-flag, .malta-poster img) {
+    animation: none !important;
+  }
+  .efm-motion .motion-scene .malta-illustration {
+    transform: none;
+    transition: none;
+  }
+  .efm-motion :is(.button, .text-link, .header-contact, .select-plan) svg:last-child {
+    transform: none !important;
+    transition: none;
+  }
+}

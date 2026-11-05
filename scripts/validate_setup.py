@@ -80,7 +80,7 @@ def main():
             ast.parse(path.read_text(), filename=str(path))
     for path in ("AGENTS.md", "docs/briefing.md", "docs/brand.md", "docs/agents.md", "docs/skills.md", ".agents/THIRD_PARTY_LICENSE.txt", "public/brand/tokens.css"):
         require((ROOT / path).is_file(), f"Missing reference: {path}")
-    print(json.dumps({"status": "passed", "agents": len(agents), "skills": len(skills), "locked_files": len(lock["files"]), "scope": "project preparation only; application not implemented"}, ensure_ascii=False))
+    print(json.dumps({"status": "passed", "agents": len(agents), "skills": len(skills), "locked_files": len(lock["files"]), "scope": "project configuration only; application not assessed"}, ensure_ascii=False))
 
 if __name__ == "__main__":
     try:

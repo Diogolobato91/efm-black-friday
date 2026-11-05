@@ -52,6 +52,47 @@ test('truthy non-boolean consent is rejected', () => {
   assert.equal(window.dataLayer.length, 0);
 });
 
+test('rhythm choices emit one local event per action with only allowed plan context', () => {
+  for (const plan of ['basic', 'pro', 'premium']) {
+    const choice = { section: 'plan-finder', language: 'english', plan };
+    const before = events.length;
+    assert.equal(trackEvent('rhythm_select', { ...choice, classesPerMonth: 4, source: 'private@example.com' }), true);
+    assert.equal(events.length, before + 1);
+    assert.deepEqual(events.at(-1).detail, { event: 'rhythm_select', ...choice });
+    assert.equal(Object.isFrozen(events.at(-1).detail), true);
+  }
+  assert.deepEqual(window.dataLayer, []);
+  assert.equal(trackEvent('rhythm_select', properties), false);
+  assert.equal(trackEvent('rhythm_select', { ...properties, section: 'plan-finder', plan: '16' }), false);
+  assert.equal(events.length, 3);
+  setAnalyticsConsent(true);
+  const choice = { section: 'plan-finder', language: 'spanish', plan: 'pro' };
+  assert.equal(trackEvent('rhythm_select', choice), true);
+  assert.equal(events.length, 4);
+  assert.deepEqual(window.dataLayer, [{ event: 'rhythm_select', ...choice }]);
+});
+
+test('new CTA positions preserve one event per action and consent boundaries', () => {
+  const positions = ['plan-finder', 'selected-plan', 'sticky-desktop'];
+  for (const section of positions) {
+    assert.equal(trackEvent('whatsapp_click', { ...properties, section }), true);
+  }
+  assert.equal(events.length, 3);
+  assert.deepEqual(window.dataLayer, []);
+
+  setAnalyticsConsent(true);
+  for (const section of positions) {
+    assert.equal(trackEvent('whatsapp_click', { ...properties, section }), true);
+  }
+  assert.equal(events.length, 6);
+  assert.deepEqual(window.dataLayer, positions.map((section) => ({ event: 'whatsapp_click', ...properties, section })));
+
+  setAnalyticsConsent(false);
+  assert.equal(trackEvent('rhythm_select', { ...properties, section: 'plan-finder' }), true);
+  assert.equal(window.dataLayer.length, 3);
+  assert.equal(events.length, 7);
+});
+
 test('invalid names, unknown IDs and free text never enter payloads', () => {
   for (const [name, props] of [
     ['enrollment_completed', properties],
