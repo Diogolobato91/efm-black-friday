@@ -86,9 +86,8 @@ button:focus-visible {
 .brand img {
   width:125px;
   height:58px;
-  object-fit:cover;
-  object-position:50% 50%;
-  border-radius:5px
+  object-fit:contain;
+  object-position:left center
 }
 .site-header nav {
   display:flex;
@@ -941,10 +940,8 @@ h3 {
 }
 .site-footer img {
   width:110px;
-  height:51px;
-  object-fit:cover;
-  object-position:50% 50%;
-  border-radius:5px
+  height:auto;
+  object-fit:contain
 }
 .site-footer p {
   font-size:11px;

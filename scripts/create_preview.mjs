@@ -10,7 +10,7 @@ const dataURL = async (path, type) => `data:${type};base64,${(await asset(path))
 const images = new Map([
   ['/brand/efm-white.svg', 'image/svg+xml'],
   ['/brand/efm-blue.svg', 'image/svg+xml'],
-  ['/brand/efm-navy.png', 'image/png'],
+  ['/brand/efm-transparent.png', 'image/png'],
   ['/images/malta-illustration.svg', 'image/svg+xml'],
   ['/images/vinicius-malta-hero.webp', 'image/webp'],
   ['/images/vinicius-malta-coast.webp', 'image/webp'],

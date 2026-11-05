@@ -33,7 +33,7 @@ const faq = [
 
 document.querySelector('#app').innerHTML = `
 <header class="site-header wrap">
-  <a class="brand" href="#inicio" aria-label="EFM Languages — início"><img src="/brand/efm-navy.png" alt="EFM Languages" width="125" height="58"></a>
+  <a class="brand" href="#inicio" aria-label="EFM Languages — início"><img src="/brand/efm-transparent.png" alt="EFM Languages" width="125" height="58"></a>
   <nav aria-label="Navegação principal"><a href="#planos">Planos</a><a href="#malta">Destino Malta</a><a href="#duvidas">Dúvidas</a></nav>
   <a class="header-contact" data-whatsapp data-section="header" href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">Fale com a EFM ${arrow}</a>
 </header>
@@ -86,11 +86,11 @@ ${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'CONCORRA A UM INTERCÂMBIO EM 
 <div class="benefit-strip"><div class="wrap strip-inner"><span>${suitcase} Concorra a <strong>2 semanas de INTERCÂMBIO em Malta</strong></span><span>${globe} Aprenda online</span><span>${check} Ganhe 1 mês do outro idioma</span></div></div>
 <section class="section wrap story-section" id="beneficios">
   <div class="story-layout">
-    <div class="section-heading story-heading"><p class="eyebrow">DA PRIMEIRA AULA AO PRÓXIMO DESTINO</p><h2>Aprenda online.<br><span>Seu próximo destino pode ser Malta.</span></h2><p>A Black Friday EFM une aprendizado, a experiência de um segundo idioma e a oportunidade de viver duas semanas de intercâmbio.</p><a class="text-link" href="#seu-plano">Quero participar ${arrow}</a></div>
+    <div class="section-heading story-heading"><p class="eyebrow">DA PRIMEIRA AULA AO PRÓXIMO DESTINO</p><h2>Uma escolha agora.<br><span>Novas possibilidades depois.</span></h2><p>A Black Friday EFM começa com um idioma. Até onde essa decisão pode levar você é o que vem a seguir.</p><span class="story-scroll-hint">CONTINUE ROLANDO PARA DESCOBRIR <i aria-hidden="true">↓</i></span></div>
     <div class="benefit-grid story-track">
-      <article class="story-card"><span class="number">01</span><span class="story-tag">APRENDA</span><h3>No seu ritmo.<br>Onde você estiver.</h3><p>Escolha 4, 8 ou 12 aulas online por mês e comece com uma rotina que realmente cabe na sua vida.</p></article>
-      <article class="story-card"><span class="number">02</span><span class="story-tag">EXPERIMENTE</span><h3>Comece com um.<br>Descubra outro.</h3><p>Você ganha um mês do outro idioma, com uma aula por semana, para ampliar suas possibilidades desde o início.</p></article>
-      <article class="story-card story-card-malta"><span class="number">03</span><span class="story-tag">CONCORRA A MALTA</span><h3>Duas semanas<br>de intercâmbio.</h3><p>Qualquer matrícula de inglês ou espanhol participa do sorteio. Seu plano define quantas chances você recebe.</p></article>
+      <article class="story-card"><span class="number">01</span><span class="story-tag">COMECE</span><h3>Escolha seu idioma.<br>Encontre seu ritmo.</h3><p>Inglês ou espanhol, com aulas online e uma rotina que se adapta ao seu momento.</p></article>
+      <article class="story-card"><span class="number">02</span><span class="story-tag">DESCUBRA</span><h3>Existe algo além<br>da primeira escolha.</h3><p>Sua matrícula abre uma nova experiência para você explorar durante a campanha.</p></article>
+      <article class="story-card story-card-malta"><span class="number">03</span><span class="story-tag">IMAGINE</span><h3>Malta pode ser<br>o próximo capítulo.</h3><p>Continue para descobrir como o aprendizado pode levar você muito além da tela.</p></article>
     </div>
   </div>
 </section>
@@ -142,7 +142,7 @@ ${marquee(['COMECE COM UM IDIOMA', 'EXPERIMENTE DOIS', 'UM MÊS DE BÔNUS', 'NOV
 <section class="final-section section"><div class="wrap"><p class="eyebrow">BLACK FRIDAY EFM · CONCORRA A MALTA</p><h2>Aprenda daqui.<br><span>Concorra a Malta.</span></h2><p>Escolha o idioma e o seu ritmo.<br>Sua matrícula já coloca você na campanha.</p>${cta('Quero concorrer a Malta', 'final')}<p class="final-selection" data-current-selection></p><p class="commercial">A partir de R$ 350/mês + taxa inicial de R$ 199,90.<br>Primeira mensalidade em dezembro.</p></div></section>
 ${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'SEU PRÓXIMO IDIOMA COMEÇA AGORA', 'CONCORRA A MALTA'], 'marquee-final marquee-reverse')}
 </main>
-<footer class="wrap site-footer"><a href="#inicio" aria-label="EFM Languages — voltar ao início"><img src="/brand/efm-navy.png" alt="EFM Languages" width="110" height="51"></a><p>English For Me.<br>Novos idiomas. Novas possibilidades.</p><div><span>ATENDIMENTO DA CAMPANHA</span><a data-whatsapp data-section="footer" href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">(91) 98510-6086 ${arrow}</a></div><p class="footer-note">Regulamento em etapa final de preparação. A matrícula e a participação são concluídas conforme orientação no atendimento.</p></footer>
+<footer class="wrap site-footer"><a href="#inicio" aria-label="EFM Languages — voltar ao início"><img src="/brand/efm-transparent.png" alt="EFM Languages" width="110" height="66"></a><p>English For Me.<br>Novos idiomas. Novas possibilidades.</p><div><span>ATENDIMENTO DA CAMPANHA</span><a data-whatsapp data-section="footer" href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">(91) 98510-6086 ${arrow}</a></div><p class="footer-note">Regulamento em etapa final de preparação. A matrícula e a participação são concluídas conforme orientação no atendimento.</p></footer>
 <div class="mobile-sticky"><span data-current-selection></span>${cta('Falar com a EFM', 'sticky')}</div>
 <aside class="desktop-sticky" aria-label="Continuar com o plano escolhido" hidden><div><span class="small-label">SEU PRÓXIMO PASSO</span><strong data-current-selection></strong><small>+ R$ 199,90 de taxa inicial · 1ª mensalidade em dezembro</small></div>${cta('Continuar no WhatsApp', 'sticky-desktop')}</aside>`;
 
