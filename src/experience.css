@@ -162,6 +162,10 @@ body { position:relative; }
 .marquee-group span { font-size:clamp(22px,2.6vw,40px);font-weight:900;line-height:1;letter-spacing:-1.3px; }
 .marquee-group b { font-size:clamp(22px,2.3vw,36px);font-weight:900;line-height:1; }
 .campaign-marquee:hover .marquee-track { animation-play-state:paused; }
+.campaign-marquee.marquee-navy { margin-block:18px;background:#07183b;color:var(--efm-orange);border-block:1px solid #f25c0588;transform:rotate(.55deg) scale(1.015); }
+.campaign-marquee.marquee-offset { margin-block:-8px 12px;transform:rotate(.85deg) scale(1.02); }
+.campaign-marquee.marquee-final { margin-top:-18px;margin-bottom:46px;transform:rotate(-.35deg) scale(1.015); }
+.campaign-marquee.marquee-reverse .marquee-track { animation-direction:reverse;animation-duration:34s; }
 @keyframes efm-marquee { to { transform:translateX(-50%); } }
 
 .malta-gallery { position:relative;height:300vh;background:#06080d; }

@@ -11,7 +11,9 @@ const images = new Map([
   ['/brand/efm-white.svg', 'image/svg+xml'],
   ['/brand/efm-blue.svg', 'image/svg+xml'],
   ['/images/malta-illustration.svg', 'image/svg+xml'],
-  ['/images/vinicius-malta-hero.jpg', 'image/jpeg'],
+  ['/images/vinicius-malta-hero.webp', 'image/webp'],
+  ['/images/vinicius-malta-coast.webp', 'image/webp'],
+  ['/images/malta-sunset.webp', 'image/webp'],
 ]);
 const imageURLs = new Map(
   await Promise.all([...images].map(async ([path, type]) => [path, await dataURL(path, type)])),
