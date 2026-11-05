@@ -190,6 +190,7 @@ body { position:relative; }
 .malta-gallery-copy h2 { margin:0;color:#fff;font-size:clamp(46px,7.2vw,105px);font-weight:850;line-height:.91;letter-spacing:-5px; }
 .malta-gallery-copy h2 em { color:var(--efm-orange);font-style:normal; }
 .malta-gallery-copy p { width:min(540px,90%);margin:24px auto 0;color:#f5f6f8;font-size:15px;line-height:1.65; }
+.benefit-strip strong { color:#fff;font-weight:850;letter-spacing:.1px; }
 .gallery-credit { position:absolute;left:clamp(24px,4vw,70px);bottom:22px;z-index:4;margin:0;color:#d8dee8;font-size:8px;font-weight:700;letter-spacing:2px; }
 
 .malta-poster { border-radius:24px 150px 24px 24px;box-shadow:0 34px 75px #0008; }
