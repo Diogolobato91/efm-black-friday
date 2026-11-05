@@ -26,6 +26,7 @@ const faq = [
   ['Como funciona o bônus do outro idioma?', 'Você ganha um mês do outro idioma, com uma aula por semana. Depois, decide se continua nos dois idiomas ou apenas no inicialmente escolhido. Consulte a equipe sobre as condições de continuidade.'],
   ['Inglês e espanhol participam do sorteio?', 'Sim. Matrículas em qualquer uma das duas modalidades participam da promoção. Os planos de 4, 8 e 12 aulas por mês têm, respectivamente, 3, 5 e 7 chances.'],
   ['A matrícula garante a viagem para Malta?', 'Não. A viagem é uma premiação por sorteio. O prêmio inclui curso de duas semanas, hospedagem, seguro viagem, transfer do aeroporto para a acomodação e € 200 de ajuda de custo. Passagem aérea não incluída.'],
+  ['Quando será o sorteio?', 'O sorteio será realizado em 10 de dezembro de 2026, pelo Instagram da EFM.'],
   ['Quais condições conhecidas se aplicam ao prêmio?', 'O prêmio não é transferível. Para aproveitar a premiação, é necessário manter matrícula ativa e mensalidades em dia até o mês da viagem. O regulamento será tratado na etapa final.'],
   ['Já sou aluno EFM. Posso participar?', 'Sim. Indique um novo aluno e também concorra ao intercâmbio. Fale com a equipe para saber como participar.'],
   ['Como concluo minha matrícula?', 'Escolha seu idioma e plano e fale com a EFM no WhatsApp. A equipe orienta os próximos passos e conclui a matrícula no atendimento. Abrir o link não conclui a matrícula nem confirma participação no sorteio.'],

@@ -100,10 +100,10 @@
     "drawDate": {
       "day": 10,
       "month": 12,
-      "year": null,
+      "year": 2026,
       "time": null
     },
-    "instagram": null,
+    "instagram": "Instagram da EFM",
     "regulationStatus": "pending-final-stage"
   },
   "referral": {

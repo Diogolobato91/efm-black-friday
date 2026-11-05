@@ -53,8 +53,10 @@ Depois de `npm run build`, execute `npm run preview:file`. O comando gera `/tmp/
 
 Montserrat é hospedada localmente via Fontsource (SIL Open Font License; licença no pacote). As logos são os SVGs existentes da EFM. A ilustração de Valletta é original deste projeto. O hero e a seção de Malta usam uma fotografia original do Vinícius fornecida pela EFM; não é depoimento nem imagem gerada.
 
-## Antes da publicação
+## Publicação no Netlify
 
-A primeira versão usa `noindex` para revisão. Confirmar domínio e hospedagem, revisar metadados finais e indexação, finalizar regulamento e informações comerciais pendentes. Não há pixel GA4/Meta nem matrícula/conversa confirmada por clique. Uma integração futura exige IDs reais, definição de consentimento e validação de recepção no provedor.
+O repositório inclui `netlify.toml` com build `npm run build`, diretório público `dist`, Node.js 22.12 e cabeçalhos básicos de segurança. No Netlify, basta importar o repositório e selecionar a branch desejada; a configuração é lida automaticamente.
 
-Esta implementação não faz deploy, não publica regulamento e não aplica mudanças nos sistemas reais da EFM.
+A página está liberada para indexação. O sorteio está informado para 10 de dezembro de 2026, pelo Instagram da EFM. O regulamento permanece em preparação e deve ser publicado quando finalizado. Não há pixel GA4/Meta nem matrícula/conversa confirmada por clique. Uma integração futura exige IDs reais, definição de consentimento e validação de recepção no provedor.
+
+Esta implementação não realiza o deploy nem aplica mudanças nos sistemas acadêmicos da EFM.
