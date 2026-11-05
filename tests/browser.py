@@ -236,7 +236,11 @@ def exercise_motion(browser, results):
             assert_content_available(page)
             assert page.locator('.motion-route').count() == 1
             assert page.locator('.hero h1').evaluate("e=>getComputedStyle(e).animationName") == 'efm-rise'
-            assert page.evaluate("document.getAnimations().every(a=>a.effect.getTiming().iterations !== Infinity)"), 'Decorative motion must finish'
+            # The campaign tape is intentionally continuous. No other decorative
+            # animation may loop forever, and reduced-motion still disables it.
+            assert page.evaluate("""document.getAnimations()
+                .filter(a=>a.effect.getTiming().iterations === Infinity)
+                .every(a=>getComputedStyle(a.effect.target).animationName === 'efm-marquee')"""), 'Only the campaign tape may loop'
             if without_observer:
                 assert not page.evaluate("'IntersectionObserver' in window")
                 # Full decision flow remains available with no observer API.
