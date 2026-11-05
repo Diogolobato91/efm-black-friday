@@ -15,11 +15,14 @@ export function initMotion() {
   const decorations = new Set();
   let observer;
   let sceneObserver;
+  let storyObserver;
   let frame = 0;
+  let depthFrame = 0;
   let pendingScene = null;
   let pendingX = 0;
   let pendingY = 0;
   let destroyed = false;
+  const depthScenes = new Set();
 
   root.classList.add('efm-motion');
 
@@ -32,6 +35,24 @@ export function initMotion() {
   function resetScene(scene) {
     scene.style.removeProperty('--motion-x');
     scene.style.removeProperty('--motion-y');
+  }
+
+  function updateDepth() {
+    depthFrame = 0;
+    if (destroyed || reduced.matches || document.hidden) return;
+    for (const scene of depthScenes) {
+      if (!scene.isConnected) {
+        depthScenes.delete(scene);
+        continue;
+      }
+      const rect = scene.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(1, (innerHeight - rect.top) / (innerHeight + rect.height)));
+      scene.style.setProperty('--scroll-progress', progress.toFixed(3));
+    }
+  }
+
+  function scheduleDepth() {
+    if (!depthFrame) depthFrame = requestAnimationFrame(updateDepth);
   }
 
   function reveal(element) {
@@ -103,6 +124,9 @@ export function initMotion() {
         if (!entry.isIntersecting) scene.leave();
       }
     }, { threshold: 0 });
+    storyObserver = new IntersectionObserver((entries) => {
+      for (const entry of entries) entry.target.classList.toggle('is-active', entry.isIntersecting);
+    }, { threshold: 0.24, rootMargin: '-24% 0px -42% 0px' });
   }
 
   function refresh() {
@@ -126,6 +150,12 @@ export function initMotion() {
       addRoute(hero);
       addScene(hero);
     });
+    document.querySelectorAll('.hero-art.has-portrait, .scroll-depth').forEach((scene) => depthScenes.add(scene));
+    document.querySelectorAll('.story-card').forEach((card, index) => {
+      if (storyObserver) storyObserver.observe(card);
+      else card.classList.toggle('is-active', index === 0);
+    });
+    scheduleDepth();
     for (const [scene, handlers] of scenes) {
       if (scene.isConnected) continue;
       sceneObserver?.unobserve(scene);
@@ -140,6 +170,10 @@ export function initMotion() {
     if (reduced.matches || !finePointer.matches) {
       stopFrame();
       for (const scene of scenes.keys()) resetScene(scene);
+    }
+    if (reduced.matches) {
+      depthScenes.forEach((scene) => scene.style.removeProperty('--scroll-progress'));
+      document.querySelectorAll('.story-card').forEach((card) => card.classList.add('is-active'));
     }
     if (reduced.matches) {
       observer?.disconnect();
@@ -165,6 +199,8 @@ export function initMotion() {
   finePointer.addEventListener('change', syncPreference);
   document.addEventListener('visibilitychange', syncVisibility);
   document.addEventListener('focusin', onFocus);
+  addEventListener('scroll', scheduleDepth, { passive: true });
+  addEventListener('resize', scheduleDepth, { passive: true });
   function onFocus(event) {
     // Keyboard focus should never wait for a decorative entrance to finish.
     const element = event.target.closest?.('.motion-enter');
@@ -183,10 +219,14 @@ export function initMotion() {
       stopFrame();
       observer?.disconnect();
       sceneObserver?.disconnect();
+      storyObserver?.disconnect();
       reduced.removeEventListener('change', syncPreference);
       finePointer.removeEventListener('change', syncPreference);
       document.removeEventListener('visibilitychange', syncVisibility);
       document.removeEventListener('focusin', onFocus);
+      removeEventListener('scroll', scheduleDepth);
+      removeEventListener('resize', scheduleDepth);
+      if (depthFrame) cancelAnimationFrame(depthFrame);
       for (const [scene, handlers] of scenes) {
         scene.removeEventListener('pointermove', handlers.move);
         scene.removeEventListener('pointerleave', handlers.leave);
@@ -203,6 +243,8 @@ export function initMotion() {
       scenes.clear();
       elements.clear();
       decorations.clear();
+      depthScenes.forEach((scene) => scene.style.removeProperty('--scroll-progress'));
+      depthScenes.clear();
     },
   };
 }

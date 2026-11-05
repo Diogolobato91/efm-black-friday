@@ -51,7 +51,7 @@ Depois de `npm run build`, execute `npm run preview:file`. O comando gera `/tmp/
 - `docs/analytics.md`: eventos, consentimento e limites de mensuração.
 - `docs/qa.md`: verificações e limitações da primeira versão.
 
-Montserrat é hospedada localmente via Fontsource (SIL Open Font License; licença no pacote). As logos são os SVGs existentes da EFM. A ilustração de Valletta é original deste projeto; não é fotografia nem depoimento.
+Montserrat é hospedada localmente via Fontsource (SIL Open Font License; licença no pacote). As logos são os SVGs existentes da EFM. A ilustração de Valletta é original deste projeto. O hero e a seção de Malta usam uma fotografia original do Vinícius fornecida pela EFM; não é depoimento nem imagem gerada.
 
 ## Antes da publicação
 

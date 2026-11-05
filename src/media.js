@@ -16,7 +16,7 @@ export function mediaUrl(value) {
 export function portraitMarkup(portrait = {}) {
   const src = mediaUrl(portrait.src);
   if (!src) return '';
-  return `<div class="hero-portrait"><img src="${escapeText(src)}" alt="${escapeText(portrait.alt || 'Vinícius, da EFM Languages')}" width="720" height="900" decoding="async"><span>${escapeText(portrait.caption || 'Vinícius · EFM Languages')}</span></div>`;
+  return `<div class="hero-portrait"><img src="${escapeText(src)}" alt="${escapeText(portrait.alt || 'Vinícius, da EFM Languages')}" width="1080" height="1283" decoding="async" fetchpriority="high"><span>${escapeText(portrait.caption || 'Vinícius · EFM Languages')}</span></div>`;
 }
 
 export function videoMarkup(video = {}) {

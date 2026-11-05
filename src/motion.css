@@ -51,7 +51,7 @@
 .efm-motion .hero-art .travel-stamp { z-index: 1; }
 .efm-motion .hero-art figcaption { z-index: 3; }
 .efm-motion .hero-art:has(.hero-portrait) .motion-route { opacity: .28; }
-.efm-motion .hero-art:has(.hero-portrait) .hero-portrait { z-index: 1; }
+.efm-motion .hero-art:has(.hero-portrait) .hero-portrait { z-index: 0; }
 
 .efm-motion .motion-scene .malta-illustration {
   transform: translate(var(--motion-x, 0px), var(--motion-y, 0px)) scale(1.025);

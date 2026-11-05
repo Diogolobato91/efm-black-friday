@@ -7,8 +7,15 @@ const output = resolve(process.argv[2] || '/tmp/efm-black-friday-review/preview.
 let html = await readFile(resolve(root, 'dist/index.html'), 'utf8');
 const asset = async (path) => readFile(resolve(root, 'dist', path.replace(/^\//, '')));
 const dataURL = async (path, type) => `data:${type};base64,${(await asset(path)).toString('base64')}`;
-const images = ['/brand/efm-white.svg', '/brand/efm-blue.svg', '/images/malta-illustration.svg'];
-const imageURLs = new Map(await Promise.all(images.map(async (path) => [path, await dataURL(path, 'image/svg+xml')])));
+const images = new Map([
+  ['/brand/efm-white.svg', 'image/svg+xml'],
+  ['/brand/efm-blue.svg', 'image/svg+xml'],
+  ['/images/malta-illustration.svg', 'image/svg+xml'],
+  ['/images/vinicius-malta-hero.jpg', 'image/jpeg'],
+]);
+const imageURLs = new Map(
+  await Promise.all([...images].map(async ([path, type]) => [path, await dataURL(path, type)])),
+);
 const jsPath = html.match(/<script[^>]*src="([^"]+)"[^>]*><\/script>/)?.[1];
 const stylesheets = [...html.matchAll(/<link[^>]*href="([^"]+\.css)"[^>]*>/g)];
 if (!jsPath || !stylesheets.length) throw new Error('Build assets not found. Run npm run build first.');

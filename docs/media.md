@@ -1,13 +1,13 @@
 # Foto e vídeo do Vinícius
 
-Os campos em `config/media.json` são opcionais. Com `src` vazio, a página não exibe espaço vazio ou imagem substituta para o Vinícius. Use arquivos reais autorizados pela EFM; as capturas do Instagram são referências visuais.
+Os campos em `config/media.json` são opcionais. Com `src` vazio, a página não exibe espaço vazio ou imagem substituta para o Vinícius. Use apenas arquivos reais autorizados pela EFM.
 
 ## Foto na abertura
 
-Coloque uma foto otimizada em `public/images/` e informe seu endereço em `heroPortrait.src`, por exemplo `/images/vinicius-hero.webp`. Use uma foto vertical, nítida e, se possível, recortada com fundo transparente. Ajuste o texto alternativo em `alt` e a legenda em `caption`.
+A campanha usa `public/images/vinicius-malta-hero.jpg`, selecionada da pasta de Malta fornecida pela EFM no Google Drive. A fotografia aparece no hero e na seção do sorteio com enquadramentos diferentes. A imagem original foi mantida, sem alteração de rosto ou corpo. O texto alternativo está em `heroPortrait.alt` e a identificação da foto em `caption`.
 
 ## Vídeo da campanha
 
 Coloque o vídeo em `public/videos/` e configure `campaignVideo.src`, por exemplo `/videos/vinicius-campanha.mp4`. É possível informar também `poster`, `title` e `description`. Forneça legendas em WebVTT no campo `captions` e uma transcrição acessível junto ao vídeo antes da publicação. O vídeo não inicia automaticamente.
 
-Os exemplos indicam caminhos de configuração: os arquivos ainda precisam ser fornecidos e adicionados ao projeto.
+O vídeo continua opcional e ainda depende de arquivo, legendas e transcrição antes da publicação.
