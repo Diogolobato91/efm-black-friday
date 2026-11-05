@@ -19,6 +19,14 @@ test('portrait preserves a supplied local original and escapes its attributes', 
   assert.equal(escapeText("<&'"), '&lt;&amp;&#39;');
 });
 
+test('offline preview accepts embedded image data without enabling arbitrary data URLs', () => {
+  const embedded = 'data:image/webp;base64,UklGRg==';
+  assert.equal(mediaUrl(embedded), embedded);
+  assert.match(portraitMarkup({ src: embedded, alt: 'Malta' }), /data:image\/webp;base64,UklGRg==/);
+  assert.equal(mediaUrl('data:text/html;base64,PHNjcmlwdD4='), '');
+  assert.equal(mediaUrl('data:image/webp,not-base64'), '');
+});
+
 test('optional video is user-controlled, lazy and supports a captions track', () => {
   const html = videoMarkup({ src: '/videos/campaign.mp4', poster: '/images/video.webp', captions: '/videos/campaign.vtt', title: 'Vinícius apresenta' });
   assert.match(html, /controls playsinline preload="none"/);

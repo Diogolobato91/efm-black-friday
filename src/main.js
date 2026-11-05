@@ -74,8 +74,9 @@ document.querySelector('#app').innerHTML = `
   <figure class="hero-art ${mediaUrl(media.heroPortrait.src) ? 'has-portrait' : ''}">
     <div class="art-top"><span>PRÓXIMA PARADA?</span><span>35°53′ N · 14°30′ E</span></div>
     <div class="art-title">MALTA<span>Uma nova perspectiva.</span></div>
-    <img class="malta-illustration" src="/images/malta-illustration.svg" alt="Ilustração de Valletta, em Malta, com construções históricas à beira do mar" width="1000" height="1200" fetchpriority="high">
-    ${portraitMarkup(media.heroPortrait)}
+    ${mediaUrl(media.heroPortrait.src)
+      ? portraitMarkup(media.heroPortrait)
+      : '<img class="malta-illustration" src="/images/malta-illustration.svg" alt="Ilustração de Valletta, em Malta, com construções históricas à beira do mar" width="1000" height="1200" fetchpriority="high">'}
     <div class="floating-flag flag-one">${flag('uk')}</div><div class="floating-flag flag-two">${flag('es')}</div>
     <div class="travel-stamp"><span>CONCORRA A</span><strong>2 semanas</strong><span>DE INTERCÂMBIO</span></div>
     <figcaption>Malta · seu próximo destino pode começar aqui. Passagem aérea não incluída.</figcaption>

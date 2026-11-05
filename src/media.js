@@ -6,6 +6,7 @@ export function mediaUrl(value) {
   if (typeof value !== 'string' || !value.trim()) return '';
   const candidate = value.trim();
   if (/[\x00-\x20\\]/.test(candidate)) return '';
+  if (/^data:image\/(?:avif|gif|jpe?g|png|svg\+xml|webp);base64,[a-z0-9+/=]+$/i.test(candidate)) return candidate;
   if (candidate.startsWith('/') && !candidate.startsWith('//')) return candidate;
   try {
     const url = new URL(candidate);
