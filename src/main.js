@@ -48,6 +48,14 @@ document.querySelector('#app').innerHTML = `
   <span class="country-orb orbit-eight">${flag('de')}</span>
   <span class="country-orb orbit-nine">${flag('gr')}</span>
   <span class="country-orb orbit-ten">${flag('mt')}</span>
+  <span class="country-orb orb-small orbit-eleven">${flag('uk')}</span>
+  <span class="country-orb orb-small orbit-twelve">${flag('es')}</span>
+  <span class="country-orb orbit-thirteen">${flag('pt')}</span>
+  <span class="country-orb orb-small orbit-fourteen">${flag('it')}</span>
+  <span class="country-orb orbit-fifteen">${flag('ie')}</span>
+  <span class="country-orb orb-small orbit-sixteen">${flag('fr')}</span>
+  <span class="country-orb orbit-seventeen">${flag('de')}</span>
+  <span class="country-orb orb-small orbit-eighteen">${flag('gr')}</span>
 </div>
 <main id="conteudo">
 <section class="hero wrap" id="inicio" aria-labelledby="hero-heading">

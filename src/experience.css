@@ -112,7 +112,7 @@ body { position:relative; }
 .hero-art.has-portrait { height:min(690px,72dvh);min-height:580px;border-radius:20px 190px 20px 20px;background:#111827;box-shadow:0 34px 80px #0008; }
 .hero-art.has-portrait .malta-illustration { display:none; }
 .hero-art.has-portrait .hero-portrait { position:absolute;inset:0;z-index:0;overflow:hidden; }
-.hero-art.has-portrait .hero-portrait img { width:100%;height:calc(100% + 40px);object-fit:cover;object-position:49% 42%;filter:saturate(.92) contrast(1.04);transform:translate3d(0,calc((var(--scroll-progress,.35) - .5) * 32px),0) scale(1.055);will-change:transform; }
+.hero-art.has-portrait .hero-portrait img { width:100%;height:calc(100% + 40px);object-fit:cover;object-position:50% 50%;filter:saturate(1.04) contrast(1.04);transform:translate3d(0,calc((var(--scroll-progress,.35) - .5) * 32px),0) scale(1.055);will-change:transform; }
 .hero-art.has-portrait .hero-portrait>span { display:none; }
 .hero-art.has-portrait:before { content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#061938b8 0%,#06193820 34%,#06193808 55%,#061938d9 100%),linear-gradient(90deg,#06193855,transparent 58%);pointer-events:none; }
 .hero-art.has-portrait .art-top,.hero-art.has-portrait .art-title { z-index:2; }
@@ -206,6 +206,7 @@ body { position:relative; }
 .country-orb { --travel:140px;--tilt:0deg;--drift:9px;--duration:7s;position:absolute;display:grid;place-items:center;width:58px;height:58px;padding:6px;border:1px solid #ffffff40;border-radius:50% 50% 48% 52%;background:linear-gradient(145deg,#172541e8,#091225d9);box-shadow:0 16px 38px #0008,0 0 0 5px #ffffff08;opacity:.7;backdrop-filter:blur(9px);transform:translate3d(0,calc((var(--page-progress,0) - .5) * var(--travel)),0) rotate(var(--tilt));animation:efm-country-float var(--duration) ease-in-out infinite alternate; }
 .country-orb:after { content:'';position:absolute;left:50%;bottom:-7px;width:12px;height:12px;border-right:1px solid #ffffff32;border-bottom:1px solid #ffffff32;background:#0c172c;transform:translateX(-50%) rotate(45deg);z-index:-1; }
 .country-orb .flag { width:100%;height:100%;box-shadow:inset 0 0 0 1px #ffffff29; }
+.country-orb.orb-small { width:43px;height:43px;padding:5px;opacity:.55;--drift:7px; }
 .orbit-one { left:1.2%;top:520px;--travel:90px;--tilt:-8deg;--duration:6.5s; }
 .orbit-two { right:1.5%;top:14%;--travel:-140px;--tilt:7deg;--duration:8s; }
 .orbit-three { left:.8%;top:27%;--travel:-150px;--tilt:5deg;--duration:7.4s; }
@@ -216,6 +217,14 @@ body { position:relative; }
 .orbit-eight { right:1.1%;top:79%;--travel:-120px;--tilt:6deg;--duration:6.7s; }
 .orbit-nine { left:1.4%;top:87%;--travel:145px;--tilt:7deg;--duration:8.5s; }
 .orbit-ten { right:1%;top:94%;--travel:-100px;--tilt:-8deg;--duration:7.1s; }
+.orbit-eleven { right:5.2%;top:7%;--travel:75px;--tilt:6deg;--duration:9.2s; }
+.orbit-twelve { left:5%;top:20%;--travel:-92px;--tilt:-5deg;--duration:8.9s; }
+.orbit-thirteen { right:1.8%;top:32%;--travel:105px;--tilt:7deg;--duration:10s; }
+.orbit-fourteen { left:4.8%;top:44%;--travel:-85px;--tilt:-7deg;--duration:9.5s; }
+.orbit-fifteen { right:4.7%;top:57%;--travel:95px;--tilt:5deg;--duration:10.4s; }
+.orbit-sixteen { left:5.1%;top:67%;--travel:-78px;--tilt:-6deg;--duration:9.7s; }
+.orbit-seventeen { right:1.7%;top:84%;--travel:110px;--tilt:8deg;--duration:10.2s; }
+.orbit-eighteen { left:5.3%;top:97%;--travel:-70px;--tilt:-5deg;--duration:9.3s; }
 .flag-mt { background:linear-gradient(90deg,#fff 0 50%,#cf142b 50%); }
 .flag-mt:after { content:'';position:absolute;left:17%;top:17%;width:7px;height:7px;border:1px solid #8d9299;background:linear-gradient(90deg,transparent 38%,#8d9299 38% 62%,transparent 62%),linear-gradient(0deg,transparent 38%,#8d9299 38% 62%,transparent 62%); }
 .flag-it { background:linear-gradient(90deg,#009246 0 33.33%,#fff 33.33% 66.66%,#ce2b37 66.66%); }
@@ -244,6 +253,7 @@ body { position:relative; }
   .story-card .number { margin-bottom:42px;font-size:58px; }
   .story-card h3 { font-size:25px; }
   .country-orb { width:46px;height:46px;opacity:.54; }
+  .orbit-eleven,.orbit-twelve,.orbit-fourteen,.orbit-sixteen,.orbit-eighteen { display:none; }
   .malta-gallery-grid { inset:40px 28px; }
 }
 
@@ -272,7 +282,7 @@ body { position:relative; }
   .malta-poster { border-radius:18px 92px 18px 18px; }
   .plans-section:before { display:none; }
   .country-orb { width:38px;height:38px;padding:4px;opacity:.45; }
-  .orbit-two,.orbit-five,.orbit-six,.orbit-eight,.orbit-ten { display:none; }
+  .orbit-two,.orbit-five,.orbit-six,.orbit-eight,.orbit-ten,.orbit-eleven,.orbit-twelve,.orbit-fourteen,.orbit-fifteen,.orbit-sixteen,.orbit-eighteen { display:none; }
   .orbit-one { left:-9px;top:22%; }
   .orbit-three { left:-8px;top:55%; }
   .orbit-four { right:-9px;top:76%; }
