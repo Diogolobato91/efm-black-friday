@@ -2,7 +2,7 @@
 const eventNames = new Set(['language_select', 'plan_select', 'rhythm_select', 'whatsapp_click']);
 const sections = new Set([
   'header', 'hero', 'benefits', 'bonus', 'malta', 'how-it-works', 'plans',
-  'referral', 'faq', 'final', 'sticky', 'footer', 'plan-finder', 'selected-plan', 'sticky-desktop',
+  'faq', 'final', 'sticky', 'footer', 'plan-finder', 'selected-plan',
 ]);
 const languages = new Set(['english', 'spanish']);
 const plans = new Set(['basic', 'pro', 'premium']);

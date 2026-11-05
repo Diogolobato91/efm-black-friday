@@ -6,7 +6,7 @@ export function initMotion() {
   const revealSelector = [
     '.section-heading', '.benefit-grid article', '.plans-heading', '.plan-card',
     '.plan-conditions > div', '.plan-finder', '.malta-poster', '.malta-copy',
-    '.bonus-layout > div', '.steps li', '.referral-section', '.faq-section > div',
+    '.bonus-layout > div', '.steps li', '.faq-section > div',
     '.final-section > .wrap', '.vinicius-section > div',
   ].join(',');
   const seen = new WeakSet();

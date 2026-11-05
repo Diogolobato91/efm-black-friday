@@ -73,24 +73,24 @@ test('rhythm choices emit one local event per action with only allowed plan cont
 });
 
 test('new CTA positions preserve one event per action and consent boundaries', () => {
-  const positions = ['plan-finder', 'selected-plan', 'sticky-desktop'];
+  const positions = ['plan-finder', 'selected-plan'];
   for (const section of positions) {
     assert.equal(trackEvent('whatsapp_click', { ...properties, section }), true);
   }
-  assert.equal(events.length, 3);
+  assert.equal(events.length, 2);
   assert.deepEqual(window.dataLayer, []);
 
   setAnalyticsConsent(true);
   for (const section of positions) {
     assert.equal(trackEvent('whatsapp_click', { ...properties, section }), true);
   }
-  assert.equal(events.length, 6);
+  assert.equal(events.length, 4);
   assert.deepEqual(window.dataLayer, positions.map((section) => ({ event: 'whatsapp_click', ...properties, section })));
 
   setAnalyticsConsent(false);
   assert.equal(trackEvent('rhythm_select', { ...properties, section: 'plan-finder' }), true);
-  assert.equal(window.dataLayer.length, 3);
-  assert.equal(events.length, 7);
+  assert.equal(window.dataLayer.length, 2);
+  assert.equal(events.length, 5);
 });
 
 test('invalid names, unknown IDs and free text never enter payloads', () => {

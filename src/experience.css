@@ -35,12 +35,6 @@
 .selected-action > small { display:block;color:var(--bf-text-muted);font-size:12px;text-align:center;margin-top:9px; }
 .comparison-title { display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0 0 20px;scroll-margin-top:30px; }
 .comparison-title > span:last-child { font-size:11px;color:var(--soft);text-align:right; }
-.desktop-sticky { position:fixed;bottom:24px;left:50%;width:min(820px,calc(100% - 64px));transform:translateX(-50%);z-index:35;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 20px;background:#0c1428f5;border:1px solid #405375;border-radius:14px;box-shadow:0 12px 50px #0008; }
-.desktop-sticky > div { display:grid;gap:4px; }
-.desktop-sticky strong { font-size:14px;line-height:1.4; }
-.desktop-sticky .small-label { font-size:8px; }
-.desktop-sticky small { font-size:9px;color:var(--bf-text-muted); }
-.desktop-sticky .button { min-height:49px;flex-shrink:0; }
 .hero-portrait { position:absolute;z-index:1;inset:130px -8% 50px 18%;pointer-events:none; }
 .hero-portrait > img { width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 15px 20px #06193855); }
 .hero-portrait > span { position:absolute;left:16%;right:16%;bottom:0;padding:6px 9px;border-radius:4px;text-align:center;background:#061938e6;color:white;font-size:10px;font-weight:600; }
@@ -52,16 +46,12 @@
 .vinicius-section .text-link { color:var(--efm-orange); }
 .vinicius-video { border:1px solid #3e4658;border-radius:16px;overflow:hidden;background:var(--efm-navy);aspect-ratio:16/9; }
 .vinicius-video video { display:block;width:100%;height:100%;object-fit:contain; }
-@media (min-width:901px) {
-  .site-footer { padding-bottom:130px; }
-}
 @media (max-width:900px) {
   .selected-plan { grid-template-columns:1fr 1fr;gap:20px; }
   .finder-heading { align-items:flex-start; }
   .finder-heading .text-link { max-width:125px; }
   .rhythm-choice { padding:18px 15px; }
   .rhythm-choice > strong { gap:6px; }
-  .desktop-sticky { display:none!important; }
   .vinicius-section { gap:30px;grid-template-columns:1fr 1fr; }
 }
 @media (max-width:600px) {
