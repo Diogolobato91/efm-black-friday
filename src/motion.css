@@ -9,11 +9,11 @@
   animation-delay: var(--motion-delay, 0ms);
 }
 
-.efm-motion .motion-hero-enter .hero-copy > :is(.eyebrow, .black-friday, .hero-prize, h1, .hero-description, .hero-actions, .hero-proof) {
+.efm-motion .motion-hero-enter .hero-copy > :is(.eyebrow, .black-friday, .hero-tripline, h1, .hero-description, .hero-actions, .hero-proof) {
   animation: efm-rise 680ms var(--motion-ease) both;
 }
 .efm-motion .motion-hero-enter .black-friday { animation-delay: 55ms; }
-.efm-motion .motion-hero-enter .hero-prize { animation-delay: 110ms; }
+.efm-motion .motion-hero-enter .hero-tripline { animation-delay: 110ms; }
 .efm-motion .motion-hero-enter h1 { animation-delay: 165ms; }
 .efm-motion .motion-hero-enter .hero-description { animation-delay: 220ms; }
 .efm-motion .motion-hero-enter .hero-actions { animation-delay: 275ms; }

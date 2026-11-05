@@ -4,6 +4,8 @@ import { getSelection, formatBRL, whatsappLink } from './campaign.js';
 import { trackEvent } from './analytics.js';
 import { portraitMarkup, videoMarkup, mediaUrl } from './media.js';
 import { initMotion } from './motion.js';
+import { initKineticGrid } from './kinetic-grid.js';
+import { initMaltaGallery } from './gallery.js';
 import './style.css';
 import './experience.css';
 import './motion.css';
@@ -41,10 +43,11 @@ document.querySelector('#app').innerHTML = `
 </div>
 <main id="conteudo">
 <section class="hero wrap" id="inicio" aria-labelledby="hero-heading">
+  <canvas class="hero-kinetic-grid" data-kinetic-grid aria-hidden="true"></canvas>
   <div class="hero-copy">
     <p class="eyebrow"><span class="signal"></span> BLACK FRIDAY EFM · SEU PRÓXIMO IDIOMA COMEÇA AQUI</p>
     <div class="black-friday" aria-label="Black Friday">BLACK<span>FRIDAY<svg class="asterisk" aria-hidden="true" viewBox="0 0 80 80" fill="currentColor"><path d="M34 0h12v25L64 7l9 9-18 18h25v12H55l18 18-9 9-18-18v25H34V55L16 73l-9-9 18-18H0V34h25L7 16l9-9 18 18Z"/></svg></span></div>
-    <div class="hero-prize">${plane}<span>SORTEIO PRINCIPAL</span><strong>2 semanas de intercâmbio em Malta</strong></div>
+    <div class="hero-tripline"><span>BLACK FRIDAY QUE PODE VIRAR VIAGEM</span><strong>2 semanas em Malta</strong><i aria-hidden="true">↗</i></div>
     <h1 id="hero-heading">Seu próximo idioma<br><span>pode levar você a Malta.</span></h1>
     <p class="hero-description">Matricule-se em <strong>inglês ou espanhol</strong> nesta Black Friday, ganhe um mês do outro idioma e concorra à experiência em Malta.</p>
     <div class="hero-actions"><a class="button button-orange" href="#seu-plano"><span>Quero concorrer a Malta</span>${arrow}</a>${cta('Falar com a EFM', 'hero', 'data-hero-direct')}</div>
@@ -62,6 +65,12 @@ document.querySelector('#app').innerHTML = `
     <figcaption>Vinícius em Malta · foto original EFM. Passagem aérea não incluída.</figcaption>
   </figure>
   <a class="scroll-cue" href="#beneficios"><span>ROLE PARA DESCOBRIR</span><i aria-hidden="true"></i></a>
+</section>
+<section class="campaign-marquee" aria-label="Destaques da Black Friday EFM">
+  <div class="marquee-track">
+    <div class="marquee-group"><span>VEM PARA A EFM</span><b>✳</b><span>BLACK FRIDAY EFM</span><b>✳</b><span>CONCORRA A UM INTERCÂMBIO EM MALTA</span><b>✳</b><span>INGLÊS E ESPANHOL</span><b>✳</b></div>
+    <div class="marquee-group" aria-hidden="true"><span>VEM PARA A EFM</span><b>✳</b><span>BLACK FRIDAY EFM</span><b>✳</b><span>CONCORRA A UM INTERCÂMBIO EM MALTA</span><b>✳</b><span>INGLÊS E ESPANHOL</span><b>✳</b></div>
+  </div>
 </section>
 <div class="benefit-strip"><div class="wrap strip-inner"><span>${plane} Concorra a 2 semanas em Malta</span><span>${globe} Aprenda online</span><span>${check} Ganhe 1 mês do outro idioma</span></div></div>
 <section class="section wrap story-section" id="beneficios">
@@ -93,8 +102,25 @@ ${videoMarkup(media.campaignVideo)}
   <p class="selection-status" id="selection-status" role="status" aria-live="polite"></p>
   <div class="plan-conditions"><div><span class="small-label">PARA COMEÇAR</span><p>Taxa inicial de <strong>R$ 199,90</strong></p><span>Inclui material didático e portal do aluno.</span></div><div><span class="small-label">PARA SE ORGANIZAR</span><p>Primeira mensalidade <strong>em dezembro.</strong></p><span>Os valores dos planos são mensais.</span></div><div><span class="small-label">EM TODOS OS PLANOS</span><p><strong>1 mês</strong> do outro idioma.</p><span>Uma aula por semana durante o bônus.</span></div></div>
 </div></section>
+<section class="malta-gallery" aria-labelledby="gallery-heading" data-malta-gallery>
+  <div class="malta-gallery-stage">
+    <div class="malta-gallery-grid">
+      <figure class="gallery-card gallery-card-one" data-gallery-card><img src="/images/vinicius-malta-hero.webp" alt="Vinícius diante da marina em Malta" width="1080" height="1283" loading="lazy"></figure>
+      <figure class="gallery-card gallery-card-two" data-gallery-card><img src="/images/vinicius-malta-coast.webp" alt="Vinícius nas formações rochosas à beira do mar em Malta" width="1080" height="1446" loading="lazy"></figure>
+      <figure class="gallery-card gallery-card-three" data-gallery-card><img src="/images/malta-sunset.webp" alt="Pôr do sol visto da costa de Malta" width="1200" height="1600" loading="lazy"></figure>
+      <figure class="gallery-card gallery-card-four" data-gallery-card aria-hidden="true"><img src="/images/vinicius-malta-coast.webp" alt="" width="1080" height="1446" loading="lazy"></figure>
+      <figure class="gallery-card gallery-card-five" data-gallery-card aria-hidden="true"><img src="/images/vinicius-malta-hero.webp" alt="" width="1080" height="1283" loading="lazy"></figure>
+    </div>
+    <div class="malta-gallery-copy" data-gallery-copy>
+      <span>VISTO PELA EFM</span>
+      <h2 id="gallery-heading">Malta não é cenário.<br><em>É o destino.</em></h2>
+      <p>Uma matrícula pode ser o primeiro passo para duas semanas de intercâmbio.</p>
+    </div>
+    <p class="gallery-credit">FOTOS ORIGINAIS EFM · VINÍCIUS EM MALTA</p>
+  </div>
+</section>
 <section class="section wrap malta-section" id="malta" aria-labelledby="malta-heading">
-  <div class="malta-poster scroll-depth"><span class="poster-kicker">EFM LANGUAGES / UMA EXPERIÊNCIA REAL</span><span class="poster-title">HELLO,<br>MALTA.</span><img src="/images/vinicius-malta-hero.jpg" alt="Vinícius, da EFM Languages, diante da marina em Malta" width="1080" height="1283" loading="lazy"><span class="poster-foot">VINÍCIUS EM MALTA · FOTO ORIGINAL EFM</span></div>
+  <div class="malta-poster scroll-depth"><span class="poster-kicker">EFM LANGUAGES / UMA EXPERIÊNCIA REAL</span><span class="poster-title">HELLO,<br>MALTA.</span><img src="/images/vinicius-malta-hero.webp" alt="Vinícius, da EFM Languages, diante da marina em Malta" width="1080" height="1283" loading="lazy"><span class="poster-foot">VINÍCIUS EM MALTA · FOTO ORIGINAL EFM</span></div>
   <div class="malta-copy"><p class="eyebrow">UMA OPORTUNIDADE PARA IR ALÉM</p><h2 id="malta-heading">Aprender aqui.<br><span>Se imaginar lá.</span></h2><p>Ao se matricular em inglês ou espanhol na Black Friday EFM, você concorre a <strong>duas semanas de intercâmbio em Malta.</strong></p><ul class="included-list">${campaign.giveaway.included.map(item => `<li>${check}<span>${item}</span></li>`).join('')}<li>${check}<span><strong>€ 200</strong> de ajuda de custo</span></li></ul><div class="travel-notice"><strong>Passagem aérea não incluída.</strong><p>A viagem é uma premiação por sorteio, não um benefício garantido da matrícula.</p></div><p class="fine-print">Prêmio não transferível. É necessário manter matrícula ativa e mensalidades em dia até o mês da viagem para aproveitar a premiação.</p>${cta('Quero meu plano EFM', 'malta')}</div>
 </section>
 <section class="bonus-section section"><div class="wrap bonus-layout"><div><p class="eyebrow">SEU BÔNUS DE BLACK FRIDAY</p><h2>Comece com um.<br><span>Experimente dois.</span></h2><p>Escolheu inglês? Experimente espanhol.<br>Escolheu espanhol? Descubra o inglês.</p></div><div class="bonus-details"><span class="bonus-number">1<span>MÊS DO OUTRO IDIOMA</span></span><p>Uma aula por semana durante o bônus. Depois, você decide se continua nos dois idiomas ou apenas no escolhido inicialmente.</p><p class="fine-print">Consulte a equipe sobre as condições de continuidade após o bônus.</p>${cta('Quero aproveitar o bônus', 'bonus')}</div></div></section>
@@ -110,6 +136,8 @@ ${videoMarkup(media.campaignVideo)}
 let language = 'english';
 let planId = 'basic';
 let motion;
+let kineticGrid;
+let maltaGallery;
 let selectionAnimation;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -183,6 +211,8 @@ document.addEventListener('click', (e) => {
 });
 renderPlans(); updateLinks();
 motion = initMotion();
+kineticGrid = initKineticGrid(document.querySelector('.hero'));
+maltaGallery = initMaltaGallery(document.querySelector('[data-malta-gallery]'));
 function stopSelectionMotion() {
   if (reducedMotion.matches || document.hidden) {
     selectionAnimation?.cancel();
@@ -218,6 +248,8 @@ addEventListener('resize', scheduleScrollFeedback, { passive: true });
 updateScrollFeedback();
 if (import.meta.hot) import.meta.hot.dispose(() => {
   motion.destroy();
+  kineticGrid.destroy();
+  maltaGallery.destroy();
   selectionAnimation?.cancel();
   reducedMotion.removeEventListener('change', stopSelectionMotion);
   document.removeEventListener('visibilitychange', stopSelectionMotion);
