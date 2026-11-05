@@ -12,6 +12,7 @@ const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
 const check = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>';
 const chat = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 21l1.9-5.6A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8 9c1 4 3 6 7 6l1-2-3-1-1 1-2-2 1-1-1-3-2 2Z"/></svg>';
 const globe = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>';
+const plane = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m3 11 18-7-7 18-3-8-8-3Z"/><path d="m11 14 4-4"/></svg>';
 const flag = (type) => `<span class="flag flag-${type}" aria-hidden="true"></span>`;
 const cta = (label, section, extra = '') => `<a class="button button-orange" data-whatsapp data-section="${section}" ${extra} href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">${chat}<span>${label}</span>${arrow}</a>`;
 const faq = [
@@ -30,14 +31,23 @@ document.querySelector('#app').innerHTML = `
   <nav aria-label="Navegação principal"><a href="#planos">Planos</a><a href="#malta">Destino Malta</a><a href="#duvidas">Dúvidas</a></nav>
   <a class="header-contact" data-whatsapp data-section="header" href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">Fale com a EFM ${arrow}</a>
 </header>
+<div class="country-orbits" aria-hidden="true">
+  <span class="country-orb orbit-one">${flag('mt')}</span>
+  <span class="country-orb orbit-two">${flag('uk')}</span>
+  <span class="country-orb orbit-three">${flag('es')}</span>
+  <span class="country-orb orbit-four">${flag('it')}</span>
+  <span class="country-orb orbit-five">${flag('fr')}</span>
+  <span class="country-orb orbit-six">${flag('pt')}</span>
+</div>
 <main id="conteudo">
 <section class="hero wrap" id="inicio" aria-labelledby="hero-heading">
   <div class="hero-copy">
     <p class="eyebrow"><span class="signal"></span> BLACK FRIDAY EFM · SEU PRÓXIMO IDIOMA COMEÇA AQUI</p>
     <div class="black-friday" aria-label="Black Friday">BLACK<span>FRIDAY<svg class="asterisk" aria-hidden="true" viewBox="0 0 80 80" fill="currentColor"><path d="M34 0h12v25L64 7l9 9-18 18h25v12H55l18 18-9 9-18-18v25H34V55L16 73l-9-9 18-18H0V34h25L7 16l9-9 18 18Z"/></svg></span></div>
-    <h1 id="hero-heading">Um idioma muda a conversa.<br><span>Dois ampliam o seu mundo.</span></h1>
-    <p class="hero-description">Comece <strong>inglês ou espanhol</strong>, experimente um mês do outro idioma e ainda concorra a duas semanas de intercâmbio em Malta.</p>
-    <div class="hero-actions"><a class="button button-orange" href="#seu-plano"><span>Quero escolher meu plano</span>${arrow}</a>${cta('Falar com a EFM', 'hero', 'data-hero-direct')}</div>
+    <div class="hero-prize">${plane}<span>SORTEIO PRINCIPAL</span><strong>2 semanas de intercâmbio em Malta</strong></div>
+    <h1 id="hero-heading">Seu próximo idioma<br><span>pode levar você a Malta.</span></h1>
+    <p class="hero-description">Matricule-se em <strong>inglês ou espanhol</strong> nesta Black Friday, ganhe um mês do outro idioma e concorra à experiência em Malta.</p>
+    <div class="hero-actions"><a class="button button-orange" href="#seu-plano"><span>Quero concorrer a Malta</span>${arrow}</a>${cta('Falar com a EFM', 'hero', 'data-hero-direct')}</div>
     <div class="hero-proof" aria-label="Condições principais"><span>Aulas online</span><span>Sem fidelidade</span><span>1ª mensalidade em dezembro</span></div>
     <p class="commercial">Taxa inicial de <strong>R$ 199,90</strong>, com material e portal. Mensalidades a partir de <strong>R$ 350/mês</strong>, com a primeira em dezembro.</p>
     <p class="action-note">Atendimento pelo WhatsApp para concluir sua matrícula.</p>
@@ -53,14 +63,14 @@ document.querySelector('#app').innerHTML = `
   </figure>
   <a class="scroll-cue" href="#beneficios"><span>ROLE PARA DESCOBRIR</span><i aria-hidden="true"></i></a>
 </section>
-<div class="benefit-strip"><div class="wrap strip-inner"><span>${globe} Aprenda online</span><span>${check} Um mês do outro idioma</span><span>${arrow} Concorra a um intercâmbio</span></div></div>
+<div class="benefit-strip"><div class="wrap strip-inner"><span>${plane} Concorra a 2 semanas em Malta</span><span>${globe} Aprenda online</span><span>${check} Ganhe 1 mês do outro idioma</span></div></div>
 <section class="section wrap story-section" id="beneficios">
   <div class="story-layout">
-    <div class="section-heading story-heading"><p class="eyebrow">DA PRIMEIRA AULA AO PRÓXIMO DESTINO</p><h2>Sua escolha de hoje pode abrir<br><span>o próximo capítulo.</span></h2><p>Não é só sobre estudar um idioma. É sobre ter mais autonomia para conversar, viajar e aproveitar oportunidades.</p><a class="text-link" href="#seu-plano">Escolher por onde começar ${arrow}</a></div>
+    <div class="section-heading story-heading"><p class="eyebrow">DA PRIMEIRA AULA AO PRÓXIMO DESTINO</p><h2>Aprenda online.<br><span>Seu próximo destino pode ser Malta.</span></h2><p>A Black Friday EFM une aprendizado, a experiência de um segundo idioma e a oportunidade de viver duas semanas de intercâmbio.</p><a class="text-link" href="#seu-plano">Quero participar ${arrow}</a></div>
     <div class="benefit-grid story-track">
       <article class="story-card"><span class="number">01</span><span class="story-tag">APRENDA</span><h3>No seu ritmo.<br>Onde você estiver.</h3><p>Escolha 4, 8 ou 12 aulas online por mês e comece com uma rotina que realmente cabe na sua vida.</p></article>
       <article class="story-card"><span class="number">02</span><span class="story-tag">EXPERIMENTE</span><h3>Comece com um.<br>Descubra outro.</h3><p>Você ganha um mês do outro idioma, com uma aula por semana, para ampliar suas possibilidades desde o início.</p></article>
-      <article class="story-card"><span class="number">03</span><span class="story-tag">VÁ ALÉM</span><h3>Seu próximo destino<br>pode ser Malta.</h3><p>Qualquer matrícula de inglês ou espanhol participa do sorteio. Seu plano define quantas chances você recebe.</p></article>
+      <article class="story-card story-card-malta"><span class="number">03</span><span class="story-tag">CONCORRA A MALTA</span><h3>Duas semanas<br>de intercâmbio.</h3><p>Qualquer matrícula de inglês ou espanhol participa do sorteio. Seu plano define quantas chances você recebe.</p></article>
     </div>
   </div>
   <div class="conversion-bridge"><span>VOCÊ NÃO PRECISA ESPERAR O MOMENTO PERFEITO.</span><strong>Precisa escolher por onde começar.</strong><a class="button button-orange" href="#seu-plano"><span>Encontrar meu plano</span>${arrow}</a></div>
@@ -91,7 +101,7 @@ ${videoMarkup(media.campaignVideo)}
 <section class="section wrap how-section"><div class="section-heading"><p class="eyebrow">SEU PRÓXIMO PASSO É SIMPLES</p><h2>Do plano à primeira conversa.</h2></div><ol class="steps"><li><span>01</span><h3>Encontre seu plano</h3><p>Escolha inglês ou espanhol e compare as aulas mensais.</p></li><li><span>02</span><h3>Fale com a EFM</h3><p>Abra o WhatsApp. Sua seleção já acompanha a mensagem.</p></li><li><span>03</span><h3>Conclua sua matrícula</h3><p>A equipe orienta os próximos passos no atendimento.</p></li></ol></section>
 <section class="referral-section wrap"><div><p class="eyebrow">JÁ FAZ PARTE DA EFM?</p><h2>Indique. E também concorra.</h2><p>Já é aluno EFM? Indique um novo aluno e também concorra ao intercâmbio em Malta.</p></div>${cta('Saber sobre indicação', 'referral', 'data-referral="true"')}</section>
 <section class="section wrap faq-section" id="duvidas"><div><p class="eyebrow">TUDO MAIS CLARO</p><h2>Antes de dar<br><span>o próximo passo.</span></h2><p>Ficou com outra dúvida?<br>A EFM conversa com você.</p><a class="text-link" data-whatsapp data-section="faq" href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">Falar no WhatsApp ${arrow}</a></div><div class="faq-list">${faq.map(([question,answer]) => `<details><summary>${question}<span aria-hidden="true">+</span></summary><p>${answer}</p></details>`).join('')}</div></section>
-<section class="final-section section"><div class="wrap"><p class="eyebrow">O SEU PRÓXIMO CAPÍTULO PODE COMEÇAR AGORA</p><h2>Seu mundo pode<br>ficar <span>maior.</span></h2><p>Escolha o idioma. Defina o seu ritmo.<br>A EFM ajuda você com o próximo passo.</p>${cta('Quero começar com a EFM', 'final')}<p class="final-selection" data-current-selection></p><p class="commercial">A partir de R$ 350/mês + taxa inicial de R$ 199,90.<br>Primeira mensalidade em dezembro.</p></div></section>
+<section class="final-section section"><div class="wrap"><p class="eyebrow">BLACK FRIDAY EFM · CONCORRA A MALTA</p><h2>Aprenda daqui.<br><span>Concorra a Malta.</span></h2><p>Escolha o idioma e o seu ritmo.<br>Sua matrícula já coloca você na campanha.</p>${cta('Quero concorrer a Malta', 'final')}<p class="final-selection" data-current-selection></p><p class="commercial">A partir de R$ 350/mês + taxa inicial de R$ 199,90.<br>Primeira mensalidade em dezembro.</p></div></section>
 </main>
 <footer class="wrap site-footer"><a href="#inicio" aria-label="EFM Languages — voltar ao início"><img src="/brand/efm-white.svg" alt="EFM Languages" width="128" height="54"></a><p>English For Me.<br>Novos idiomas. Novas possibilidades.</p><div><span>ATENDIMENTO DA CAMPANHA</span><a data-whatsapp data-section="footer" href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">(91) 98510-6086 ${arrow}</a></div><p class="footer-note">Regulamento em etapa final de preparação. A matrícula e a participação são concluídas conforme orientação no atendimento.</p></footer>
 <div class="mobile-sticky"><span data-current-selection></span>${cta('Falar com a EFM', 'sticky')}</div>
@@ -193,6 +203,7 @@ function updateScrollFeedback() {
   scrollFrame = 0;
   const scrollRange = document.documentElement.scrollHeight - innerHeight;
   progress.style.setProperty('--reading-progress', String(scrollRange > 0 ? Math.min(1, Math.max(0, scrollY / scrollRange)) : 0));
+  document.documentElement.style.setProperty('--page-progress', String(scrollRange > 0 ? Math.min(1, Math.max(0, scrollY / scrollRange)) : 0));
   const hero = document.querySelector('.hero').getBoundingClientRect();
   const finder = document.querySelector('.plan-finder').getBoundingClientRect();
   const final = document.querySelector('.final-section').getBoundingClientRect();

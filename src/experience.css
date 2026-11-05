@@ -97,9 +97,14 @@
 
 /* Cinematic campaign direction: genuine Malta photography + scroll narrative. */
 :root { --impact-ease:cubic-bezier(.23,1,.32,1); }
+body { position:relative; }
 .hero { position:relative;min-height:calc(100dvh - 112px);padding-top:42px;padding-bottom:34px; }
 .hero-copy { position:relative;z-index:4; }
 .hero-copy .black-friday { text-shadow:0 10px 40px #0004; }
+.hero-prize { display:grid;grid-template-columns:32px auto;column-gap:10px;align-items:center;width:max-content;max-width:100%;margin:10px 0 19px;padding:10px 13px 10px 11px;border:1px solid #f25c0566;border-left:3px solid var(--efm-orange);border-radius:8px;background:#f25c050d; }
+.hero-prize svg { grid-row:1/3;width:23px;height:23px;color:var(--efm-orange); }
+.hero-prize span { color:var(--efm-orange);font-size:8px;font-weight:750;letter-spacing:1.5px; }
+.hero-prize strong { color:#fff;font-size:12px;line-height:1.35; }
 .hero-proof { display:flex;flex-wrap:wrap;gap:8px;margin-top:18px; }
 .hero-proof span { padding:7px 10px;border:1px solid #3a4353;border-radius:999px;color:#c9d0db;font-size:9px;font-weight:650;letter-spacing:.6px;text-transform:uppercase; }
 .hero-art.has-portrait { height:min(690px,72dvh);min-height:580px;border-radius:20px 190px 20px 20px;background:#111827;box-shadow:0 34px 80px #0008; }
@@ -130,6 +135,8 @@
 .story-tag { display:block;margin-bottom:13px;color:var(--efm-orange);font-size:9px;font-weight:750;letter-spacing:2px; }
 .story-card h3 { margin:0 0 18px;font-size:clamp(27px,2.4vw,38px);line-height:1.08;letter-spacing:-1.3px; }
 .story-card p { max-width:550px;margin:0;color:#adb7c6;font-size:14px;line-height:1.75; }
+.story-card-malta { border-color:#f25c0577;background:radial-gradient(circle at 86% 10%,#f25c052c,transparent 39%),linear-gradient(145deg,#151924,#0d1017); }
+.story-card-malta:before { content:'MALTA';position:absolute;right:24px;top:27px;color:#f25c0517;font-size:67px;font-weight:900;letter-spacing:-5px;z-index:-1; }
 .efm-motion .story-card { opacity:.64;transform:translateY(32px) scale(.965);transition:opacity 480ms var(--impact-ease),transform 680ms var(--impact-ease),border-color 480ms var(--impact-ease),background-color 480ms var(--impact-ease); }
 .efm-motion .story-card.is-active { opacity:1;transform:translateY(0) scale(1);border-color:#526485; }
 .efm-motion .story-card.is-active .number { color:var(--efm-blue); }
@@ -154,8 +161,23 @@
 .malta-copy h2 { font-size:clamp(42px,4.4vw,61px);line-height:1.03;letter-spacing:-2.3px; }
 .final-section { overflow:hidden;background:radial-gradient(circle at 50% 105%,#173b9c 0%,#0c1737 34%,#070a11 70%); }
 .final-section .wrap { position:relative; }
-.final-section .wrap:before { content:'EFM';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:min(38vw,560px);font-weight:900;line-height:1;color:#fff03;pointer-events:none; }
+.final-section .wrap:before { content:'EFM';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:min(32vw,460px);font-weight:900;line-height:1;color:transparent;-webkit-text-stroke:1px #ffffff12;pointer-events:none; }
 .final-section .wrap>* { position:relative;z-index:1; }
+
+.country-orbits { position:absolute;inset:0;z-index:3;overflow:hidden;pointer-events:none; }
+.country-orb { --travel:140px;--tilt:0deg;position:absolute;display:grid;place-items:center;width:48px;height:48px;padding:5px;border:1px solid #ffffff24;border-radius:50%;background:#0d1528c7;box-shadow:0 14px 34px #0005;opacity:.44;backdrop-filter:blur(8px);transform:translate3d(0,calc((var(--page-progress,0) - .5) * var(--travel)),0) rotate(var(--tilt));transition:opacity 220ms; }
+.country-orb .flag { width:100%;height:100%;box-shadow:inset 0 0 0 1px #ffffff29; }
+.orbit-one { left:-17px;top:430px;--travel:90px;--tilt:-8deg; }
+.orbit-two { right:-17px;top:19%;--travel:-140px;--tilt:7deg; }
+.orbit-three { left:-17px;top:37%;--travel:-150px;--tilt:5deg; }
+.orbit-four { right:-17px;top:55%;--travel:160px;--tilt:-7deg; }
+.orbit-five { left:-17px;top:73%;--travel:130px;--tilt:8deg; }
+.orbit-six { right:-17px;top:89%;--travel:-150px;--tilt:-5deg; }
+.flag-mt { background:linear-gradient(90deg,#fff 0 50%,#cf142b 50%); }
+.flag-mt:after { content:'';position:absolute;left:17%;top:17%;width:7px;height:7px;border:1px solid #8d9299;background:linear-gradient(90deg,transparent 38%,#8d9299 38% 62%,transparent 62%),linear-gradient(0deg,transparent 38%,#8d9299 38% 62%,transparent 62%); }
+.flag-it { background:linear-gradient(90deg,#009246 0 33.33%,#fff 33.33% 66.66%,#ce2b37 66.66%); }
+.flag-fr { background:linear-gradient(90deg,#0055a4 0 33.33%,#fff 33.33% 66.66%,#ef4135 66.66%); }
+.flag-pt { background:linear-gradient(90deg,#046a38 0 40%,#da291c 40%); }
 
 @keyframes scroll-cue { 0% { transform:translateY(-100%); } 55%,100% { transform:translateY(100%); } }
 
@@ -170,6 +192,7 @@
   .story-card { min-height:335px;padding:28px 22px; }
   .story-card .number { margin-bottom:42px;font-size:58px; }
   .story-card h3 { font-size:25px; }
+  .country-orb { width:40px;height:40px;opacity:.34; }
 }
 
 @media (max-width:600px) {
@@ -179,6 +202,7 @@
   .hero-art.has-portrait .art-title { top:58px;left:20px;font-size:61px; }
   .hero-art.has-portrait .travel-stamp { right:13px;bottom:48px;padding:12px 13px; }
   .hero-proof { margin-top:15px; }
+  .hero-prize { width:100%;margin-top:6px; }
   .hero-proof span { font-size:8px;padding:6px 8px; }
   .black-friday { margin-bottom:62px; }
   .black-friday .asterisk { position:absolute;right:3px;bottom:-.64em;width:.52em;height:.52em;margin:0; }
@@ -195,10 +219,17 @@
   .conversion-bridge>.button { margin-top:15px; }
   .malta-poster { border-radius:18px 92px 18px 18px; }
   .plans-section:before { display:none; }
+  .country-orb { width:34px;height:34px;padding:4px;opacity:.3; }
+  .orbit-two,.orbit-five,.orbit-six { display:none; }
+  .orbit-one { left:-9px;top:22%; }
+  .orbit-three { left:-8px;top:55%; }
+  .orbit-four { right:-9px;top:76%; }
+  .final-section .wrap:before { font-size:72vw;opacity:.75; }
 }
 
 @media (prefers-reduced-motion:reduce) {
   .scroll-cue i:after { animation:none;transform:none; }
   .hero-art.has-portrait .hero-portrait img,.malta-poster>img { transform:none;will-change:auto; }
   .efm-motion .story-card { opacity:1;transform:none;transition:none; }
+  .country-orb { transform:none; }
 }
