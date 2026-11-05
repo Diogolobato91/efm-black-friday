@@ -14,6 +14,11 @@ const images = new Map([
   ['/images/vinicius-malta-hero.webp', 'image/webp'],
   ['/images/vinicius-malta-coast.webp', 'image/webp'],
   ['/images/malta-sunset.webp', 'image/webp'],
+  ['/images/malta-valletta.webp', 'image/webp'],
+  ['/images/malta-cove-aerial.webp', 'image/webp'],
+  ['/images/malta-luzzu-boats.webp', 'image/webp'],
+  ['/images/malta-blue-lagoon.webp', 'image/webp'],
+  ['/images/malta-street.webp', 'image/webp'],
 ]);
 const imageURLs = new Map(
   await Promise.all([...images].map(async ([path, type]) => [path, await dataURL(path, type)])),

@@ -240,7 +240,7 @@ def exercise_motion(browser, results):
             # animation may loop forever, and reduced-motion still disables it.
             assert page.evaluate("""document.getAnimations()
                 .filter(a=>a.effect.getTiming().iterations === Infinity)
-                .every(a=>getComputedStyle(a.effect.target).animationName === 'efm-marquee')"""), 'Only the campaign tape may loop'
+                .every(a=>['efm-marquee','efm-country-float'].includes(getComputedStyle(a.effect.target).animationName))"""), 'Only the campaign tape and country balloons may loop'
             if without_observer:
                 assert not page.evaluate("'IntersectionObserver' in window")
                 # Full decision flow remains available with no observer API.

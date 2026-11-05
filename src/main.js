@@ -44,6 +44,10 @@ document.querySelector('#app').innerHTML = `
   <span class="country-orb orbit-four">${flag('it')}</span>
   <span class="country-orb orbit-five">${flag('fr')}</span>
   <span class="country-orb orbit-six">${flag('pt')}</span>
+  <span class="country-orb orbit-seven">${flag('ie')}</span>
+  <span class="country-orb orbit-eight">${flag('de')}</span>
+  <span class="country-orb orbit-nine">${flag('gr')}</span>
+  <span class="country-orb orbit-ten">${flag('mt')}</span>
 </div>
 <main id="conteudo">
 <section class="hero wrap" id="inicio" aria-labelledby="hero-heading">
@@ -66,7 +70,7 @@ document.querySelector('#app').innerHTML = `
     ${portraitMarkup(media.heroPortrait)}
     <div class="floating-flag flag-one">${flag('uk')}</div><div class="floating-flag flag-two">${flag('es')}</div>
     <div class="travel-stamp"><span>CONCORRA A</span><strong>2 semanas</strong><span>DE INTERCÂMBIO</span></div>
-    <figcaption>Vinícius em Malta · foto original EFM. Passagem aérea não incluída.</figcaption>
+    <figcaption>Malta · seu próximo destino pode começar aqui. Passagem aérea não incluída.</figcaption>
   </figure>
   <a class="scroll-cue" href="#beneficios"><span>ROLE PARA DESCOBRIR</span><i aria-hidden="true"></i></a>
 </section>
@@ -106,18 +110,18 @@ ${marquee(['MALTA PODE SER O PRÓXIMO DESTINO', '2 SEMANAS DE INTERCÂMBIO', 'BL
 <section class="malta-gallery" aria-labelledby="gallery-heading" data-malta-gallery>
   <div class="malta-gallery-stage">
     <div class="malta-gallery-grid">
-      <figure class="gallery-card gallery-card-one" data-gallery-card><img src="/images/vinicius-malta-hero.webp" alt="Vinícius diante da marina em Malta" width="1080" height="1283" loading="lazy"></figure>
-      <figure class="gallery-card gallery-card-two" data-gallery-card><img src="/images/vinicius-malta-coast.webp" alt="Vinícius nas formações rochosas à beira do mar em Malta" width="1080" height="1446" loading="lazy"></figure>
-      <figure class="gallery-card gallery-card-three" data-gallery-card><img src="/images/malta-sunset.webp" alt="Pôr do sol visto da costa de Malta" width="1200" height="1600" loading="lazy"></figure>
-      <figure class="gallery-card gallery-card-four" data-gallery-card aria-hidden="true"><img src="/images/vinicius-malta-coast.webp" alt="" width="1080" height="1446" loading="lazy"></figure>
-      <figure class="gallery-card gallery-card-five" data-gallery-card aria-hidden="true"><img src="/images/vinicius-malta-hero.webp" alt="" width="1080" height="1283" loading="lazy"></figure>
+      <figure class="gallery-card gallery-card-one" data-gallery-card><img src="/images/malta-valletta.webp" alt="Vista aérea de Valletta e sua costa em Malta" width="1024" height="682" loading="lazy"></figure>
+      <figure class="gallery-card gallery-card-two" data-gallery-card><img src="/images/malta-cove-aerial.webp" alt="Enseada de águas turquesa e formações rochosas em Malta" width="2048" height="1529" loading="lazy"></figure>
+      <figure class="gallery-card gallery-card-three" data-gallery-card><img src="/images/malta-luzzu-boats.webp" alt="Barcos tradicionais coloridos no porto de Marsaxlokk, Malta" width="1224" height="816" loading="lazy"></figure>
+      <figure class="gallery-card gallery-card-four" data-gallery-card><img src="/images/malta-blue-lagoon.webp" alt="Águas cristalinas da costa de Malta" width="2048" height="1365" loading="lazy"></figure>
+      <figure class="gallery-card gallery-card-five" data-gallery-card><img src="/images/malta-street.webp" alt="Rua histórica com fachadas e varandas tradicionais de Malta" width="2048" height="1529" loading="lazy"></figure>
     </div>
     <div class="malta-gallery-copy" data-gallery-copy>
       <span>VISTO PELA EFM</span>
       <h2 id="gallery-heading">Malta não é cenário.<br><em>É o destino.</em></h2>
       <p>Uma matrícula pode ser o primeiro passo para duas semanas de intercâmbio.</p>
     </div>
-    <p class="gallery-credit">FOTOS ORIGINAIS EFM · VINÍCIUS EM MALTA</p>
+    <p class="gallery-credit">MALTA · CIDADES HISTÓRICAS, COSTA E MEDITERRÂNEO</p>
   </div>
 </section>
 <section class="section wrap malta-section" id="malta" aria-labelledby="malta-heading">
