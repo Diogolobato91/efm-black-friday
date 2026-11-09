@@ -321,10 +321,20 @@ html, body { overflow-x: clip; }
 .malta-gallery { height:210vh; }
 .faq-section { padding-top:105px;padding-bottom:120px; }
 .faq-section h2 span { color:var(--efm-orange); }
-.faq-list details { background:#0b1018;border-color:#29364b; }
+.faq-list { display:grid;gap:10px; }
+.faq-list details,
+.faq-list details:last-child {
+  overflow:hidden;
+  border:1px solid #29364b;
+  border-radius:10px;
+  background:#0b1018;
+  transition:border-color 220ms ease,background-color 220ms ease;
+}
+.faq-list details[open] { border-color:#ff5c18;background:#0c121c; }
+.faq-list summary { padding:20px 22px; }
 .faq-answer { display:block!important;height:0;overflow:hidden;opacity:0; }
 .faq-item[open] > .faq-answer { height:auto;opacity:1; }
-.faq-answer-inner { padding:0 36px 24px 0; }
+.faq-answer-inner { padding:0 48px 22px 22px; }
 .faq-answer p { margin:0;color:var(--bf-text-muted);font-size:13px;line-height:1.8; }
 .faq-icon { transition:transform 240ms ease; }
 .faq-item[open] .faq-icon { transform:rotate(45deg); }
