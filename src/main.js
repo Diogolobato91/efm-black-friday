@@ -2,7 +2,7 @@ import campaign from '../config/campaign.json';
 import media from '../config/media.json';
 import { getSelection, formatBRL, whatsappLink } from './campaign.js';
 import { trackEvent } from './analytics.js';
-import { portraitMarkup, videoMarkup, mediaUrl } from './media.js';
+import { portraitMarkup, mediaUrl } from './media.js';
 import { initMotion } from './motion.js';
 import { initKineticGrid } from './kinetic-grid.js';
 import { initMaltaGallery } from './gallery.js';
@@ -86,20 +86,25 @@ document.querySelector('#app').innerHTML = `
 ${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'CONCORRA A UM INTERCÂMBIO EM MALTA', 'INGLÊS E ESPANHOL'])}
 <div class="benefit-strip"><div class="wrap strip-inner"><span>${suitcase} Concorra a <strong>2 semanas de INTERCÂMBIO em Malta</strong></span><span>${globe} Aprenda online</span><span>${check} Ganhe 1 mês do outro idioma</span></div></div>
 <section class="section wrap reference-story" id="beneficios">
-  <div class="reference-intro"><p class="eyebrow">LEVE O IDIOMA PARA ALÉM DA TELA</p><h2>Uma campanha para aprender agora.<br><span>E se imaginar lá.</span></h2><p>O curso é o começo. Malta é a oportunidade que faz esta Black Friday ir muito além de uma oferta comum.</p></div>
   <div class="reference-story-grid">
     <figure class="reference-human"><img src="/images/vinicius-malta-coast.webp" alt="Vinícius, da EFM Languages, observando a costa de Malta" width="1080" height="1283" loading="lazy"><figcaption><strong>Vinícius, da EFM, em Malta.</strong><span>Uma experiência real que inspira o destino desta campanha.</span></figcaption></figure>
     <article class="reference-prize"><p class="eyebrow">O QUE O PRÊMIO INCLUI</p><h3>Duas semanas para viver o idioma fora da tela.</h3><ul>${campaign.giveaway.included.map(item => `<li>${check}<span>${item}</span></li>`).join('')}<li>${check}<span><strong>€ 200</strong> de ajuda de custo</span></li></ul><div class="reference-warning"><strong>Passagem aérea não incluída.</strong><span>A viagem é uma premiação por sorteio, não um benefício garantido da matrícula.</span></div>${cta('Quero concorrer', 'prize-overview')}</article>
   </div>
+  <section class="campaign-video-card" aria-labelledby="campaign-video-heading">
+    <button class="campaign-video-trigger" type="button" data-video-open aria-haspopup="dialog">
+      <img src="/images/vinicius-malta-coast.webp" alt="" width="1080" height="1283" loading="lazy">
+      <span class="campaign-video-overlay"><span class="campaign-video-play" aria-hidden="true">▶</span><span>Assistir ao vídeo</span></span>
+    </button>
+    <div class="campaign-video-copy"><p class="eyebrow">A CAMPANHA, EM VÍDEO</p><h2 id="campaign-video-heading">Dê o play e conheça essa experiência.</h2><p>O vídeo é carregado somente quando você abrir.</p><button class="text-link" type="button" data-video-open>Ver vídeo <span aria-hidden="true">→</span></button></div>
+  </section>
   <div class="reference-course-bridge"><div><span>INGLÊS OU ESPANHOL</span><strong>4, 8 ou 12 aulas por mês.</strong></div><div><span>PLANOS A PARTIR DE</span><strong>R$ 350/mês</strong></div><a href="#seu-plano" class="button button-orange"><span>Ver os planos</span>${arrow}</a></div>
 </section>
-${videoMarkup(media.campaignVideo)}
 <section class="section wrap efm-benefits" aria-labelledby="benefits-heading">
   <div class="efm-benefits-heading"><div><p class="eyebrow">POR QUE APRENDER COM A EFM</p><h2 id="benefits-heading">Um curso pensado<br><span>para caber na sua rotina.</span></h2></div><p>Você escolhe o idioma e o ritmo. A EFM cuida da experiência de aprendizagem, do material e do acompanhamento.</p></div>
   <div class="efm-benefit-grid">
-    <article class="efm-benefit-card benefit-live"><div class="benefit-visual"><span class="benefit-orbit"></span><span class="benefit-avatar">EFM</span><span class="benefit-signal"></span></div><span class="benefit-index">01</span><h3>Aulas online e individuais</h3><p>Aulas que respeitam o seu ritmo e colocam você no centro da experiência.</p></article>
-    <article class="efm-benefit-card benefit-time"><div class="benefit-visual"><span class="clock-ring"></span><strong>SEU<br>HORÁRIO</strong></div><span class="benefit-index">02</span><h3>Horários flexíveis</h3><p>Organize suas aulas de acordo com a sua disponibilidade.</p></article>
-    <article class="efm-benefit-card benefit-material"><div class="benefit-visual"><span class="material-sheet"></span><span class="material-window"></span></div><span class="benefit-index">03</span><h3>Material e portal do aluno</h3><p>Conteúdo didático e recursos reunidos para apoiar seus estudos.</p></article>
+    <article class="efm-benefit-card benefit-live"><div class="benefit-visual"><img src="/images/benefit-online-class.webp" alt="Aluno participando de uma aula individual de idioma pela internet" width="1024" height="1024" loading="lazy"></div><span class="benefit-index">01</span><h3>Aulas online e individuais</h3><p>Aulas que respeitam o seu ritmo e colocam você no centro da experiência.</p></article>
+    <article class="efm-benefit-card benefit-time"><div class="benefit-visual"><img src="/images/benefit-flexible-time.webp" alt="Aluno organizando o melhor horário para estudar" width="1024" height="1024" loading="lazy"></div><span class="benefit-index">02</span><h3>Horários flexíveis</h3><p>Organize suas aulas de acordo com a sua disponibilidade.</p></article>
+    <article class="efm-benefit-card benefit-material"><div class="benefit-visual"><img src="/images/benefit-student-portal.webp" alt="Material didático e portal digital usados durante os estudos" width="1024" height="1024" loading="lazy"></div><span class="benefit-index">03</span><h3>Material e portal do aluno</h3><p>Conteúdo didático e recursos reunidos para apoiar seus estudos.</p></article>
   </div>
 </section>
 ${marquee(['AULAS ONLINE E INDIVIDUAIS', 'HORÁRIOS FLEXÍVEIS', 'MATERIAL E PORTAL DO ALUNO'], 'marquee-navy marquee-reverse')}
@@ -117,7 +122,7 @@ ${marquee(['AULAS ONLINE E INDIVIDUAIS', 'HORÁRIOS FLEXÍVEIS', 'MATERIAL E POR
   </div>
   <div class="plan-conditions"><div><span class="small-label">PARA COMEÇAR</span><p>Taxa inicial de <strong>R$ 199,90</strong></p><span>Inclui material didático e portal do aluno.</span></div><div><span class="small-label">PARA SE ORGANIZAR</span><p>Primeira mensalidade <strong>em dezembro.</strong></p><span>Os valores dos planos são mensais.</span></div><div><span class="small-label">EM TODOS OS PLANOS</span><p><strong>1 mês</strong> do outro idioma.</p><span>Uma aula por semana durante o bônus.</span></div></div>
 </div></section>
-<section class="malta-gallery" aria-labelledby="gallery-heading" data-malta-gallery>
+<section class="malta-gallery" id="malta" aria-labelledby="gallery-heading" data-malta-gallery>
   <div class="malta-gallery-stage">
     <div class="malta-gallery-grid">
       <figure class="gallery-card gallery-card-one" data-gallery-card><img src="/images/malta-valletta.webp" alt="Vista aérea de Valletta e sua costa em Malta" width="1024" height="682" loading="lazy"></figure>
@@ -134,11 +139,15 @@ ${marquee(['AULAS ONLINE E INDIVIDUAIS', 'HORÁRIOS FLEXÍVEIS', 'MATERIAL E POR
   </div>
 </section>
 ${marquee(['MALTA NÃO É CENÁRIO', 'É O DESTINO', '2 SEMANAS DE INTERCÂMBIO', 'BLACK FRIDAY EFM'], 'marquee-offset')}
-<section class="section wrap campaign-rules" id="malta" aria-labelledby="rules-heading"><div><p class="eyebrow">CONDIÇÕES IMPORTANTES</p><h2 id="rules-heading">Sonhe com Malta.<br><span>Decida com clareza.</span></h2></div><div class="rules-grid"><article><span>01</span><h3>É um sorteio</h3><p>A matrícula oferece a oportunidade de concorrer. A viagem não é garantida.</p></article><article><span>02</span><h3>Passagem à parte</h3><p>A passagem aérea não está incluída na premiação.</p></article><article><span>03</span><h3>Matrícula ativa</h3><p>É necessário manter a matrícula ativa e as mensalidades em dia até o mês da viagem.</p></article></div></section>
 <section class="section wrap faq-section" id="duvidas"><div><p class="eyebrow">TUDO MAIS CLARO</p><h2>Antes de dar<br><span>o próximo passo.</span></h2><p>Ficou com outra dúvida?<br>A EFM conversa com você.</p><a class="text-link" data-whatsapp data-section="faq" href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">Falar no WhatsApp ${arrow}</a></div><div class="faq-list">${faq.map(([question,answer], index) => `<details class="faq-item" ${index === 0 ? 'open' : ''}><summary><span class="faq-question">${question}</span><span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer"><div class="faq-answer-inner"><p>${answer}</p></div></div></details>`).join('')}</div></section>
 </main>
 <footer class="wrap site-footer"><a href="#inicio" aria-label="EFM Languages — voltar ao início"><img src="/brand/efm-transparent.png" alt="EFM Languages" width="110" height="66"></a><p>English For Me.<br>Novos idiomas. Novas possibilidades.</p><div><span>ATENDIMENTO DA CAMPANHA</span><a data-whatsapp data-section="footer" href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">(91) 98510-6086 ${arrow}</a></div><p class="footer-note">Regulamento em etapa final de preparação. A matrícula e a participação são concluídas conforme orientação no atendimento.</p></footer>
 <div class="mobile-sticky"><span data-current-selection></span>${cta('Falar com a EFM', 'sticky')}</div>
+<dialog class="campaign-video-dialog" data-video-dialog aria-labelledby="video-dialog-title">
+  <div class="campaign-video-dialog-head"><h2 id="video-dialog-title">Campanha Black Friday EFM</h2><button type="button" data-video-close aria-label="Fechar vídeo">×</button></div>
+  <div class="campaign-video-frame" data-video-frame></div>
+  <a href="https://www.instagram.com/p/DfXbPhmxCnS/" target="_blank" rel="noopener noreferrer">Abrir no Instagram ${arrow}</a>
+</dialog>
 `;
 
 let language = 'english';
@@ -148,6 +157,31 @@ let kineticGrid;
 let maltaGallery;
 let selectionAnimation;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const videoDialog = document.querySelector('[data-video-dialog]');
+const videoFrame = document.querySelector('[data-video-frame]');
+let videoReturnFocus;
+
+function openCampaignVideo(trigger) {
+  videoReturnFocus = trigger;
+  videoFrame.innerHTML = '<iframe src="https://www.instagram.com/p/DfXbPhmxCnS/embed/?autoplay=1" title="Vídeo da campanha Black Friday EFM no Instagram" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="eager"></iframe>';
+  videoDialog.showModal();
+  document.body.classList.add('dialog-open');
+}
+
+function closeCampaignVideo() {
+  videoDialog.close();
+  videoFrame.replaceChildren();
+  document.body.classList.remove('dialog-open');
+  videoReturnFocus?.focus();
+}
+
+document.querySelectorAll('[data-video-open]').forEach((button) => button.addEventListener('click', () => openCampaignVideo(button)));
+document.querySelector('[data-video-close]').addEventListener('click', closeCampaignVideo);
+videoDialog.addEventListener('click', (event) => { if (event.target === videoDialog) closeCampaignVideo(); });
+videoDialog.addEventListener('close', () => {
+  videoFrame.replaceChildren();
+  document.body.classList.remove('dialog-open');
+});
 
 function updateLinks() {
   const { modality, plan } = getSelection(campaign, language, planId);
