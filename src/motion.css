@@ -86,7 +86,7 @@
 .efm-motion .plan-card:focus-within {
   box-shadow: 0 0 0 1px var(--efm-blue), 0 12px 30px #0003;
 }
-.efm-motion .faq-list summary > span {
+.efm-motion .faq-list .faq-icon {
   transition: transform 200ms var(--motion-ease);
 }
 .efm-motion .language-toggle button {
