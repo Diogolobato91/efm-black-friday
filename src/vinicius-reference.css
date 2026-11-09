@@ -1,0 +1,320 @@
+/* Readaptação do modelo enviado pela EFM: Malta em primeiro plano, composição
+   editorial e recortes orgânicos, preservando a lógica e a oferta da campanha. */
+:root {
+  --reference-blue: #1592ff;
+  --reference-ink: #05070b;
+}
+
+.site-header {
+  height: 92px;
+  border-bottom-color: #188fff55;
+}
+
+.hero {
+  min-height: calc(100svh - 92px);
+  grid-template-columns: minmax(0, .94fr) minmax(480px, 1.06fr);
+  gap: clamp(34px, 5vw, 76px);
+  padding-top: 34px;
+  padding-bottom: 62px;
+}
+
+.hero-copy .eyebrow {
+  color: #e9eef7;
+  margin-bottom: 13px;
+}
+
+.hero-copy .black-friday {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 30px;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.hero-copy .black-friday > span {
+  display: inline-flex;
+  padding: 11px 14px 10px;
+  color: var(--reference-ink);
+  background: var(--efm-orange);
+  font-size: 15px;
+  letter-spacing: -.3px;
+  transform: rotate(-1.5deg);
+}
+
+.hero-copy .black-friday > small {
+  color: #fff;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 3.2px;
+}
+
+.hero h1 {
+  max-width: 680px;
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: clamp(43px, 5vw, 72px);
+  font-weight: 850;
+  letter-spacing: -3.8px;
+  line-height: .98;
+}
+
+.hero h1 strong {
+  display: block;
+  color: var(--efm-orange);
+  font-weight: 850;
+}
+
+.hero-description {
+  max-width: 620px;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.hero-art.has-portrait {
+  min-height: 590px;
+  height: min(720px, 76svh);
+  border: 0;
+  border-radius: 40% 9% 34% 8% / 9% 28% 10% 35%;
+  outline: 1px solid #1992ff77;
+  outline-offset: 10px;
+  box-shadow: 0 40px 120px #000b, 0 0 90px #0d48fe22;
+}
+
+.hero-art.has-portrait::after {
+  content: '';
+  position: absolute;
+  inset: -18px -24px;
+  z-index: 4;
+  pointer-events: none;
+  border: 16px solid var(--reference-ink);
+  border-radius: 36% 12% 31% 7% / 12% 25% 9% 30%;
+  transform: rotate(-1.2deg);
+}
+
+.hero-art.has-portrait .art-title {
+  top: 65px;
+  left: 32px;
+  font-size: clamp(58px, 6.4vw, 96px);
+  letter-spacing: -6px;
+}
+
+.hero-art.has-portrait .art-title span {
+  max-width: 260px;
+  margin-top: 5px;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
+.hero-art .art-top,
+.hero-art.has-portrait figcaption {
+  z-index: 5;
+}
+
+.hero-art.has-portrait .travel-stamp {
+  z-index: 6;
+  border-color: var(--efm-orange);
+}
+
+.benefit-strip {
+  border-block: 1px solid #158fff66;
+  background: #07152c;
+}
+
+.reference-story {
+  padding-top: 120px;
+  padding-bottom: 130px;
+}
+
+.reference-intro {
+  max-width: 860px;
+  margin: 0 auto 62px;
+  text-align: center;
+}
+
+.reference-intro .eyebrow {
+  justify-content: center;
+  color: var(--efm-orange);
+}
+
+.reference-intro h2 {
+  margin: 0 0 22px;
+  font-size: clamp(43px, 5.1vw, 70px);
+  line-height: 1.02;
+  letter-spacing: -3.2px;
+}
+
+.reference-intro h2 span {
+  color: var(--reference-blue);
+}
+
+.reference-intro > p:last-child {
+  max-width: 660px;
+  margin: 0 auto;
+  color: var(--bf-text-muted);
+}
+
+.reference-story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(390px, .92fr);
+  gap: clamp(40px, 6vw, 86px);
+  align-items: center;
+}
+
+.reference-human {
+  position: relative;
+  min-height: 680px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8% 34% 7% 27% / 28% 8% 31% 9%;
+  background: #0b1220;
+  box-shadow: 0 35px 90px #0009;
+}
+
+.reference-human::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, #04070ee8 100%);
+}
+
+.reference-human img {
+  width: 100%;
+  height: 680px;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(.92) contrast(1.06);
+}
+
+.reference-human figcaption {
+  position: absolute;
+  right: 34px;
+  bottom: 32px;
+  left: 34px;
+  z-index: 2;
+}
+
+.reference-human figcaption strong,
+.reference-human figcaption span {
+  display: block;
+}
+
+.reference-human figcaption strong {
+  margin-bottom: 6px;
+  color: #fff;
+  font-size: 22px;
+}
+
+.reference-human figcaption span {
+  max-width: 500px;
+  color: #d5deea;
+  font-size: 13px;
+}
+
+.reference-prize {
+  position: relative;
+  padding: 48px;
+  border: 1px solid #178fff8f;
+  border-radius: 24px;
+  background: radial-gradient(circle at 100% 0, #0d48fe33, transparent 36%), #0c111a;
+}
+
+.reference-prize::before {
+  content: 'MALTA';
+  position: absolute;
+  top: -45px;
+  right: 4px;
+  color: #ffffff0b;
+  font-size: 100px;
+  font-weight: 900;
+  letter-spacing: -8px;
+  pointer-events: none;
+}
+
+.reference-prize .eyebrow {
+  color: var(--efm-orange);
+}
+
+.reference-prize h3 {
+  margin: 0 0 30px;
+  font-size: clamp(32px, 3.3vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.reference-prize ul {
+  display: grid;
+  gap: 13px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reference-prize li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #dde5f0;
+  font-size: 14px;
+}
+
+.reference-prize li svg {
+  width: 18px;
+  color: var(--efm-orange);
+}
+
+.reference-warning {
+  display: grid;
+  gap: 4px;
+  margin: 28px 0 24px;
+  padding: 16px 18px;
+  border-left: 3px solid var(--efm-orange);
+  background: #05070b;
+}
+
+.reference-warning strong { color: #fff; font-size: 13px; }
+.reference-warning span { color: var(--bf-text-muted); font-size: 11px; line-height: 1.55; }
+.reference-prize .button { width: 100%; justify-content: space-between; }
+
+@media (max-width: 1000px) {
+  .hero { grid-template-columns: 1fr 1fr; }
+  .reference-story-grid { grid-template-columns: 1fr 1fr; }
+  .reference-human, .reference-human img { min-height: 590px; height: 590px; }
+  .reference-prize { padding: 34px 28px; }
+}
+
+@media (max-width: 760px) {
+  .site-header { height: 78px; }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 46px;
+    padding-top: 30px;
+  }
+  .hero h1 { font-size: clamp(42px, 12.5vw, 61px); letter-spacing: -3px; }
+  .hero-description { font-size: 15px; }
+  .hero-art.has-portrait { height: 540px; min-height: 0; outline-offset: 6px; }
+  .hero-art.has-portrait::after { inset: -10px -12px; border-width: 9px; }
+  .reference-story { padding-top: 90px; padding-bottom: 90px; }
+  .reference-story-grid { grid-template-columns: 1fr; gap: 34px; }
+  .reference-human, .reference-human img { min-height: 520px; height: 520px; }
+  .reference-prize { padding: 30px 22px; }
+}
+
+@media (max-width: 480px) {
+  .hero-copy .black-friday { align-items: flex-start; flex-direction: column; gap: 11px; }
+  .hero h1 { font-size: 43px; }
+  .hero-art.has-portrait { height: 500px; border-radius: 25% 7% 21% 6% / 7% 20% 8% 22%; }
+  .hero-art.has-portrait .art-title { left: 18px; font-size: 58px; letter-spacing: -4px; }
+  .reference-intro { text-align: left; }
+  .reference-intro .eyebrow { justify-content: flex-start; }
+  .reference-intro h2 { font-size: 40px; letter-spacing: -2px; }
+  .reference-human, .reference-human img { min-height: 440px; height: 440px; }
+  .reference-human figcaption { right: 22px; bottom: 24px; left: 22px; }
+  .reference-prize::before { top: -22px; font-size: 65px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-art.has-portrait::after { animation: none !important; }
+}
