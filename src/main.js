@@ -9,6 +9,7 @@ import { initMaltaGallery } from './gallery.js';
 import './style.css';
 import './experience.css';
 import './motion.css';
+import './vinicius-reference.css';
 
 const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
 const check = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>';
@@ -63,17 +64,16 @@ document.querySelector('#app').innerHTML = `
   <canvas class="hero-kinetic-grid" data-kinetic-grid aria-hidden="true"></canvas>
   <div class="hero-copy">
     <p class="eyebrow"><span class="signal"></span> BLACK FRIDAY EFM · SEU PRÓXIMO IDIOMA COMEÇA AQUI</p>
-    <div class="black-friday" aria-label="Black Friday">BLACK<span>FRIDAY<svg class="asterisk" aria-hidden="true" viewBox="0 0 80 80" fill="currentColor"><path d="M34 0h12v25L64 7l9 9-18 18h25v12H55l18 18-9 9-18-18v25H34V55L16 73l-9-9 18-18H0V34h25L7 16l9-9 18 18Z"/></svg></span></div>
-    <div class="hero-tripline"><span>BLACK FRIDAY QUE PODE VIRAR VIAGEM</span><strong>2 semanas em Malta</strong><i aria-hidden="true">↗</i></div>
-    <h1 id="hero-heading">Seu próximo idioma<br><span>pode levar você a Malta.</span></h1>
-    <p class="hero-description">Matricule-se em <strong>inglês ou espanhol</strong> nesta Black Friday, ganhe um mês do outro idioma e concorra a um <strong>INTERCÂMBIO em Malta.</strong></p>
+    <div class="black-friday" aria-label="Black Friday EFM"><span>BLACK FRIDAY</span><small>EFM LANGUAGES</small></div>
+    <h1 id="hero-heading">Concorra a um intercâmbio de <strong>2 semanas em Malta.</strong></h1>
+    <p class="hero-description">Matricule-se em <strong>inglês ou espanhol</strong>, ganhe um mês do outro idioma e transforme o começo de uma nova língua na chance de viver Malta de verdade.</p>
     <div class="hero-actions"><a class="button button-orange" href="#seu-plano"><span>Quero concorrer a Malta</span>${arrow}</a>${cta('Falar com a EFM', 'hero', 'data-hero-direct')}</div>
-    <div class="hero-proof" aria-label="Condições principais"><span>Aulas online</span><span>Sem fidelidade</span><span>1ª mensalidade em dezembro</span></div>
+    <div class="hero-proof" aria-label="Condições principais"><span>Aulas online</span><span>Planos a partir de R$ 350/mês</span><span>1ª mensalidade em dezembro</span></div>
     <p class="action-note">Atendimento pelo WhatsApp para concluir sua matrícula.</p>
   </div>
   <figure class="hero-art ${mediaUrl(media.heroPortrait.src) ? 'has-portrait' : ''}">
     <div class="art-top"><span>PRÓXIMA PARADA?</span><span>35°53′ N · 14°30′ E</span></div>
-    <div class="art-title">MALTA<span>Uma nova perspectiva.</span></div>
+    <div class="art-title">MALTA<span>Não é cenário. É o destino.</span></div>
     ${mediaUrl(media.heroPortrait.src)
       ? portraitMarkup(media.heroPortrait)
       : '<img class="malta-illustration" src="/images/malta-illustration.svg" alt="Ilustração de Valletta, em Malta, com construções históricas à beira do mar" width="1000" height="1200" fetchpriority="high">'}
@@ -85,14 +85,11 @@ document.querySelector('#app').innerHTML = `
 </section>
 ${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'CONCORRA A UM INTERCÂMBIO EM MALTA', 'INGLÊS E ESPANHOL'])}
 <div class="benefit-strip"><div class="wrap strip-inner"><span>${suitcase} Concorra a <strong>2 semanas de INTERCÂMBIO em Malta</strong></span><span>${globe} Aprenda online</span><span>${check} Ganhe 1 mês do outro idioma</span></div></div>
-<section class="section wrap story-section" id="beneficios">
-  <div class="story-layout">
-    <div class="section-heading story-heading"><p class="eyebrow">DA PRIMEIRA AULA AO PRÓXIMO DESTINO</p><h2>Uma escolha agora.<br><span>Novas possibilidades depois.</span></h2><p>A Black Friday EFM começa com um idioma. Até onde essa decisão pode levar você é o que vem a seguir.</p><span class="story-scroll-hint">CONTINUE ROLANDO PARA DESCOBRIR <i aria-hidden="true">↓</i></span></div>
-    <div class="benefit-grid story-track">
-      <article class="story-card"><span class="number">01</span><span class="story-tag">COMECE</span><h3>Escolha seu idioma.<br>Encontre seu ritmo.</h3><p>Inglês ou espanhol, com aulas online e uma rotina que se adapta ao seu momento.</p></article>
-      <article class="story-card"><span class="number">02</span><span class="story-tag">DESCUBRA</span><h3>Existe algo além<br>da primeira escolha.</h3><p>Sua matrícula abre uma nova experiência para você explorar durante a campanha.</p></article>
-      <article class="story-card story-card-malta"><span class="number">03</span><span class="story-tag">IMAGINE</span><h3>Malta pode ser<br>o próximo capítulo.</h3><p>Continue para descobrir como o aprendizado pode levar você muito além da tela.</p></article>
-    </div>
+<section class="section wrap reference-story" id="beneficios">
+  <div class="reference-intro"><p class="eyebrow">VIVA UMA IMERSÃO. DESTRAVE O SEU INGLÊS.</p><h2>Uma campanha para aprender agora.<br><span>E se imaginar lá.</span></h2><p>O curso é o começo. Malta é a oportunidade que faz esta Black Friday ir muito além de uma oferta comum.</p></div>
+  <div class="reference-story-grid">
+    <figure class="reference-human"><img src="/images/vinicius-malta-coast.webp" alt="Vinícius, da EFM Languages, observando a costa de Malta" width="1080" height="1283" loading="lazy"><figcaption><strong>Vinícius viveu Malta de perto.</strong><span>Agora a EFM quer abrir essa possibilidade para um aluno.</span></figcaption></figure>
+    <article class="reference-prize"><p class="eyebrow">O QUE O PRÊMIO INCLUI</p><h3>Duas semanas para viver o idioma fora da tela.</h3><ul>${campaign.giveaway.included.map(item => `<li>${check}<span>${item}</span></li>`).join('')}<li>${check}<span><strong>€ 200</strong> de ajuda de custo</span></li></ul><div class="reference-warning"><strong>Passagem aérea não incluída.</strong><span>A viagem é uma premiação por sorteio, não um benefício garantido da matrícula.</span></div>${cta('Quero concorrer', 'prize-overview')}</article>
   </div>
 </section>
 ${marquee(['APRENDA ONLINE', 'INGLÊS OU ESPANHOL', 'ESCOLHA O SEU RITMO', 'VIVA NOVAS POSSIBILIDADES'], 'marquee-navy marquee-reverse')}
