@@ -322,10 +322,9 @@ html, body { overflow-x: clip; }
 .faq-section { padding-top:105px;padding-bottom:120px; }
 .faq-section h2 span { color:var(--efm-orange); }
 .faq-list details { background:#0b1018;border-color:#29364b; }
-.faq-answer { display:grid!important;grid-template-rows:0fr;opacity:0;transition:grid-template-rows 320ms cubic-bezier(.2,.75,.25,1),opacity 220ms ease; }
-.faq-item[open] > .faq-answer { grid-template-rows:1fr;opacity:1; }
-.faq-answer-inner { min-height:0;overflow:hidden;padding:0 36px 0 0;transition:padding 320ms cubic-bezier(.2,.75,.25,1); }
-.faq-item[open] .faq-answer-inner { padding-bottom:24px; }
+.faq-answer { display:block!important;height:0;overflow:hidden;opacity:0; }
+.faq-item[open] > .faq-answer { height:auto;opacity:1; }
+.faq-answer-inner { padding:0 36px 24px 0; }
 .faq-answer p { margin:0;color:var(--bf-text-muted);font-size:13px;line-height:1.8; }
 .faq-icon { transition:transform 240ms ease; }
 .faq-item[open] .faq-icon { transform:rotate(45deg); }

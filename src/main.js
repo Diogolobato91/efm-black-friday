@@ -195,15 +195,41 @@ document.addEventListener('click', (e) => {
 });
 
 const faqItems = [...document.querySelectorAll('.faq-item')];
+const faqAnimations = new WeakMap();
+
+function setFaqState(item, open, animate = !reducedMotion.matches) {
+  const answer = item.querySelector('.faq-answer');
+  const runningAnimation = faqAnimations.get(item);
+  runningAnimation?.cancel();
+
+  const startHeight = answer.getBoundingClientRect().height;
+  item.open = open;
+
+  if (!animate) return;
+
+  const endHeight = open ? answer.scrollHeight : 0;
+  const animation = answer.animate(
+    [
+      { height: `${startHeight}px`, opacity: open ? 0 : 1 },
+      { height: `${endHeight}px`, opacity: open ? 1 : 0 },
+    ],
+    { duration: 280, easing: 'cubic-bezier(.2,.75,.25,1)' },
+  );
+
+  faqAnimations.set(item, animation);
+  animation.addEventListener('finish', () => {
+    if (faqAnimations.get(item) === animation) faqAnimations.delete(item);
+  }, { once: true });
+}
 
 faqItems.forEach((item) => {
   item.querySelector('summary').addEventListener('click', (event) => {
     event.preventDefault();
     const shouldOpen = !item.open;
     faqItems.forEach((other) => {
-      if (other !== item) other.open = false;
+      if (other !== item && other.open) setFaqState(other, false);
     });
-    item.open = shouldOpen;
+    setFaqState(item, shouldOpen);
   });
 });
 
