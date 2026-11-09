@@ -91,11 +91,8 @@ ${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'CONCORRA A UM INTERCÂMBIO EM 
     <article class="reference-prize"><p class="eyebrow">O QUE O PRÊMIO INCLUI</p><h3>Duas semanas para viver o idioma fora da tela.</h3><ul>${campaign.giveaway.included.map(item => `<li>${check}<span>${item}</span></li>`).join('')}<li>${check}<span><strong>€ 200</strong> de ajuda de custo</span></li></ul><div class="reference-warning"><strong>Passagem aérea não incluída.</strong><span>A viagem é uma premiação por sorteio, não um benefício garantido da matrícula.</span></div>${cta('Quero concorrer', 'prize-overview')}</article>
   </div>
   <section class="campaign-video-card" aria-labelledby="campaign-video-heading">
-    <button class="campaign-video-trigger" type="button" data-video-open aria-haspopup="dialog">
-      <img src="/images/vinicius-malta-coast.webp" alt="" width="1080" height="1283" loading="lazy">
-      <span class="campaign-video-overlay"><span class="campaign-video-play" aria-hidden="true">▶</span><span>Assistir ao vídeo</span></span>
-    </button>
-    <div class="campaign-video-copy"><p class="eyebrow">A CAMPANHA, EM VÍDEO</p><h2 id="campaign-video-heading">Dê o play e conheça essa experiência.</h2><p>O vídeo é carregado somente quando você abrir.</p><button class="text-link" type="button" data-video-open>Ver vídeo <span aria-hidden="true">→</span></button></div>
+    <div class="campaign-video-player"><video controls playsinline preload="metadata" poster="/images/campaign-video-poster.webp" aria-label="Vídeo da campanha Black Friday EFM"><source src="/videos/campaign-vertical.mp4" type="video/mp4">Seu navegador não reproduz este vídeo.</video></div>
+    <div class="campaign-video-copy"><p class="eyebrow">A CAMPANHA, EM VÍDEO</p><h2 id="campaign-video-heading">Dê o play e conheça essa experiência.</h2><p>Assista ao vídeo da campanha diretamente por aqui.</p></div>
   </section>
   <div class="reference-course-bridge"><div><span>INGLÊS OU ESPANHOL</span><strong>4, 8 ou 12 aulas por mês.</strong></div><div><span>PLANOS A PARTIR DE</span><strong>R$ 350/mês</strong></div><a href="#seu-plano" class="button button-orange"><span>Ver os planos</span>${arrow}</a></div>
 </section>
@@ -143,11 +140,6 @@ ${marquee(['MALTA NÃO É CENÁRIO', 'É O DESTINO', '2 SEMANAS DE INTERCÂMBIO'
 </main>
 <footer class="wrap site-footer"><a href="#inicio" aria-label="EFM Languages — voltar ao início"><img src="/brand/efm-transparent.png" alt="EFM Languages" width="110" height="66"></a><p>English For Me.<br>Novos idiomas. Novas possibilidades.</p><div><span>ATENDIMENTO DA CAMPANHA</span><a data-whatsapp data-section="footer" href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">(91) 98510-6086 ${arrow}</a></div><p class="footer-note">Regulamento em etapa final de preparação. A matrícula e a participação são concluídas conforme orientação no atendimento.</p></footer>
 <div class="mobile-sticky"><span data-current-selection></span>${cta('Falar com a EFM', 'sticky')}</div>
-<dialog class="campaign-video-dialog" data-video-dialog aria-labelledby="video-dialog-title">
-  <div class="campaign-video-dialog-head"><h2 id="video-dialog-title">Campanha Black Friday EFM</h2><button type="button" data-video-close aria-label="Fechar vídeo">×</button></div>
-  <div class="campaign-video-frame" data-video-frame></div>
-  <a href="https://www.instagram.com/p/DfXbPhmxCnS/" target="_blank" rel="noopener noreferrer">Abrir no Instagram ${arrow}</a>
-</dialog>
 `;
 
 let language = 'english';
@@ -157,31 +149,6 @@ let kineticGrid;
 let maltaGallery;
 let selectionAnimation;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-const videoDialog = document.querySelector('[data-video-dialog]');
-const videoFrame = document.querySelector('[data-video-frame]');
-let videoReturnFocus;
-
-function openCampaignVideo(trigger) {
-  videoReturnFocus = trigger;
-  videoFrame.innerHTML = '<iframe src="https://www.instagram.com/p/DfXbPhmxCnS/embed/?autoplay=1" title="Vídeo da campanha Black Friday EFM no Instagram" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="eager"></iframe>';
-  videoDialog.showModal();
-  document.body.classList.add('dialog-open');
-}
-
-function closeCampaignVideo() {
-  videoDialog.close();
-  videoFrame.replaceChildren();
-  document.body.classList.remove('dialog-open');
-  videoReturnFocus?.focus();
-}
-
-document.querySelectorAll('[data-video-open]').forEach((button) => button.addEventListener('click', () => openCampaignVideo(button)));
-document.querySelector('[data-video-close]').addEventListener('click', closeCampaignVideo);
-videoDialog.addEventListener('click', (event) => { if (event.target === videoDialog) closeCampaignVideo(); });
-videoDialog.addEventListener('close', () => {
-  videoFrame.replaceChildren();
-  document.body.classList.remove('dialog-open');
-});
 
 function updateLinks() {
   const { modality, plan } = getSelection(campaign, language, planId);
