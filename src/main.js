@@ -102,6 +102,7 @@ ${videoMarkup(media.campaignVideo)}
     <article class="efm-benefit-card benefit-material"><div class="benefit-visual"><span class="material-sheet"></span><span class="material-window"></span></div><span class="benefit-index">03</span><h3>Material e portal do aluno</h3><p>Conteúdo didático e recursos reunidos para apoiar seus estudos.</p></article>
   </div>
 </section>
+${marquee(['AULAS ONLINE E INDIVIDUAIS', 'HORÁRIOS FLEXÍVEIS', 'MATERIAL E PORTAL DO ALUNO'], 'marquee-navy marquee-reverse')}
 <section class="plans-section section" id="planos" aria-labelledby="plans-heading"><div class="wrap">
   <div class="plans-heading"><div><p class="eyebrow">SUA DECISÃO, DO SEU JEITO</p><h2 id="plans-heading">Monte seu plano<br><span>em poucos segundos.</span></h2></div><div class="language-toggle" role="group" aria-label="Idioma do curso"><button type="button" data-language="english" aria-pressed="true">${flag('uk')} Inglês</button><button type="button" data-language="spanish" aria-pressed="false">${flag('es')} Espanhol</button></div></div>
   <p class="plans-intro">Escolha o idioma e a quantidade de aulas. Você vê o investimento na hora e leva sua decisão pronta para o atendimento da EFM.</p>
@@ -132,8 +133,9 @@ ${videoMarkup(media.campaignVideo)}
     <p class="gallery-credit">MALTA · CIDADES HISTÓRICAS, COSTA E MEDITERRÂNEO</p>
   </div>
 </section>
+${marquee(['MALTA NÃO É CENÁRIO', 'É O DESTINO', '2 SEMANAS DE INTERCÂMBIO', 'BLACK FRIDAY EFM'], 'marquee-offset')}
 <section class="section wrap campaign-rules" id="malta" aria-labelledby="rules-heading"><div><p class="eyebrow">CONDIÇÕES IMPORTANTES</p><h2 id="rules-heading">Sonhe com Malta.<br><span>Decida com clareza.</span></h2></div><div class="rules-grid"><article><span>01</span><h3>É um sorteio</h3><p>A matrícula oferece a oportunidade de concorrer. A viagem não é garantida.</p></article><article><span>02</span><h3>Passagem à parte</h3><p>A passagem aérea não está incluída na premiação.</p></article><article><span>03</span><h3>Matrícula ativa</h3><p>É necessário manter a matrícula ativa e as mensalidades em dia até o mês da viagem.</p></article></div></section>
-<section class="section wrap faq-section" id="duvidas"><div><p class="eyebrow">TUDO MAIS CLARO</p><h2>Antes de dar<br><span>o próximo passo.</span></h2><p>Ficou com outra dúvida?<br>A EFM conversa com você.</p><a class="text-link" data-whatsapp data-section="faq" href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">Falar no WhatsApp ${arrow}</a></div><div class="faq-list">${faq.map(([question,answer]) => `<details><summary>${question}<span aria-hidden="true">+</span></summary><p>${answer}</p></details>`).join('')}</div></section>
+<section class="section wrap faq-section" id="duvidas"><div><p class="eyebrow">TUDO MAIS CLARO</p><h2>Antes de dar<br><span>o próximo passo.</span></h2><p>Ficou com outra dúvida?<br>A EFM conversa com você.</p><a class="text-link" data-whatsapp data-section="faq" href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">Falar no WhatsApp ${arrow}</a></div><div class="faq-list">${faq.map(([question,answer], index) => `<details class="faq-item" ${index === 0 ? 'open' : ''}><summary><span class="faq-question">${question}</span><span class="faq-icon" aria-hidden="true">+</span></summary><div class="faq-answer"><div class="faq-answer-inner"><p>${answer}</p></div></div></details>`).join('')}</div></section>
 </main>
 <footer class="wrap site-footer"><a href="#inicio" aria-label="EFM Languages — voltar ao início"><img src="/brand/efm-transparent.png" alt="EFM Languages" width="110" height="66"></a><p>English For Me.<br>Novos idiomas. Novas possibilidades.</p><div><span>ATENDIMENTO DA CAMPANHA</span><a data-whatsapp data-section="footer" href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">(91) 98510-6086 ${arrow}</a></div><p class="footer-note">Regulamento em etapa final de preparação. A matrícula e a participação são concluídas conforme orientação no atendimento.</p></footer>
 <div class="mobile-sticky"><span data-current-selection></span>${cta('Falar com a EFM', 'sticky')}</div>
@@ -191,6 +193,20 @@ document.addEventListener('click', (e) => {
     event('whatsapp_click', link.dataset.section);
   }
 });
+
+const faqItems = [...document.querySelectorAll('.faq-item')];
+
+faqItems.forEach((item) => {
+  item.querySelector('summary').addEventListener('click', (event) => {
+    event.preventDefault();
+    const shouldOpen = !item.open;
+    faqItems.forEach((other) => {
+      if (other !== item) other.open = false;
+    });
+    item.open = shouldOpen;
+  });
+});
+
 updateLinks();
 motion = initMotion();
 kineticGrid = initKineticGrid(document.querySelector('.hero'));
