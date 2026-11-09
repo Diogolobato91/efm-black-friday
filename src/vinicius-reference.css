@@ -273,6 +273,36 @@ html, body { overflow-x: clip; }
 .reference-course-bridge span { display:block;margin-bottom:5px;color:#9fb0c8;font-size:11px;font-weight:700;letter-spacing:1.4px; }
 .reference-course-bridge strong { color:#fff;font-size:18px; }
 .reference-course-bridge .button { min-width:190px; }
+
+.efm-benefits { padding-block:120px; }
+.efm-benefits-heading { display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:60px;align-items:end;margin-bottom:48px; }
+.efm-benefits-heading h2 { margin:0;font-size:clamp(42px,4.8vw,66px);line-height:1.02;letter-spacing:-3px; }
+.efm-benefits-heading h2 span { color:var(--reference-blue); }
+.efm-benefits-heading > p { max-width:520px;margin:0 0 7px;color:var(--bf-text-muted);font-size:15px;line-height:1.75; }
+.efm-benefit-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px; }
+.efm-benefit-card { position:relative;min-height:510px;padding:24px;border:1px solid #26354e;border-radius:22px;background:#0c1119;overflow:hidden; }
+.efm-benefit-card::after { content:'';position:absolute;inset:auto 0 0;height:55%;background:linear-gradient(180deg,transparent,#080b11 55%);pointer-events:none; }
+.benefit-visual { position:relative;height:285px;margin:-24px -24px 30px;overflow:hidden;border-bottom:1px solid #273a5b;background:radial-gradient(circle at 68% 25%,#0d48fe66,transparent 30%),linear-gradient(145deg,#10285b,#08101f 62%,#131924); }
+.benefit-index,.efm-benefit-card h3,.efm-benefit-card p { position:relative;z-index:2; }
+.benefit-index { display:block;margin-bottom:12px;color:var(--efm-orange);font-size:10px;font-weight:800;letter-spacing:2px; }
+.efm-benefit-card h3 { margin:0 0 12px;color:#fff;font-size:23px;line-height:1.15;letter-spacing:-.8px; }
+.efm-benefit-card p { margin:0;color:var(--bf-text-muted);font-size:13px;line-height:1.7; }
+.benefit-orbit { position:absolute;left:50%;top:50%;width:190px;height:190px;border:1px solid #70a3ff88;border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 24px #0d48fe0c,0 0 0 48px #0d48fe08; }
+.benefit-avatar { position:absolute;left:50%;top:50%;display:grid;place-items:center;width:92px;height:92px;border:1px solid #87aaff;border-radius:28px;background:#0d48fe;color:#fff;font-size:23px;font-weight:900;letter-spacing:-1px;transform:translate(-50%,-50%) rotate(-4deg);box-shadow:0 24px 60px #0009; }
+.benefit-signal { position:absolute;right:46px;top:52px;width:18px;height:18px;border-radius:50%;background:var(--efm-orange);box-shadow:0 0 0 10px #f25c0520; }
+.benefit-time .benefit-visual { background:radial-gradient(circle at 50% 50%,#f25c052f,transparent 33%),linear-gradient(145deg,#18120f,#071b39); }
+.clock-ring { position:absolute;left:50%;top:50%;width:176px;height:176px;border:2px solid var(--efm-orange);border-radius:50%;transform:translate(-50%,-50%);box-shadow:inset 0 0 0 18px #f25c0508,0 0 60px #f25c0520; }
+.clock-ring::before,.clock-ring::after { content:'';position:absolute;left:50%;top:50%;width:3px;border-radius:3px;background:#fff;transform-origin:center bottom; }
+.clock-ring::before { height:53px;transform:translate(-50%,-100%) rotate(34deg); }
+.clock-ring::after { height:35px;transform:translate(-50%,-100%) rotate(122deg); }
+.benefit-time .benefit-visual strong { position:absolute;right:24px;bottom:18px;color:#ffffff1a;font-size:24px;line-height:.9;text-align:right; }
+.benefit-material .benefit-visual { background:radial-gradient(circle at 40% 30%,#1592ff42,transparent 34%),linear-gradient(145deg,#09152b,#141923); }
+.material-sheet,.material-window { position:absolute;border:1px solid #7196ff;border-radius:10px;background:#0b1d43;box-shadow:0 22px 50px #0009; }
+.material-sheet { left:18%;top:48px;width:145px;height:185px;transform:rotate(-7deg); }
+.material-sheet::before { content:'';position:absolute;inset:24px 20px;background:repeating-linear-gradient(180deg,#8da7d8 0 2px,transparent 2px 17px);opacity:.55; }
+.material-window { right:11%;top:74px;width:175px;height:132px;transform:rotate(6deg); }
+.material-window::before { content:'';position:absolute;left:14px;right:14px;top:17px;height:12px;border-radius:4px;background:var(--efm-orange);box-shadow:0 25px 0 #3158a8,0 50px 0 #1b315f; }
+
 .campaign-rules { padding-block:110px; }
 .campaign-rules > div:first-child { max-width:760px;margin-bottom:44px; }
 .campaign-rules h2 { margin:0;font-size:clamp(42px,5vw,68px);line-height:1;letter-spacing:-3px; }
@@ -287,6 +317,11 @@ html, body { overflow-x: clip; }
 .referral-section h2 span { color:var(--reference-blue); }
 .referral-section p:not(.eyebrow) { max-width:690px;margin:0;color:var(--bf-text-muted); }
 .referral-section .button { min-width:270px; }
+
+.malta-gallery { height:210vh; }
+.faq-section { padding-top:105px;padding-bottom:120px; }
+.faq-section h2 span { color:var(--efm-orange); }
+.faq-list details { background:#0b1018;border-color:#29364b; }
 
 @media (max-width: 1000px) {
   .reference-human, .reference-human img { min-height: 590px; height: 590px; }
@@ -305,6 +340,9 @@ html, body { overflow-x: clip; }
   .hero-art.has-portrait { height: 540px; min-height: 0; outline-offset: 6px; }
   .reference-story { padding-top: 90px; padding-bottom: 90px; }
   .reference-story-grid { grid-template-columns: 1fr; gap: 34px; }
+  .efm-benefits-heading { grid-template-columns:1fr;gap:20px; }
+  .efm-benefit-grid { grid-template-columns:1fr; }
+  .efm-benefit-card { min-height:460px; }
   .reference-course-bridge { grid-template-columns:1fr 1fr; }
   .reference-course-bridge .button { grid-column:1/-1;width:100%; }
   .rules-grid { grid-template-columns:1fr; }
@@ -325,6 +363,10 @@ html, body { overflow-x: clip; }
   .reference-human, .reference-human img { min-height: 440px; height: 440px; }
   .reference-human figcaption { right: 22px; bottom: 24px; left: 22px; }
   .reference-prize::before { top: -22px; font-size: 65px; }
+  .efm-benefits { padding-block:80px; }
+  .efm-benefits-heading h2 { font-size:39px;letter-spacing:-2px; }
+  .efm-benefit-card { min-height:430px; }
+  .benefit-visual { height:245px; }
   .reference-course-bridge { grid-template-columns:1fr; }
   .reference-course-bridge .button { grid-column:auto; }
   .campaign-rules { padding-block:80px; }
