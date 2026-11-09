@@ -884,13 +884,13 @@ h3 {
 .faq-list summary::-webkit-details-marker {
   display:none
 }
-.faq-list summary>span {
+.faq-list .faq-icon {
   font-size:24px;
   font-weight:400;
   color:var(--efm-orange);
   line-height:1
 }
-.faq-list details[open] summary>span {
+.faq-list details[open] .faq-icon {
   transform:rotate(45deg)
 }
 .faq-list details>p {
