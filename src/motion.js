@@ -4,10 +4,10 @@ export function initMotion() {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
   const revealSelector = [
-    '.section-heading', '.benefit-grid article', '.plans-heading', '.plan-card',
+    '.section-heading', '.benefit-grid article', '.plans-heading',
     '.plan-conditions > div', '.plan-finder', '.malta-poster', '.malta-copy',
-    '.bonus-layout > div', '.steps li', '.faq-section > div',
-    '.final-section > .wrap', '.vinicius-section > div',
+    '.efm-benefits-heading', '.efm-benefit-card', '.campaign-rules > div',
+    '.faq-section > div', '.vinicius-section > div',
   ].join(',');
   const seen = new WeakSet();
   const elements = new Set();
