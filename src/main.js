@@ -94,11 +94,19 @@ ${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'CONCORRA A UM INTERCÂMBIO EM 
   <div class="reference-course-bridge"><div><span>INGLÊS OU ESPANHOL</span><strong>4, 8 ou 12 aulas por mês.</strong></div><div><span>PLANOS A PARTIR DE</span><strong>R$ 350/mês</strong></div><a href="#seu-plano" class="button button-orange"><span>Ver os planos</span>${arrow}</a></div>
 </section>
 ${videoMarkup(media.campaignVideo)}
+<section class="section wrap efm-benefits" aria-labelledby="benefits-heading">
+  <div class="efm-benefits-heading"><div><p class="eyebrow">POR QUE APRENDER COM A EFM</p><h2 id="benefits-heading">Um curso pensado<br><span>para caber na sua rotina.</span></h2></div><p>Você escolhe o idioma e o ritmo. A EFM cuida da experiência de aprendizagem, do material e do acompanhamento.</p></div>
+  <div class="efm-benefit-grid">
+    <article class="efm-benefit-card benefit-live"><div class="benefit-visual"><span class="benefit-orbit"></span><span class="benefit-avatar">EFM</span><span class="benefit-signal"></span></div><span class="benefit-index">01</span><h3>Aulas online e individuais</h3><p>Aulas que respeitam o seu ritmo e colocam você no centro da experiência.</p></article>
+    <article class="efm-benefit-card benefit-time"><div class="benefit-visual"><span class="clock-ring"></span><strong>SEU<br>HORÁRIO</strong></div><span class="benefit-index">02</span><h3>Horários flexíveis</h3><p>Organize suas aulas de acordo com a sua disponibilidade.</p></article>
+    <article class="efm-benefit-card benefit-material"><div class="benefit-visual"><span class="material-sheet"></span><span class="material-window"></span></div><span class="benefit-index">03</span><h3>Material e portal do aluno</h3><p>Conteúdo didático e recursos reunidos para apoiar seus estudos.</p></article>
+  </div>
+</section>
 <section class="plans-section section" id="planos" aria-labelledby="plans-heading"><div class="wrap">
   <div class="plans-heading"><div><p class="eyebrow">SUA DECISÃO, DO SEU JEITO</p><h2 id="plans-heading">Monte seu plano<br><span>em poucos segundos.</span></h2></div><div class="language-toggle" role="group" aria-label="Idioma do curso"><button type="button" data-language="english" aria-pressed="true">${flag('uk')} Inglês</button><button type="button" data-language="spanish" aria-pressed="false">${flag('es')} Espanhol</button></div></div>
   <p class="plans-intro">Escolha o idioma e a quantidade de aulas. Você vê o investimento na hora e leva sua decisão pronta para o atendimento da EFM.</p>
   <div class="plan-finder" id="seu-plano" aria-labelledby="finder-heading">
-    <div class="finder-heading"><div><p class="eyebrow">SEU IDIOMA. SEU RITMO.</p><h3 id="finder-heading">Quantas aulas cabem no seu mês?</h3><p>Experimente as opções. A escolha é sua.</p></div><a class="text-link" href="#comparar-planos">Ver todos os planos ${arrow}</a></div>
+    <div class="finder-heading"><div><p class="eyebrow">SEU IDIOMA. SEU RITMO.</p><h3 id="finder-heading">Quantas aulas cabem no seu mês?</h3><p>Escolha uma opção e veja o resumo do seu plano.</p></div></div>
     <div class="rhythm-options" role="group" aria-label="Quantidade de aulas por mês">
       <button type="button" class="rhythm-choice" data-rhythm="basic" aria-pressed="true"><strong>4<span>aulas / mês</span></strong><span>Um começo possível</span>${check}</button>
       <button type="button" class="rhythm-choice" data-rhythm="pro" aria-pressed="false"><strong>8<span>aulas / mês</span></strong><span>Mais espaço para praticar</span>${check}</button>
@@ -106,9 +114,6 @@ ${videoMarkup(media.campaignVideo)}
     </div>
     <div class="selected-plan" id="selected-plan"><div class="selected-overview"><span class="small-label">SUA ESCOLHA, SEM COMPLICAÇÃO</span><h3 data-choice-title></h3><p data-choice-description></p><div class="selected-perks"><span>${check} 1 mês do outro idioma</span><span data-choice-chances></span></div><p class="selected-draw-note">Concorra a Malta. Passagem aérea não incluída.</p></div><div class="selected-action"><p class="selected-price" data-choice-price></p><p>+ taxa inicial de <strong>R$ 199,90</strong><br>Primeira mensalidade em dezembro.</p>${cta('Continuar com meu plano', 'selected-plan', 'data-selection-cta')}<small>Sua escolha acompanha a mensagem no WhatsApp.</small></div></div>
   </div>
-  <div class="comparison-title" id="comparar-planos"><span class="small-label">COMPARE DO SEU JEITO</span><span>Os mesmos benefícios, no ritmo que você escolher.</span></div>
-  <div class="plan-grid" id="plan-grid"></div>
-  <p class="selection-status" id="selection-status" role="status" aria-live="polite"></p>
   <div class="plan-conditions"><div><span class="small-label">PARA COMEÇAR</span><p>Taxa inicial de <strong>R$ 199,90</strong></p><span>Inclui material didático e portal do aluno.</span></div><div><span class="small-label">PARA SE ORGANIZAR</span><p>Primeira mensalidade <strong>em dezembro.</strong></p><span>Os valores dos planos são mensais.</span></div><div><span class="small-label">EM TODOS OS PLANOS</span><p><strong>1 mês</strong> do outro idioma.</p><span>Uma aula por semana durante o bônus.</span></div></div>
 </div></section>
 <section class="malta-gallery" aria-labelledby="gallery-heading" data-malta-gallery>
@@ -128,12 +133,7 @@ ${videoMarkup(media.campaignVideo)}
   </div>
 </section>
 <section class="section wrap campaign-rules" id="malta" aria-labelledby="rules-heading"><div><p class="eyebrow">CONDIÇÕES IMPORTANTES</p><h2 id="rules-heading">Sonhe com Malta.<br><span>Decida com clareza.</span></h2></div><div class="rules-grid"><article><span>01</span><h3>É um sorteio</h3><p>A matrícula oferece a oportunidade de concorrer. A viagem não é garantida.</p></article><article><span>02</span><h3>Passagem à parte</h3><p>A passagem aérea não está incluída na premiação.</p></article><article><span>03</span><h3>Matrícula ativa</h3><p>É necessário manter a matrícula ativa e as mensalidades em dia até o mês da viagem.</p></article></div></section>
-<section class="bonus-section section"><div class="wrap bonus-layout"><div><p class="eyebrow">SEU BÔNUS DE BLACK FRIDAY</p><h2>Comece com um.<br><span>Experimente dois.</span></h2><p>Escolheu inglês? Experimente espanhol.<br>Escolheu espanhol? Descubra o inglês.</p></div><div class="bonus-details"><span class="bonus-number">1<span>MÊS DO OUTRO IDIOMA</span></span><p>Uma aula por semana durante o bônus. Depois, você decide se continua nos dois idiomas ou apenas no escolhido inicialmente.</p><p class="fine-print">Consulte a equipe sobre as condições de continuidade após o bônus.</p>${cta('Quero aproveitar o bônus', 'bonus')}</div></div></section>
-<section class="section wrap referral-section"><div><p class="eyebrow">JÁ ESTUDA NA EFM?</p><h2>Seu próximo passo<br><span>também pode indicar um caminho.</span></h2><p>Indique um novo aluno e também concorra ao intercâmbio. A equipe explica as condições no atendimento.</p></div>${cta('Quero indicar um novo aluno', 'referral', 'data-referral="true"')}</section>
-<section class="section wrap how-section"><div class="section-heading"><p class="eyebrow">SEU PRÓXIMO PASSO É SIMPLES</p><h2>Do plano à primeira conversa.</h2></div><ol class="steps"><li><span>01</span><h3>Encontre seu plano</h3><p>Escolha inglês ou espanhol e compare as aulas mensais.</p></li><li><span>02</span><h3>Fale com a EFM</h3><p>Abra o WhatsApp. Sua seleção já acompanha a mensagem.</p></li><li><span>03</span><h3>Conclua sua matrícula</h3><p>A equipe orienta os próximos passos no atendimento.</p></li></ol></section>
 <section class="section wrap faq-section" id="duvidas"><div><p class="eyebrow">TUDO MAIS CLARO</p><h2>Antes de dar<br><span>o próximo passo.</span></h2><p>Ficou com outra dúvida?<br>A EFM conversa com você.</p><a class="text-link" data-whatsapp data-section="faq" href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">Falar no WhatsApp ${arrow}</a></div><div class="faq-list">${faq.map(([question,answer]) => `<details><summary>${question}<span aria-hidden="true">+</span></summary><p>${answer}</p></details>`).join('')}</div></section>
-<section class="final-section section"><div class="wrap"><p class="eyebrow">BLACK FRIDAY EFM · CONCORRA A MALTA</p><h2>Aprenda daqui.<br><span>Concorra a Malta.</span></h2><p>Escolha o idioma e o seu ritmo.<br>Ao concluir sua matrícula, você participa conforme as condições da campanha.</p>${cta('Quero escolher meu plano', 'final')}<p class="final-selection" data-current-selection></p><p class="commercial">A partir de R$ 350/mês + taxa inicial de R$ 199,90.<br>Primeira mensalidade em dezembro.</p></div></section>
-${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'SEU PRÓXIMO IDIOMA COMEÇA AGORA', 'CONCORRA A MALTA'], 'marquee-final marquee-reverse')}
 </main>
 <footer class="wrap site-footer"><a href="#inicio" aria-label="EFM Languages — voltar ao início"><img src="/brand/efm-transparent.png" alt="EFM Languages" width="110" height="66"></a><p>English For Me.<br>Novos idiomas. Novas possibilidades.</p><div><span>ATENDIMENTO DA CAMPANHA</span><a data-whatsapp data-section="footer" href="${whatsappLink(campaign, 'english', 'basic')}" target="_blank" rel="noopener noreferrer">(91) 98510-6086 ${arrow}</a></div><p class="footer-note">Regulamento em etapa final de preparação. A matrícula e a participação são concluídas conforme orientação no atendimento.</p></footer>
 <div class="mobile-sticky"><span data-current-selection></span>${cta('Falar com a EFM', 'sticky')}</div>
@@ -147,17 +147,12 @@ let maltaGallery;
 let selectionAnimation;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 
-function renderPlans() {
-  const { modality } = getSelection(campaign, language, planId);
-  document.querySelector('#plan-grid').innerHTML = modality.plans.map((plan, index) => `<article class="plan-card ${index === 1 ? 'plan-card-featured' : ''} ${plan.id === planId ? 'is-selected' : ''}" data-plan-card="${plan.id}"><div class="plan-card-top"><span class="small-label">${modality.label.toUpperCase()}</span><span class="plan-indicator">${plan.id === planId ? 'Selecionado' : `PLANO 0${index + 1}`}</span></div><h3>${plan.name}</h3><div class="class-count"><strong>${plan.classesPerMonth}</strong><span>aulas<br>por mês</span></div><p class="plan-price"><span>R$</span> ${plan.monthlyPriceBRL}<small>/mês</small></p><ul><li>${check}<span>${plan.drawChances} chances no sorteio de Malta</span></li><li>${check}<span>1 mês do outro idioma</span></li><li>${check}<span>Aulas online</span></li></ul><button class="select-plan" type="button" data-select-plan="${plan.id}" aria-pressed="${plan.id === planId}">${plan.id === planId ? 'Plano selecionado' : 'Selecionar plano'} ${check}</button><a class="button ${index === 1 ? 'button-orange' : 'button-outline'}" data-whatsapp data-section="plans" data-plan="${plan.id}" href="${whatsappLink(campaign, language, plan.id)}" target="_blank" rel="noopener noreferrer"><span>Falar sobre o ${plan.name}</span>${arrow}</a></article>`).join('');
-}
 function updateLinks() {
   const { modality, plan } = getSelection(campaign, language, planId);
   document.querySelectorAll('[data-whatsapp]').forEach((link) => {
     link.href = whatsappLink(campaign, language, link.dataset.plan || planId, link.dataset.referral === 'true');
   });
   document.querySelectorAll('[data-current-selection]').forEach((node) => { node.textContent = `${modality.label} · ${plan.name} · ${formatBRL(plan.monthlyPriceBRL)}/mês`; });
-  document.querySelector('#selection-status').textContent = `Sua seleção: ${modality.label}, plano ${plan.name}, ${plan.classesPerMonth} aulas por mês por ${formatBRL(plan.monthlyPriceBRL)}/mês, ${plan.drawChances} chances no sorteio. Taxa inicial de R$ 199,90. Primeira mensalidade em dezembro.`;
   document.querySelectorAll('[data-rhythm]').forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.rhythm === planId)));
   document.querySelector('[data-choice-title]').textContent = `${modality.label} · ${plan.name}`;
   document.querySelector('[data-choice-description]').textContent = `${plan.classesPerMonth} aulas online por mês, no seu ritmo.`;
@@ -167,14 +162,12 @@ function updateLinks() {
 }
 function event(name, section) { trackEvent(name, { section, language, plan: planId }); }
 
-function choosePlan(nextPlan, section, eventName, returnFocus = false) {
+function choosePlan(nextPlan, section, eventName) {
   if (nextPlan === planId) return;
   getSelection(campaign, language, nextPlan);
   planId = nextPlan;
-  renderPlans();
   updateLinks();
   motion?.refresh();
-  if (returnFocus) document.querySelector(`[data-select-plan="${planId}"]`).focus({ preventScroll: true });
   const feedback = document.querySelector('.selected-plan');
   selectionAnimation?.cancel();
   if (!reducedMotion.matches && feedback.animate) {
@@ -188,34 +181,17 @@ document.addEventListener('click', (e) => {
   if (languageButton && languageButton.dataset.language !== language) {
     language = languageButton.dataset.language;
     document.querySelectorAll('[data-language]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === language)));
-    renderPlans(); updateLinks(); event('language_select', 'plans');
+    updateLinks(); event('language_select', 'plans');
     motion?.refresh();
   }
   const rhythmButton = e.target.closest('[data-rhythm]');
   if (rhythmButton) choosePlan(rhythmButton.dataset.rhythm, 'plan-finder', 'rhythm_select');
-  const planButton = e.target.closest('[data-select-plan]');
-  if (planButton) {
-    choosePlan(planButton.dataset.selectPlan, 'plans', 'plan_select', true);
-  }
   const link = e.target.closest('[data-whatsapp]');
   if (link) {
-    if (link.dataset.plan) {
-      planId = link.dataset.plan;
-      // Do not replace the active link before its native navigation runs.
-      updateLinks();
-      document.querySelectorAll('[data-plan-card]').forEach(card => {
-        const selected = card.dataset.planCard === planId;
-        card.classList.toggle('is-selected', selected);
-        card.querySelector('.plan-indicator').textContent = selected ? 'Selecionado' : 'PLANO';
-        const button = card.querySelector('[data-select-plan]');
-        button.setAttribute('aria-pressed', String(selected));
-        button.innerHTML = `${selected ? 'Plano selecionado' : 'Selecionar plano'} ${check}`;
-      });
-    }
     event('whatsapp_click', link.dataset.section);
   }
 });
-renderPlans(); updateLinks();
+updateLinks();
 motion = initMotion();
 kineticGrid = initKineticGrid(document.querySelector('.hero'));
 maltaGallery = initMaltaGallery(document.querySelector('[data-malta-gallery]'));
