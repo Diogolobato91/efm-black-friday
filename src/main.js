@@ -101,7 +101,7 @@ ${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'CONCORRA A UM INTERCÂMBIO EM 
 <section class="pdf-dream-cta section wrap" aria-labelledby="dream-heading">
   <div class="pdf-dream-rule" aria-hidden="true"></div>
   <p class="eyebrow">O SEU IDIOMA PODE TE LEVAR MAIS LONGE</p>
-  <h2 id="dream-heading">Realize o <span>sonho de um intercâmbio</span><br>estudando o idioma que você escolheu.</h2>
+  <h2 id="dream-heading"><span>Realize o sonho de um intercâmbio</span><strong>Estudando o idioma que você escolheu.</strong></h2>
   <a href="#seu-plano" class="button button-orange"><span>Quero concorrer</span>${arrow}</a>
 </section>
 <section class="section wrap efm-benefits" aria-labelledby="benefits-heading">
