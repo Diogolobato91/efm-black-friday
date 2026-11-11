@@ -85,7 +85,7 @@ document.querySelector('#app').innerHTML = `
 </section>
 <section class="campaign-video-section campaign-video-intro-section wrap" aria-labelledby="campaign-video-heading">
   <div class="campaign-video-intro"><p>Viva uma imersão, experiências fantásticas. Destrave seu inglês e realize um dos seus maiores sonhos.</p><h2 id="campaign-video-heading">Ouça de quem viveu tudo isso na pele.</h2></div>
-  <div class="campaign-video-player"><video controls playsinline preload="metadata" aria-label="Vídeo da campanha Black Friday EFM"><source src="/campaign-horizontal.mp4" type="video/mp4">Seu navegador não reproduz este vídeo. <a href="/campaign-horizontal.mp4">Abrir vídeo</a>.</video></div>
+  <div class="campaign-video-player"><video controls playsinline preload="metadata" aria-label="Vídeo da campanha Black Friday EFM"><source src="/videos/campaign-horizontal.mp4" type="video/mp4">Seu navegador não reproduz este vídeo. <a href="/videos/campaign-horizontal.mp4">Abrir vídeo</a>.</video></div>
 </section>
 ${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'CONCORRA A UM INTERCÂMBIO EM MALTA', 'INGLÊS E ESPANHOL'])}
 <div class="benefit-strip"><div class="wrap strip-inner"><span>${suitcase} Concorra a <strong>2 semanas de INTERCÂMBIO em Malta</strong></span><span>${globe} Aprenda online</span><span>${check} Ganhe 1 mês do outro idioma</span></div></div>
