@@ -269,8 +269,8 @@ html, body { overflow-x: clip; }
 .reference-warning span { color: var(--bf-text-muted); font-size: 12px; line-height: 1.55; }
 .reference-prize .button { width: 100%; justify-content: space-between; }
 
-.pdf-dream-cta { max-width:1180px;padding-top:15px;padding-bottom:110px;text-align:center; }
-.pdf-dream-rule { width:min(100%,960px);height:3px;margin:0 auto 58px;background:linear-gradient(90deg,transparent 0 2%,#1592ff 2% 44%,var(--efm-orange) 44% 56%,#1592ff 56% 98%,transparent 98%);box-shadow:0 0 22px #1592ff4d; }
+.pdf-dream-marquee { margin-top:0;margin-bottom:58px; }
+.pdf-dream-cta { max-width:1180px;padding-top:0;padding-bottom:110px;text-align:center; }
 .pdf-dream-cta .eyebrow { justify-content:center;margin-bottom:15px;color:var(--efm-orange); }
 .pdf-dream-cta h2 { max-width:1140px;margin:0 auto 34px;font-size:clamp(34px,5vw,68px);font-weight:900;line-height:1;letter-spacing:-3.4px;text-transform:uppercase;text-wrap:balance; }
 .pdf-dream-cta h2 span,.pdf-dream-cta h2 strong { display:block; }
@@ -380,7 +380,6 @@ html, body { overflow-x: clip; }
   .efm-benefit-card { min-height:460px; }
   .campaign-video-section { padding-bottom:72px; }
   .pdf-dream-cta { padding-bottom:90px; }
-  .pdf-dream-rule { margin-bottom:42px; }
   .rules-grid { grid-template-columns:1fr; }
   .referral-section { grid-template-columns:1fr; }
   .referral-section .button { width:100%; }
@@ -409,7 +408,6 @@ html, body { overflow-x: clip; }
   .campaign-video-intro h2 { font-size:20px; }
   .campaign-video-player { border-radius:13px; }
   .pdf-dream-cta { padding-bottom:72px; }
-  .pdf-dream-rule { margin-bottom:34px; }
   .pdf-dream-cta h2 { font-size:32px;letter-spacing:-1.6px; }
   .pdf-dream-cta h2 strong { margin-top:8px; }
   .pdf-dream-cta .button { width:100%; }
