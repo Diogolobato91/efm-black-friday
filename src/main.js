@@ -90,10 +90,6 @@ ${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'CONCORRA A UM INTERCÂMBIO EM 
     <figure class="reference-human"><img src="/images/vinicius-malta-coast.webp" alt="Vinícius, da EFM Languages, observando a costa de Malta" width="1080" height="1283" loading="lazy"><figcaption><strong>Vinícius, da EFM, em Malta.</strong><span>Uma experiência real que inspira o destino desta campanha.</span></figcaption></figure>
     <article class="reference-prize"><p class="eyebrow">O QUE O PRÊMIO INCLUI</p><h3>Duas semanas para viver o idioma fora da tela.</h3><ul>${campaign.giveaway.included.map(item => `<li>${check}<span>${item}</span></li>`).join('')}<li>${check}<span><strong>€ 200</strong> de ajuda de custo</span></li></ul><div class="reference-warning"><strong>Passagem aérea não incluída.</strong><span>A viagem é uma premiação por sorteio, não um benefício garantido da matrícula.</span></div>${cta('Quero concorrer', 'prize-overview')}</article>
   </div>
-  <section class="campaign-video-card" aria-labelledby="campaign-video-heading">
-    <div class="campaign-video-player"><video controls playsinline preload="metadata" poster="/images/campaign-video-poster.webp" aria-label="Vídeo da campanha Black Friday EFM"><source src="/videos/campaign-vertical.mp4" type="video/mp4">Seu navegador não reproduz este vídeo.</video></div>
-    <div class="campaign-video-copy"><p class="eyebrow">A CAMPANHA, EM VÍDEO</p><h2 id="campaign-video-heading">Dê o play e conheça essa experiência.</h2><p>Assista ao vídeo da campanha diretamente por aqui.</p></div>
-  </section>
   <div class="reference-course-bridge"><div><span>INGLÊS OU ESPANHOL</span><strong>4, 8 ou 12 aulas por mês.</strong></div><div><span>PLANOS A PARTIR DE</span><strong>R$ 350/mês</strong></div><a href="#seu-plano" class="button button-orange"><span>Ver os planos</span>${arrow}</a></div>
 </section>
 <section class="section wrap efm-benefits" aria-labelledby="benefits-heading">
@@ -119,6 +115,10 @@ ${marquee(['AULAS ONLINE E INDIVIDUAIS', 'HORÁRIOS FLEXÍVEIS', 'MATERIAL E POR
   </div>
   <div class="plan-conditions"><div><span class="small-label">PARA COMEÇAR</span><p>Taxa inicial de <strong>R$ 199,90</strong></p><span>Inclui material didático e portal do aluno.</span></div><div><span class="small-label">PARA SE ORGANIZAR</span><p>Primeira mensalidade <strong>em dezembro.</strong></p><span>Os valores dos planos são mensais.</span></div><div><span class="small-label">EM TODOS OS PLANOS</span><p><strong>1 mês</strong> do outro idioma.</p><span>Uma aula por semana durante o bônus.</span></div></div>
 </div></section>
+<section class="campaign-video-section section wrap" aria-labelledby="campaign-video-heading">
+  <div class="campaign-video-heading"><div><p class="eyebrow">A CAMPANHA, EM VÍDEO</p><h2 id="campaign-video-heading">Veja essa experiência<br><span>ganhar vida.</span></h2></div><p>Agora em tela ampla, para você entrar no clima de Malta antes de escolher o seu plano.</p></div>
+  <div class="campaign-video-player"><video controls playsinline preload="metadata" aria-label="Vídeo da campanha Black Friday EFM"><source src="/campaign-horizontal.mp4" type="video/mp4">Seu navegador não reproduz este vídeo. <a href="/campaign-horizontal.mp4">Abrir vídeo</a>.</video></div>
+</section>
 <section class="malta-gallery" id="malta" aria-labelledby="gallery-heading" data-malta-gallery>
   <div class="malta-gallery-stage">
     <div class="malta-gallery-grid">
