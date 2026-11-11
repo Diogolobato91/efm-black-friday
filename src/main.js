@@ -97,7 +97,12 @@ ${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'CONCORRA A UM INTERCÂMBIO EM 
     <figure class="reference-human"><img src="/images/vinicius-malta-coast.webp" alt="Vinícius, da EFM Languages, observando a costa de Malta" width="1080" height="1283" loading="lazy"><figcaption><strong>Vinícius, da EFM, em Malta.</strong><span>Uma experiência real que inspira o destino desta campanha.</span></figcaption></figure>
     <article class="reference-prize"><p class="eyebrow">O QUE O PRÊMIO INCLUI</p><h3>Duas semanas para viver o idioma fora da tela.</h3><ul>${campaign.giveaway.included.map(item => `<li>${check}<span>${item}</span></li>`).join('')}<li>${check}<span><strong>€ 200</strong> de ajuda de custo</span></li></ul><div class="reference-warning"><strong>Passagem aérea não incluída.</strong><span>A viagem é uma premiação por sorteio, não um benefício garantido da matrícula.</span></div>${cta('Quero concorrer', 'prize-overview')}</article>
   </div>
-  <div class="reference-course-bridge"><div><span>INGLÊS OU ESPANHOL</span><strong>4, 8 ou 12 aulas por mês.</strong></div><div><span>PLANOS A PARTIR DE</span><strong>R$ 350/mês</strong></div><a href="#seu-plano" class="button button-orange"><span>Ver os planos</span>${arrow}</a></div>
+</section>
+<section class="pdf-dream-cta section wrap" aria-labelledby="dream-heading">
+  <div class="pdf-dream-rule" aria-hidden="true"></div>
+  <p class="eyebrow">O SEU IDIOMA PODE TE LEVAR MAIS LONGE</p>
+  <h2 id="dream-heading">Realize o <span>sonho de um intercâmbio</span><br>estudando o idioma que você escolheu.</h2>
+  <a href="#seu-plano" class="button button-orange"><span>Quero concorrer</span>${arrow}</a>
 </section>
 <section class="section wrap efm-benefits" aria-labelledby="benefits-heading">
   <div class="efm-benefits-heading"><div><p class="eyebrow">POR QUE APRENDER COM A EFM</p><h2 id="benefits-heading">Um curso pensado<br><span>para caber na sua rotina.</span></h2></div><p>Você escolhe o idioma e o ritmo. A EFM cuida da experiência de aprendizagem, do material e do acompanhamento.</p></div>
