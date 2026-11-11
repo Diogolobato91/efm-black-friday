@@ -84,7 +84,15 @@ document.querySelector('#app').innerHTML = `
   <a class="scroll-cue" href="#beneficios"><span>ROLE PARA DESCOBRIR</span><i aria-hidden="true"></i></a>
 </section>
 <section class="campaign-video-section campaign-video-intro-section wrap" aria-labelledby="campaign-video-heading">
-  <div class="campaign-video-intro"><p>Viva uma imersão, experiências fantásticas. Destrave seu inglês e realize um dos seus maiores sonhos.</p><h2 id="campaign-video-heading">Ouça de quem viveu tudo isso na pele.</h2></div>
+  <div class="campaign-video-intro">
+    <p class="campaign-video-kicker">Antes de decidir, imagine-se lá.</p>
+    <div class="campaign-video-phrases" aria-label="A experiência de aprender e viajar">
+      <span>Viva uma imersão.</span>
+      <span>Experiências fantásticas.</span>
+      <strong>Destrave seu inglês<br>e realize um dos seus maiores sonhos.</strong>
+    </div>
+    <h2 id="campaign-video-heading">Ouça de quem viveu tudo isso na pele.</h2>
+  </div>
   <div class="campaign-video-player"><video controls playsinline preload="metadata" aria-label="Vídeo da campanha Black Friday EFM"><source src="/videos/campaign-horizontal.mp4" type="video/mp4">Seu navegador não reproduz este vídeo. <a href="/videos/campaign-horizontal.mp4">Abrir vídeo</a>.</video></div>
 </section>
 ${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'CONCORRA A UM INTERCÂMBIO EM MALTA', 'INGLÊS E ESPANHOL'])}
