@@ -269,10 +269,12 @@ html, body { overflow-x: clip; }
 .reference-warning span { color: var(--bf-text-muted); font-size: 12px; line-height: 1.55; }
 .reference-prize .button { width: 100%; justify-content: space-between; }
 
-.reference-course-bridge { display:grid;grid-template-columns:1fr 1fr auto;gap:24px;align-items:center;margin-top:38px;padding:25px 28px;border:1px solid #273a5b;border-radius:18px;background:#081225; }
-.reference-course-bridge span { display:block;margin-bottom:5px;color:#9fb0c8;font-size:11px;font-weight:700;letter-spacing:1.4px; }
-.reference-course-bridge strong { color:#fff;font-size:18px; }
-.reference-course-bridge .button { min-width:190px; }
+.pdf-dream-cta { max-width:1180px;padding-top:15px;padding-bottom:110px;text-align:center; }
+.pdf-dream-rule { width:min(100%,960px);height:3px;margin:0 auto 58px;background:linear-gradient(90deg,transparent 0 2%,#1592ff 2% 44%,var(--efm-orange) 44% 56%,#1592ff 56% 98%,transparent 98%);box-shadow:0 0 22px #1592ff4d; }
+.pdf-dream-cta .eyebrow { justify-content:center;margin-bottom:15px;color:var(--efm-orange); }
+.pdf-dream-cta h2 { max-width:1080px;margin:0 auto 32px;color:#a8d4ff;font-size:clamp(36px,5.2vw,72px);font-weight:850;line-height:.99;letter-spacing:-3.5px;text-wrap:balance; }
+.pdf-dream-cta h2 span { color:var(--efm-orange); }
+.pdf-dream-cta .button { min-width:min(100%,290px);font-size:16px; }
 
 .campaign-video-section { padding-top:0;padding-bottom:84px; }
 .campaign-video-intro { max-width:1050px;margin:0 auto 32px;text-align:center; }
@@ -374,8 +376,8 @@ html, body { overflow-x: clip; }
   .efm-benefit-grid { grid-template-columns:1fr; }
   .efm-benefit-card { min-height:460px; }
   .campaign-video-section { padding-bottom:72px; }
-  .reference-course-bridge { grid-template-columns:1fr 1fr; }
-  .reference-course-bridge .button { grid-column:1/-1;width:100%; }
+  .pdf-dream-cta { padding-bottom:90px; }
+  .pdf-dream-rule { margin-bottom:42px; }
   .rules-grid { grid-template-columns:1fr; }
   .referral-section { grid-template-columns:1fr; }
   .referral-section .button { width:100%; }
@@ -403,8 +405,10 @@ html, body { overflow-x: clip; }
   .campaign-video-phrase { font-size:25px;letter-spacing:-1px; }
   .campaign-video-intro h2 { font-size:20px; }
   .campaign-video-player { border-radius:13px; }
-  .reference-course-bridge { grid-template-columns:1fr; }
-  .reference-course-bridge .button { grid-column:auto; }
+  .pdf-dream-cta { padding-bottom:72px; }
+  .pdf-dream-rule { margin-bottom:34px; }
+  .pdf-dream-cta h2 { font-size:38px;letter-spacing:-2px; }
+  .pdf-dream-cta .button { width:100%; }
   .campaign-rules { padding-block:80px; }
   .referral-section { margin-block:60px;padding:30px 22px; }
 }
