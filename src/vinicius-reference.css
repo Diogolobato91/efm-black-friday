@@ -272,9 +272,12 @@ html, body { overflow-x: clip; }
 .pdf-dream-cta { max-width:1180px;padding-top:15px;padding-bottom:110px;text-align:center; }
 .pdf-dream-rule { width:min(100%,960px);height:3px;margin:0 auto 58px;background:linear-gradient(90deg,transparent 0 2%,#1592ff 2% 44%,var(--efm-orange) 44% 56%,#1592ff 56% 98%,transparent 98%);box-shadow:0 0 22px #1592ff4d; }
 .pdf-dream-cta .eyebrow { justify-content:center;margin-bottom:15px;color:var(--efm-orange); }
-.pdf-dream-cta h2 { max-width:1080px;margin:0 auto 32px;color:#a8d4ff;font-size:clamp(36px,5.2vw,72px);font-weight:850;line-height:.99;letter-spacing:-3.5px;text-wrap:balance; }
-.pdf-dream-cta h2 span { color:var(--efm-orange); }
-.pdf-dream-cta .button { min-width:min(100%,290px);font-size:16px; }
+.pdf-dream-cta h2 { max-width:1140px;margin:0 auto 34px;font-size:clamp(34px,5vw,68px);font-weight:900;line-height:1;letter-spacing:-3.4px;text-transform:uppercase;text-wrap:balance; }
+.pdf-dream-cta h2 span,.pdf-dream-cta h2 strong { display:block; }
+.pdf-dream-cta h2 span { color:#a8d4ff; }
+.pdf-dream-cta h2 strong { margin-top:6px;color:var(--efm-orange);font-weight:900; }
+.pdf-dream-cta .button { min-width:min(100%,290px);font-size:16px;animation:pdf-cta-attention 2.8s ease-in-out infinite; }
+@keyframes pdf-cta-attention { 0%,100% { transform:translateY(0);box-shadow:0 0 0 0 #f25c0500; } 50% { transform:translateY(-4px);box-shadow:0 14px 30px #f25c0559; } }
 
 .campaign-video-section { padding-top:0;padding-bottom:84px; }
 .campaign-video-intro { max-width:1050px;margin:0 auto 32px;text-align:center; }
@@ -407,7 +410,8 @@ html, body { overflow-x: clip; }
   .campaign-video-player { border-radius:13px; }
   .pdf-dream-cta { padding-bottom:72px; }
   .pdf-dream-rule { margin-bottom:34px; }
-  .pdf-dream-cta h2 { font-size:38px;letter-spacing:-2px; }
+  .pdf-dream-cta h2 { font-size:32px;letter-spacing:-1.6px; }
+  .pdf-dream-cta h2 strong { margin-top:8px; }
   .pdf-dream-cta .button { width:100%; }
   .campaign-rules { padding-block:80px; }
   .referral-section { margin-block:60px;padding:30px 22px; }
@@ -415,5 +419,6 @@ html, body { overflow-x: clip; }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-art.has-portrait::after { animation: none !important; }
+  .pdf-dream-cta .button { animation:none; }
   .faq-answer,.faq-icon { animation:none!important;transition:none!important; }
 }
