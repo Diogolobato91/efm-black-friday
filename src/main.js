@@ -98,8 +98,8 @@ ${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'CONCORRA A UM INTERCÂMBIO EM 
     <article class="reference-prize"><p class="eyebrow">O QUE O PRÊMIO INCLUI</p><h3>Duas semanas para viver o idioma fora da tela.</h3><ul>${campaign.giveaway.included.map(item => `<li>${check}<span>${item}</span></li>`).join('')}<li>${check}<span><strong>€ 200</strong> de ajuda de custo</span></li></ul><div class="reference-warning"><strong>Passagem aérea não incluída.</strong><span>A viagem é uma premiação por sorteio, não um benefício garantido da matrícula.</span></div>${cta('Quero concorrer', 'prize-overview')}</article>
   </div>
 </section>
+${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'CONCORRA A UM INTERCÂMBIO EM MALTA'], 'pdf-dream-marquee')}
 <section class="pdf-dream-cta section wrap" aria-labelledby="dream-heading">
-  <div class="pdf-dream-rule" aria-hidden="true"></div>
   <p class="eyebrow">O SEU IDIOMA PODE TE LEVAR MAIS LONGE</p>
   <h2 id="dream-heading"><span>Realize o sonho de um intercâmbio</span><strong>Estudando o idioma que você escolheu.</strong></h2>
   <a href="#seu-plano" class="button button-orange"><span>Quero concorrer</span>${arrow}</a>
