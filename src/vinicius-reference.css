@@ -457,3 +457,49 @@ html, body { overflow-x: clip; }
   .efm-benefit-card.is-expanded p { display:block;max-height:none; }
   .efm-benefit-card:focus-visible { outline:2px solid var(--reference-blue);outline-offset:3px; }
 }
+/* Carrossel visual dos benefícios no celular. */
+@media (max-width:600px) {
+  .efm-benefit-grid { padding:0 18px 10px 0; }
+  .efm-benefit-card {
+    flex-basis:min(78vw,310px);
+    min-height:0;
+    padding:0 0 18px;
+    border-radius:18px;
+    background:#0c1119;
+  }
+  .efm-benefit-card .benefit-visual {
+    display:block;
+    height:152px;
+    margin:0 0 17px;
+    border-bottom:1px solid #273a5b;
+  }
+  .efm-benefit-card .benefit-visual img { transform:none!important; }
+  .efm-benefit-card .benefit-index { display:block;margin:0 18px 8px;font-size:9px; }
+  .efm-benefit-card h3 {
+    display:block;
+    min-height:0;
+    margin:0 18px;
+    color:#fff;
+    font-size:20px;
+    line-height:1.08;
+  }
+  .efm-benefit-card h3::after { display:none; }
+  .efm-benefit-card p,
+  .efm-benefit-card.is-expanded p { display:none; }
+  .efm-benefit-card.is-expanded { border-color:#26354e;background:#0c1119; }
+}
+.benefit-modal { position:fixed;z-index:1000;inset:0;display:grid;place-items:end center;padding:18px;visibility:hidden;opacity:0;transition:opacity 220ms ease,visibility 220ms ease; }
+.benefit-modal.is-open { visibility:visible;opacity:1; }
+.benefit-modal-backdrop { position:absolute;inset:0;background:#02040ad9;backdrop-filter:blur(6px); }
+.benefit-modal-panel { position:relative;z-index:1;width:min(100%,520px);max-height:min(82svh,720px);overflow:auto;border:1px solid #2f5d94;border-radius:22px;background:#0c1119;box-shadow:0 -24px 70px #000a;transform:translateY(22px);transition:transform 260ms ease; }
+.benefit-modal.is-open .benefit-modal-panel { transform:translateY(0); }
+.benefit-modal-close { position:absolute;z-index:2;top:12px;right:12px;display:grid;place-items:center;width:42px;height:42px;border:1px solid #ffffff55;border-radius:50%;background:#07101cdd;color:#fff;font-size:29px;line-height:1;cursor:pointer; }
+.benefit-modal-image { display:block;width:100%;height:205px;object-fit:cover; }
+.benefit-modal-index { margin:21px 24px 8px;color:var(--efm-orange);font-size:10px;font-weight:800;letter-spacing:2px; }
+.benefit-modal-panel h3 { margin:0 24px 13px;color:#fff;font-size:29px;line-height:1.05;letter-spacing:-1.2px; }
+.benefit-modal-text { margin:0 24px 28px;color:#cdd5e0;font-size:14px;line-height:1.7; }
+body.benefit-modal-open { overflow:hidden; }
+@media (min-width:601px) { .benefit-modal { display:none; } }
+@media (prefers-reduced-motion:reduce) {
+  .benefit-modal,.benefit-modal-panel { transition:none; }
+}
