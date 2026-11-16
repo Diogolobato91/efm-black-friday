@@ -584,3 +584,7 @@ body.benefit-modal-open { overflow:hidden; }
   .hero-art.has-portrait .hero-copy .hero-actions { margin-top:16px; }
   .hero-art.has-portrait .hero-copy .hero-actions > .button:first-child { width:100%;min-height:52px; }
 }
+
+@media (max-width:600px) {
+  .hero-art.has-portrait .hero-portrait img { object-position:31% center; }
+}
