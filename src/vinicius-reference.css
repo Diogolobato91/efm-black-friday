@@ -420,3 +420,40 @@ html, body { overflow-x: clip; }
   .pdf-dream-cta .button { animation:none; }
   .faq-answer,.faq-icon { animation:none!important;transition:none!important; }
 }
+
+
+/* Ajustes móveis: leitura curta, cards em carrossel e sem área vazia após Malta. */
+@media (max-width:600px) {
+  .malta-gallery { height:auto;min-height:0;padding:70px 18px; }
+
+  .efm-benefit-grid {
+    display:flex;
+    gap:12px;
+    margin-right:calc(-1 * max(18px, env(safe-area-inset-right)));
+    padding:0 18px 8px 0;
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+  }
+  .efm-benefit-grid::-webkit-scrollbar { display:none; }
+  .efm-benefit-card {
+    flex:0 0 min(78vw,310px);
+    min-height:118px;
+    padding:22px 20px;
+    cursor:pointer;
+    scroll-snap-align:start;
+    transition:border-color 200ms ease,background-color 200ms ease;
+  }
+  .efm-benefit-card::after { display:none; }
+  .efm-benefit-card .benefit-visual,
+  .efm-benefit-card .benefit-index { display:none; }
+  .efm-benefit-card h3 { display:flex;align-items:center;justify-content:space-between;min-height:66px;margin:0;font-size:22px; }
+  .efm-benefit-card h3::after { content:'+';color:var(--efm-orange);font-size:31px;font-weight:400;line-height:1; }
+  .efm-benefit-card p { display:none;max-height:0;margin-top:15px;font-size:14px;line-height:1.65; }
+  .efm-benefit-card.is-expanded { border-color:var(--efm-orange);background:#111822; }
+  .efm-benefit-card.is-expanded h3 { min-height:0; }
+  .efm-benefit-card.is-expanded h3::after { content:'−'; }
+  .efm-benefit-card.is-expanded p { display:block;max-height:none; }
+  .efm-benefit-card:focus-visible { outline:2px solid var(--reference-blue);outline-offset:3px; }
+}
