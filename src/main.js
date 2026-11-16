@@ -23,7 +23,7 @@ const marquee = (items, variant = '') => {
   return `<section class="campaign-marquee ${variant}" aria-label="Destaques da campanha"><div class="marquee-track"><div class="marquee-group">${content}</div><div class="marquee-group" aria-hidden="true">${content}</div></div></section>`;
 };
 const faq = [
-  ['O valor de R$ 199,90 é a mensalidade?', 'Não. É a taxa inicial, que inclui material didático e portal do aluno. A mensalidade depende do plano escolhido: R$ 350, R$ 450 ou R$ 550. A primeira mensalidade fica para dezembro.'],
+  ['O valor de R$ 179,90 é a mensalidade?', 'Não. É a taxa inicial, que inclui material didático e portal do aluno. A mensalidade depende do plano escolhido: R$ 350, R$ 450 ou R$ 550. A primeira mensalidade fica para dezembro.'],
   ['Como funciona o bônus do outro idioma?', 'Você ganha um mês do outro idioma, com uma aula por semana. Depois, decide se continua nos dois idiomas ou apenas no inicialmente escolhido. Consulte a equipe sobre as condições de continuidade.'],
   ['Inglês e espanhol participam do sorteio?', 'Sim. Matrículas em qualquer uma das duas modalidades participam da promoção. Os planos de 4, 8 e 12 aulas por mês têm, respectivamente, 3, 5 e 7 chances.'],
   ['A matrícula garante a viagem para Malta?', 'Não. A viagem é uma premiação por sorteio. O prêmio inclui curso de duas semanas, hospedagem, seguro viagem, transfer do aeroporto para a acomodação e € 200 de ajuda de custo. Passagem aérea não incluída.'],
@@ -107,9 +107,9 @@ ${marquee(['VEM PARA A EFM', 'BLACK FRIDAY EFM', 'CONCORRA A UM INTERCÂMBIO EM 
 <section class="section wrap efm-benefits" aria-labelledby="benefits-heading">
   <div class="efm-benefits-heading"><div><p class="eyebrow">POR QUE APRENDER COM A EFM</p><h2 id="benefits-heading">Um curso pensado<br><span>para caber na sua rotina.</span></h2></div><p>Você escolhe o idioma e o ritmo. A EFM cuida da experiência de aprendizagem, do material e do acompanhamento.</p></div>
   <div class="efm-benefit-grid">
-    <article class="efm-benefit-card benefit-live"><div class="benefit-visual"><img src="/images/benefit-online-class.webp" alt="Aluno participando de uma aula individual de idioma pela internet" width="1024" height="1024" loading="lazy"></div><span class="benefit-index">01</span><h3>Aulas online e individuais</h3><p>Aulas que respeitam o seu ritmo e colocam você no centro da experiência.</p></article>
-    <article class="efm-benefit-card benefit-time"><div class="benefit-visual"><img src="/images/benefit-flexible-time.webp" alt="Aluno organizando o melhor horário para estudar" width="1024" height="1024" loading="lazy"></div><span class="benefit-index">02</span><h3>Horários flexíveis</h3><p>Organize suas aulas de acordo com a sua disponibilidade.</p></article>
-    <article class="efm-benefit-card benefit-material"><div class="benefit-visual"><img src="/images/benefit-student-portal.webp" alt="Material didático e portal digital usados durante os estudos" width="1024" height="1024" loading="lazy"></div><span class="benefit-index">03</span><h3>Material e portal do aluno</h3><p>Conteúdo didático e recursos reunidos para apoiar seus estudos.</p></article>
+    <article class="efm-benefit-card benefit-live" role="button" tabindex="0" aria-expanded="false"><div class="benefit-visual"><img src="/images/benefit-online-class.webp" alt="Aluno participando de uma aula individual de idioma pela internet" width="1024" height="1024" loading="lazy"></div><span class="benefit-index">01</span><h3>Aulas online e individuais</h3><p>Na EFM Languages, o aprendizado é pensado para você! Nossas aulas são 100% online, ao vivo e individuais, proporcionando uma experiência personalizada, com atenção exclusiva do professor às suas necessidades, dificuldades e objetivos. Seja para viajar, morar fora do Brasil, crescer profissionalmente ou simplesmente aprender um novo idioma, você estuda no seu ritmo, com aulas direcionadas à sua realidade e muito mais oportunidades de praticar a conversação.</p></article>
+    <article class="efm-benefit-card benefit-time" role="button" tabindex="0" aria-expanded="false"><div class="benefit-visual"><img src="/images/benefit-flexible-time.webp" alt="Aluno organizando o melhor horário para estudar" width="1024" height="1024" loading="lazy"></div><span class="benefit-index">02</span><h3>Horários flexíveis</h3><p>Sua rotina não precisa ser um obstáculo para aprender um novo idioma! Na EFM Languages, você tem liberdade para organizar suas aulas de acordo com a sua disponibilidade, conciliando os estudos com o trabalho, a família e os compromissos do dia a dia. Nossa proposta é oferecer uma experiência de aprendizado que se adapte à sua realidade, permitindo que você mantenha a constância nos estudos sem precisar abrir mão das outras áreas da sua vida.</p></article>
+    <article class="efm-benefit-card benefit-material" role="button" tabindex="0" aria-expanded="false"><div class="benefit-visual"><img src="/images/benefit-student-portal.webp" alt="Material didático e portal digital usados durante os estudos" width="1024" height="1024" loading="lazy"></div><span class="benefit-index">03</span><h3>Material e portal do aluno</h3><p>Seu aprendizado continua mesmo depois que a aula termina! Na EFM Languages, você conta com material didático estruturado e acesso ao nosso Portal do Aluno, um ambiente digital desenvolvido para facilitar sua jornada de aprendizagem. Nele, você encontra recursos e ferramentas que auxiliam na organização dos seus estudos, no acompanhamento das aulas e no desenvolvimento das suas habilidades. Tudo reunido em um só lugar para tornar sua experiência mais prática, organizada e completa.</p></article>
   </div>
 </section>
 ${marquee(['AULAS ONLINE E INDIVIDUAIS', 'HORÁRIOS FLEXÍVEIS', 'MATERIAL E PORTAL DO ALUNO'], 'marquee-navy marquee-reverse')}
@@ -123,9 +123,9 @@ ${marquee(['AULAS ONLINE E INDIVIDUAIS', 'HORÁRIOS FLEXÍVEIS', 'MATERIAL E POR
       <button type="button" class="rhythm-choice" data-rhythm="pro" aria-pressed="false"><strong>8<span>aulas / mês</span></strong><span>Mais espaço para praticar</span>${check}</button>
       <button type="button" class="rhythm-choice" data-rhythm="premium" aria-pressed="false"><strong>12<span>aulas / mês</span></strong><span>Mais aulas na sua rotina</span>${check}</button>
     </div>
-    <div class="selected-plan" id="selected-plan"><div class="selected-overview"><span class="small-label">SUA ESCOLHA, SEM COMPLICAÇÃO</span><h3 data-choice-title></h3><p data-choice-description></p><div class="selected-perks"><span>${check} 1 mês do outro idioma</span><span data-choice-chances></span></div><p class="selected-draw-note">Concorra a Malta. Passagem aérea não incluída.</p></div><div class="selected-action"><p class="selected-price" data-choice-price></p><p>+ taxa inicial de <strong>R$ 199,90</strong><br>Primeira mensalidade em dezembro.</p>${cta('Continuar com meu plano', 'selected-plan', 'data-selection-cta')}<small>Sua escolha acompanha a mensagem no WhatsApp.</small></div></div>
+    <div class="selected-plan" id="selected-plan"><div class="selected-overview"><span class="small-label">SUA ESCOLHA, SEM COMPLICAÇÃO</span><h3 data-choice-title></h3><p data-choice-description></p><div class="selected-perks"><span>${check} 1 mês do outro idioma</span><span data-choice-chances></span></div><p class="selected-draw-note">Concorra a Malta. Passagem aérea não incluída.</p></div><div class="selected-action"><p class="selected-price" data-choice-price></p><p>+ taxa inicial de <strong>R$ 179,90</strong><br>Primeira mensalidade em dezembro.</p>${cta('Continuar com meu plano', 'selected-plan', 'data-selection-cta')}<small>Sua escolha acompanha a mensagem no WhatsApp.</small></div></div>
   </div>
-  <div class="plan-conditions"><div><span class="small-label">PARA COMEÇAR</span><p>Taxa inicial de <strong>R$ 199,90</strong></p><span>Inclui material didático e portal do aluno.</span></div><div><span class="small-label">PARA SE ORGANIZAR</span><p>Primeira mensalidade <strong>em dezembro.</strong></p><span>Os valores dos planos são mensais.</span></div><div><span class="small-label">EM TODOS OS PLANOS</span><p><strong>1 mês</strong> do outro idioma.</p><span>Uma aula por semana durante o bônus.</span></div></div>
+  <div class="plan-conditions"><div><span class="small-label">PARA COMEÇAR</span><p>Taxa inicial de <strong>R$ 179,90</strong></p><span>Inclui material didático e portal do aluno.</span></div><div><span class="small-label">PARA SE ORGANIZAR</span><p>Primeira mensalidade <strong>em dezembro.</strong></p><span>Os valores dos planos são mensais.</span></div><div><span class="small-label">EM TODOS OS PLANOS</span><p><strong>1 mês</strong> do outro idioma.</p><span>Uma aula por semana durante o bônus.</span></div></div>
 </div></section>
 <section class="malta-gallery" id="malta" aria-labelledby="gallery-heading" data-malta-gallery>
   <div class="malta-gallery-stage">
@@ -246,6 +246,25 @@ updateLinks();
 motion = initMotion();
 kineticGrid = initKineticGrid(document.querySelector('.hero'));
 maltaGallery = initMaltaGallery(document.querySelector('[data-malta-gallery]'));
+
+const benefitCards = [...document.querySelectorAll('.efm-benefit-card[role="button"]')];
+function toggleBenefitCard(card) {
+  if (!matchMedia('(max-width: 600px)').matches) return;
+  const expand = !card.classList.contains('is-expanded');
+  benefitCards.forEach((item) => {
+    item.classList.toggle('is-expanded', item === card && expand);
+    item.setAttribute('aria-expanded', String(item === card && expand));
+  });
+}
+benefitCards.forEach((card) => {
+  card.addEventListener('click', () => toggleBenefitCard(card));
+  card.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      toggleBenefitCard(card);
+    }
+  });
+});
 function stopSelectionMotion() {
   if (reducedMotion.matches || document.hidden) {
     selectionAnimation?.cancel();
