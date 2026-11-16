@@ -551,3 +551,36 @@ body.benefit-modal-open { overflow:hidden; }
   .hero-art.has-portrait .floating-flag { display:none; }
   .hero .scroll-cue { margin:18px 18px 0; }
 }
+
+/* Composição mais visual da primeira dobra em telas pequenas. */
+@media (max-width:600px) {
+  .hero-art.has-portrait { min-height:610px; }
+  .hero-art.has-portrait::before {
+    background:linear-gradient(180deg,transparent 0 34%,#06193828 47%,#030914d9 82%,#030914f5 100%);
+  }
+  .hero-art.has-portrait .hero-copy {
+    min-height:610px;
+    padding:38px 21px 24px;
+  }
+  .hero-art.has-portrait .hero-copy .eyebrow,
+  .hero-art.has-portrait .hero-copy .black-friday > small,
+  .hero-art.has-portrait .hero-copy [data-hero-direct],
+  .hero-art.has-portrait .hero-copy .hero-proof,
+  .hero-art.has-portrait .hero-copy .action-note { display:none; }
+  .hero-art.has-portrait .hero-copy .black-friday { margin:0 0 auto; }
+  .hero-art.has-portrait .hero-copy .black-friday > span { padding:9px 11px 8px;font-size:13px; }
+  .hero-art.has-portrait .hero-copy h1 {
+    max-width:none;
+    margin:0 0 12px;
+    font-size:35px;
+    letter-spacing:-2.1px;
+    line-height:.98;
+  }
+  .hero-art.has-portrait .hero-copy .hero-description {
+    max-width:100%;
+    font-size:13px;
+    line-height:1.42;
+  }
+  .hero-art.has-portrait .hero-copy .hero-actions { margin-top:16px; }
+  .hero-art.has-portrait .hero-copy .hero-actions > .button:first-child { width:100%;min-height:52px; }
+}
