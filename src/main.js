@@ -157,6 +157,21 @@ let kineticGrid;
 let maltaGallery;
 let selectionAnimation;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const compactHeroMedia = matchMedia('(max-width: 600px)');
+const heroSection = document.querySelector('.hero');
+const heroArtwork = document.querySelector('.hero-art');
+const heroCopy = document.querySelector('.hero-copy');
+
+function syncCompactMobileHero() {
+  if (!heroSection || !heroArtwork || !heroCopy) return;
+  if (compactHeroMedia.matches) {
+    if (heroCopy.parentElement !== heroArtwork) heroArtwork.append(heroCopy);
+  } else if (heroCopy.parentElement === heroArtwork) {
+    heroSection.insertBefore(heroCopy, heroArtwork);
+  }
+}
+compactHeroMedia.addEventListener('change', syncCompactMobileHero);
+syncCompactMobileHero();
 
 function updateLinks() {
   const { modality, plan } = getSelection(campaign, language, planId);
@@ -368,6 +383,7 @@ if (import.meta.hot) import.meta.hot.dispose(() => {
   maltaGallery.destroy();
   selectionAnimation?.cancel();
   reducedMotion.removeEventListener('change', stopSelectionMotion);
+  compactHeroMedia.removeEventListener('change', syncCompactMobileHero);
   document.removeEventListener('visibilitychange', stopSelectionMotion);
   removeEventListener('scroll', scheduleScrollFeedback);
   removeEventListener('resize', scheduleScrollFeedback);
