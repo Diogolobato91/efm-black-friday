@@ -248,23 +248,61 @@ kineticGrid = initKineticGrid(document.querySelector('.hero'));
 maltaGallery = initMaltaGallery(document.querySelector('[data-malta-gallery]'));
 
 const benefitCards = [...document.querySelectorAll('.efm-benefit-card[role="button"]')];
-function toggleBenefitCard(card) {
+const benefitCarousel = document.querySelector('.efm-benefit-grid');
+const benefitModal = document.createElement('div');
+benefitModal.className = 'benefit-modal';
+benefitModal.setAttribute('aria-hidden', 'true');
+benefitModal.innerHTML = '<div class="benefit-modal-backdrop" data-benefit-close></div><section class="benefit-modal-panel" role="dialog" aria-modal="true" aria-labelledby="benefit-modal-title"><button class="benefit-modal-close" type="button" data-benefit-close aria-label="Fechar detalhes">×</button><img class="benefit-modal-image" alt=""><p class="benefit-modal-index"></p><h3 id="benefit-modal-title"></h3><p class="benefit-modal-text"></p></section>';
+document.body.append(benefitModal);
+
+function closeBenefitModal() {
+  benefitModal.classList.remove('is-open');
+  benefitModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('benefit-modal-open');
+}
+function openBenefitModal(card) {
   if (!matchMedia('(max-width: 600px)').matches) return;
-  const expand = !card.classList.contains('is-expanded');
-  benefitCards.forEach((item) => {
-    item.classList.toggle('is-expanded', item === card && expand);
-    item.setAttribute('aria-expanded', String(item === card && expand));
-  });
+  const image = card.querySelector('img');
+  benefitModal.querySelector('.benefit-modal-image').src = image.currentSrc || image.src;
+  benefitModal.querySelector('.benefit-modal-image').alt = image.alt;
+  benefitModal.querySelector('.benefit-modal-index').textContent = card.querySelector('.benefit-index').textContent;
+  benefitModal.querySelector('#benefit-modal-title').textContent = card.querySelector('h3').textContent;
+  benefitModal.querySelector('.benefit-modal-text').textContent = card.querySelector('p').textContent;
+  benefitModal.classList.add('is-open');
+  benefitModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('benefit-modal-open');
+  benefitModal.querySelector('.benefit-modal-close').focus();
 }
 benefitCards.forEach((card) => {
-  card.addEventListener('click', () => toggleBenefitCard(card));
+  card.addEventListener('click', () => openBenefitModal(card));
   card.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
-      toggleBenefitCard(card);
+      openBenefitModal(card);
     }
   });
 });
+benefitModal.addEventListener('click', (event) => {
+  if (event.target.closest('[data-benefit-close]')) closeBenefitModal();
+});
+addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeBenefitModal();
+});
+
+let benefitCarouselTimer;
+function startBenefitCarousel() {
+  clearInterval(benefitCarouselTimer);
+  if (!benefitCarousel || !matchMedia('(max-width: 600px)').matches || reducedMotion.matches) return;
+  benefitCarouselTimer = setInterval(() => {
+    if (document.hidden || benefitModal.classList.contains('is-open')) return;
+    const atEnd = benefitCarousel.scrollLeft + benefitCarousel.clientWidth >= benefitCarousel.scrollWidth - 8;
+    benefitCarousel.scrollTo({ left: atEnd ? 0 : benefitCarousel.scrollLeft + benefitCarousel.clientWidth * .78, behavior: 'smooth' });
+  }, 3600);
+}
+benefitCarousel?.addEventListener('pointerdown', () => clearInterval(benefitCarouselTimer));
+benefitCarousel?.addEventListener('pointerup', startBenefitCarousel);
+addEventListener('resize', startBenefitCarousel);
+startBenefitCarousel();
 function stopSelectionMotion() {
   if (reducedMotion.matches || document.hidden) {
     selectionAnimation?.cancel();
