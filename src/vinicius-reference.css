@@ -506,3 +506,48 @@ body.benefit-modal-open { overflow:hidden; }
 @media (max-width:600px) {
   .efm-benefit-grid { scroll-snap-type:none;scroll-behavior:auto;touch-action:pan-x; }
 }
+
+/* No mobile, a primeira dobra reúne a chamada e a imagem de Malta. */
+@media (max-width:600px) {
+  .hero {
+    display:block;
+    min-height:0;
+    padding:18px 0 22px;
+  }
+  .hero-art.has-portrait {
+    width:100%;
+    height:auto;
+    min-height:720px;
+    margin:0;
+    border-radius:0 86px 0 0;
+    outline:0;
+    box-shadow:0 26px 70px #000a;
+  }
+  .hero-art.has-portrait::before {
+    z-index:4;
+    background:linear-gradient(180deg,#06193862 0%,#06193812 25%,#030914cc 63%,#030914fa 100%);
+  }
+  .hero-art.has-portrait .hero-copy {
+    position:relative;
+    z-index:7;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    min-height:720px;
+    max-width:none;
+    padding:96px 21px 28px;
+  }
+  .hero-art.has-portrait .hero-copy .eyebrow { margin-bottom:10px;font-size:8px;line-height:1.45; }
+  .hero-art.has-portrait .hero-copy .black-friday { margin:0 0 18px; }
+  .hero-art.has-portrait .hero-copy h1 { max-width:345px;margin:0 0 16px;font-size:43px;letter-spacing:-2.6px;line-height:.97; }
+  .hero-art.has-portrait .hero-copy .hero-description { max-width:345px;margin:0;font-size:14px;line-height:1.48; }
+  .hero-art.has-portrait .hero-copy .hero-actions { margin-top:19px; }
+  .hero-art.has-portrait .hero-copy .hero-proof { margin-top:14px; }
+  .hero-art.has-portrait .hero-copy .action-note { margin-top:12px;color:#d4ddea;font-size:12px; }
+  .hero-art.has-portrait .art-top,
+  .hero-art.has-portrait .art-title,
+  .hero-art.has-portrait .travel-stamp,
+  .hero-art.has-portrait figcaption,
+  .hero-art.has-portrait .floating-flag { display:none; }
+  .hero .scroll-cue { margin:18px 18px 0; }
+}
