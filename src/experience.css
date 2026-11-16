@@ -257,9 +257,9 @@ body { position:relative; }
   .hero-art.has-portrait .hero-portrait img { object-position:48% center; }
   .hero-art.has-portrait .art-title { top:58px;left:20px;font-size:61px; }
   .hero-art.has-portrait .travel-stamp { right:13px;bottom:48px;padding:12px 13px; }
-  .hero-proof { margin-top:15px; }
+  .hero-proof { display:flex;flex-wrap:nowrap;gap:4px;align-items:center;width:100%;margin-top:15px; }
   .hero-tripline { width:100%;margin-top:3px;padding-right:40px; }
-  .hero-proof span { font-size:8px;padding:6px 8px; }
+  .hero-proof span { flex:1 1 0;min-width:0;padding:6px 4px;font-size:7px;letter-spacing:.25px;line-height:1.2;text-align:center;white-space:nowrap; }
   .black-friday { margin-bottom:62px; }
   .black-friday .asterisk { position:absolute;right:3px;bottom:-.64em;width:.52em;height:.52em;margin:0; }
   .scroll-cue { margin-top:0; }
