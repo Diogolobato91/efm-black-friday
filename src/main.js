@@ -273,14 +273,16 @@ function openBenefitModal(card) {
   document.body.classList.add('benefit-modal-open');
   benefitModal.querySelector('.benefit-modal-close').focus();
 }
-benefitCards.forEach((card) => {
-  card.addEventListener('click', () => openBenefitModal(card));
-  card.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      openBenefitModal(card);
-    }
-  });
+benefitCarousel?.addEventListener('click', (event) => {
+  const card = event.target.closest('.efm-benefit-card[role="button"]');
+  if (card) openBenefitModal(card);
+});
+benefitCarousel?.addEventListener('keydown', (event) => {
+  const card = event.target.closest('.efm-benefit-card[role="button"]');
+  if (card && (event.key === 'Enter' || event.key === ' ')) {
+    event.preventDefault();
+    openBenefitModal(card);
+  }
 });
 benefitModal.addEventListener('click', (event) => {
   if (event.target.closest('[data-benefit-close]')) closeBenefitModal();
@@ -289,20 +291,31 @@ addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeBenefitModal();
 });
 
-let benefitCarouselTimer;
-function startBenefitCarousel() {
-  clearInterval(benefitCarouselTimer);
+let benefitCarouselFrame = 0;
+let benefitCarouselPaused = false;
+let benefitCarouselCopied = false;
+function runBenefitCarousel() {
+  cancelAnimationFrame(benefitCarouselFrame);
   if (!benefitCarousel || !matchMedia('(max-width: 600px)').matches || reducedMotion.matches) return;
-  benefitCarouselTimer = setInterval(() => {
-    if (document.hidden || benefitModal.classList.contains('is-open')) return;
-    const atEnd = benefitCarousel.scrollLeft + benefitCarousel.clientWidth >= benefitCarousel.scrollWidth - 8;
-    benefitCarousel.scrollTo({ left: atEnd ? 0 : benefitCarousel.scrollLeft + benefitCarousel.clientWidth * .78, behavior: 'smooth' });
-  }, 3600);
+  if (!benefitCarouselCopied) {
+    benefitCards.forEach((card) => benefitCarousel.append(card.cloneNode(true)));
+    benefitCarouselCopied = true;
+  }
+  const loop = () => {
+    if (!benefitCarouselPaused && !document.hidden && !benefitModal.classList.contains('is-open')) {
+      const loopWidth = benefitCarousel.scrollWidth / 2;
+      benefitCarousel.scrollLeft += .32;
+      if (benefitCarousel.scrollLeft >= loopWidth) benefitCarousel.scrollLeft -= loopWidth;
+    }
+    benefitCarouselFrame = requestAnimationFrame(loop);
+  };
+  benefitCarouselFrame = requestAnimationFrame(loop);
 }
-benefitCarousel?.addEventListener('pointerdown', () => clearInterval(benefitCarouselTimer));
-benefitCarousel?.addEventListener('pointerup', startBenefitCarousel);
-addEventListener('resize', startBenefitCarousel);
-startBenefitCarousel();
+benefitCarousel?.addEventListener('pointerdown', () => { benefitCarouselPaused = true; });
+benefitCarousel?.addEventListener('pointerup', () => { setTimeout(() => { benefitCarouselPaused = false; }, 900); });
+benefitCarousel?.addEventListener('pointercancel', () => { benefitCarouselPaused = false; });
+addEventListener('resize', runBenefitCarousel);
+runBenefitCarousel();
 function stopSelectionMotion() {
   if (reducedMotion.matches || document.hidden) {
     selectionAnimation?.cancel();
