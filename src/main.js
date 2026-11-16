@@ -294,26 +294,45 @@ addEventListener('keydown', (event) => {
 let benefitCarouselFrame = 0;
 let benefitCarouselPaused = false;
 let benefitCarouselCopied = false;
+let benefitCarouselPosition = 0;
+let benefitCarouselLastFrame = 0;
+let benefitCarouselResumeTimer = 0;
 function runBenefitCarousel() {
   cancelAnimationFrame(benefitCarouselFrame);
+  benefitCarouselLastFrame = 0;
   if (!benefitCarousel || !matchMedia('(max-width: 600px)').matches || reducedMotion.matches) return;
   if (!benefitCarouselCopied) {
     benefitCards.forEach((card) => benefitCarousel.append(card.cloneNode(true)));
     benefitCarouselCopied = true;
   }
-  const loop = () => {
+  benefitCarouselPosition = benefitCarousel.scrollLeft;
+  const loop = (time) => {
+    const elapsed = benefitCarouselLastFrame ? Math.min(time - benefitCarouselLastFrame, 48) : 16;
+    benefitCarouselLastFrame = time;
     if (!benefitCarouselPaused && !document.hidden && !benefitModal.classList.contains('is-open')) {
       const loopWidth = benefitCarousel.scrollWidth / 2;
-      benefitCarousel.scrollLeft += .32;
-      if (benefitCarousel.scrollLeft >= loopWidth) benefitCarousel.scrollLeft -= loopWidth;
+      if (loopWidth > 0) {
+        benefitCarouselPosition += elapsed * .024;
+        if (benefitCarouselPosition >= loopWidth) benefitCarouselPosition -= loopWidth;
+        benefitCarousel.scrollLeft = benefitCarouselPosition;
+      }
     }
     benefitCarouselFrame = requestAnimationFrame(loop);
   };
   benefitCarouselFrame = requestAnimationFrame(loop);
 }
-benefitCarousel?.addEventListener('pointerdown', () => { benefitCarouselPaused = true; });
-benefitCarousel?.addEventListener('pointerup', () => { setTimeout(() => { benefitCarouselPaused = false; }, 900); });
-benefitCarousel?.addEventListener('pointercancel', () => { benefitCarouselPaused = false; });
+function pauseBenefitCarousel() {
+  benefitCarouselPaused = true;
+  clearTimeout(benefitCarouselResumeTimer);
+}
+function resumeBenefitCarousel() {
+  benefitCarouselPosition = benefitCarousel?.scrollLeft || 0;
+  clearTimeout(benefitCarouselResumeTimer);
+  benefitCarouselResumeTimer = setTimeout(() => { benefitCarouselPaused = false; }, 900);
+}
+benefitCarousel?.addEventListener('pointerdown', pauseBenefitCarousel);
+benefitCarousel?.addEventListener('pointerup', resumeBenefitCarousel);
+benefitCarousel?.addEventListener('pointercancel', resumeBenefitCarousel);
 addEventListener('resize', runBenefitCarousel);
 runBenefitCarousel();
 function stopSelectionMotion() {
