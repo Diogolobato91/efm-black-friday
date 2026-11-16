@@ -503,3 +503,6 @@ body.benefit-modal-open { overflow:hidden; }
 @media (prefers-reduced-motion:reduce) {
   .benefit-modal,.benefit-modal-panel { transition:none; }
 }
+@media (max-width:600px) {
+  .efm-benefit-grid { scroll-snap-type:none;scroll-behavior:auto;touch-action:pan-x; }
+}
