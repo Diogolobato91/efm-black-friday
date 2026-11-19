@@ -591,3 +591,21 @@ body.benefit-modal-open { overflow:hidden; }
 
 .campaign-video-credit { margin:14px auto 0;text-align:center;white-space:nowrap;color:#c4d8ef;font-size:clamp(8px,1.15vw,13px);font-weight:650;letter-spacing:.1px; }
 @media (max-width:600px) { .campaign-video-credit { width:100%;margin-top:12px;font-size:clamp(8px,2.35vw,10px);line-height:1.2; } }
+
+/* Destaques da matrícula gratuita e do primeiro pagamento. */
+.hero-free-start { display:flex;align-items:center;gap:12px;width:max-content;max-width:100%;margin-top:18px;padding:10px 13px;border:1px solid #f25c0577;border-radius:10px;background:#f25c0512; }
+.hero-free-start strong { flex:0 0 auto;color:var(--efm-orange);font-size:13px;text-transform:uppercase;letter-spacing:.7px; }
+.hero-free-start span { color:#e8eef7;font-size:12px;line-height:1.35; }
+.free-start-highlight { display:grid;gap:4px;margin:10px 0 12px;padding:14px 16px;border:1px solid #f25c0588;border-radius:12px;background:#f25c0514; }
+.free-start-highlight strong { color:var(--efm-orange);font-size:19px;text-transform:uppercase;letter-spacing:.4px; }
+.free-start-highlight span,.first-payment-note { color:#e7eef8; }
+.plan-conditions .condition-free,.plan-conditions .condition-payment { border-color:#f25c0588;background:linear-gradient(145deg,#f25c0518,#0d1119 62%); }
+.plan-conditions .condition-free .small-label,.plan-conditions .condition-payment .small-label { color:var(--efm-orange); }
+.plan-conditions .condition-free p strong { color:var(--efm-orange);font-size:1.18em; }
+@media (max-width:600px) {
+  .hero-art.has-portrait .hero-copy .hero-free-start { display:grid;gap:2px;width:100%;margin-top:12px;padding:8px 10px; }
+  .hero-free-start strong { font-size:10px; }
+  .hero-free-start span { font-size:9px;white-space:nowrap; }
+  .free-start-highlight { padding:12px 14px; }
+  .free-start-highlight strong { font-size:17px; }
+}
