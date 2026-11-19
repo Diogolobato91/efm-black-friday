@@ -609,3 +609,8 @@ body.benefit-modal-open { overflow:hidden; }
   .free-start-highlight { padding:12px 14px; }
   .free-start-highlight strong { font-size:17px; }
 }
+
+@media (max-width:600px) {
+  .hero-art.has-portrait .hero-copy .hero-free-start { min-width:0;overflow:hidden; }
+  .hero-art.has-portrait .hero-copy .hero-free-start span { white-space:normal;overflow-wrap:anywhere;line-height:1.35; }
+}
