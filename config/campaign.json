@@ -65,13 +65,14 @@
     }
   ],
   "initialFee": {
-    "amountBRL": 179.9,
+    "amountBRL": 0,
     "includes": [
       "Material didático",
       "Portal do aluno"
     ]
   },
   "firstMonthlyPayment": {
+    "day": 20,
     "month": 12,
     "year": null
   },
