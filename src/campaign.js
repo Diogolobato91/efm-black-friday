@@ -14,6 +14,6 @@ export function whatsappLink(campaign, language, planId, referral = false) {
   const { modality, plan } = getSelection(campaign, language, planId);
   const message = referral
     ? `Olá! Já sou aluno EFM e quero saber como indicar um novo aluno e concorrer ao intercâmbio em Malta. Meu interesse nesta página: ${modality.label}, plano ${plan.name}.`
-    : `Olá! Tenho interesse na Black Friday EFM. Escolhi ${modality.label}, plano ${plan.name}, com ${plan.classesPerMonth} aulas por mês por ${formatBRL(plan.monthlyPriceBRL)}/mês. Quero saber como concluir minha matrícula.`;
+    : `Olá! Tenho interesse na Black Friday EFM. Escolhi ${modality.label}, plano ${plan.name}, com ${plan.classesPerMonth} aulas por mês por ${formatBRL(plan.monthlyPriceBRL)}/mês. Vi que a matrícula é gratuita e que o primeiro pagamento será em 20 de dezembro. Quero saber como concluir minha matrícula.`;
   return `${campaign.whatsapp.url}?text=${encodeURIComponent(message)}`;
 }
